@@ -50,7 +50,7 @@
           if (curr.style){
             if(!curr._fontSize){
               var mod = curr.style.font.split("px");
-              curr._fontSize = parseInt(mod[0]);
+			  curr._fontSize = 14;
               curr._font = mod[1];
             }
             curr.style.font = curr._fontSize * scale + "px" + curr._font;

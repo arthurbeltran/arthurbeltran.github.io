@@ -4,22 +4,18 @@ body {
 }
 
 .container {
-  width: 100%;
-  height: 500px;
-  margin: 0 auto;
-}
-
-.element {
-  width: 100%;
-  height: 40px;
-  margin: 7px auto 0;
-  background-color: rgb(222, 222, 222);
+  float: left;
+  clear: both;
+  width: 80%;
+  height: 600px;
+  margin: 21px 0 0 10%;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .image {
   display: block;
   width: 278px;
   height: auto;
-  margin: 7px auto 0;
+  margin: 8px auto 0;
   overflow: hidden;
 }

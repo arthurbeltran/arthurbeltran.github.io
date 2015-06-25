@@ -10,7 +10,6 @@ line-height:16px;
 
 #container {
 margin:20px auto;
-width: 960px;
 
 }
 
@@ -21,3 +20,4 @@ border:none;
 h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
 	h1{ font-size:26px; line-height:32px; font-family: 'DroidSansRegular', Helvetica, Arial , sans-serif; }
 	p, ul{margin-bottom:10px;}
+

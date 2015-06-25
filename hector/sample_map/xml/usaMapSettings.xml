@@ -3,7 +3,8 @@
 
 <mapSettings 
 
-
+mapWidth="900" 
+mapHeight="550"
 
 offColor = "222222"
 strokeColor = "ffffff"
@@ -14,6 +15,7 @@ textAreaPadding = "10"
 responsive="true"
 
 abbreviationColor="f2f2f2"
+useParameterInUrl="false"
 
 
 />
