@@ -5,7 +5,7 @@
 
 mapWidth = "900"
 mapHeight = "550"
-responsive = "true"
+
 
 offColor = "222222"
 strokeColor = "ffffff"
