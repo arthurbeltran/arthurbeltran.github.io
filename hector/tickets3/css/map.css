@@ -50,3 +50,13 @@ margin-left: 30px;
 margin:20px auto;
 
 }
+
+ul.cols2 {
+  width: 50px;
+  float: left;
+}
+
+ul.cols5 {
+  width: 160px;
+  float: left;
+}
