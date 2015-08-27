@@ -24,7 +24,7 @@ abbreviationColor="f2f2f2"
   <![CDATA[]]>
 </defaultSideText>
 
-<stateData stateName="Alabama"  url = " " stateMode = "ON" initialStateColor= "00AD18"  stateOverColor = "123DAB" stateSelectedColor = "123DAB">
+<stateData stateName="Alabama"  url = "http://www.google.com" stateMode = "ON" initialStateColor= "00AD18"  stateOverColor = "123DAB" stateSelectedColor = "123DAB">
 <![CDATA[]]>
 </stateData>
 

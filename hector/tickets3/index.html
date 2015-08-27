@@ -7,26 +7,7 @@
     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css\map.css" rel="stylesheet" type="text/css">
   </head><body style="">
-    <div class="section" style="padding: 10px; background-color:lightblue;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="nav nav-justified nav-pills">
-              <li class="active">
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Profile</a>
-              </li>
-              <li>
-                <a href="#">Messages</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section text-center" style=" ">
+    <div class="section text-center" style="padding:10px; background-image: url(images/bg1.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -35,15 +16,40 @@
         </div>
       </div>
     </div>
+    <div class="section text-center" style="padding:10px; background-color:aliceblue;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="nav nav-pills navbar-nav">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="section text-center" style="background-color:steelblue; background-image: url(images/bg2.jpg);">
       <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="text-center text-info" style="color:black; font-weight:bold;">Click a state to view the directory</h3>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-12 text-center">
             <!--main content-->
             <div id="container1">
               <div class="mapWrapper">
                 <div id="map"></div>
-                <!--<div id="text"></div>--></div>
+                <div id="text" style="display:none; visibility:hidden;"></div>
+              </div>
             </div>
           </div>
         </div>
