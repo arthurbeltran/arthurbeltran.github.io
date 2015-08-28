@@ -59,8 +59,14 @@ ul.cols2 {
 ul.cols5 {
   width: 160px;
   float: left;
+  
 }
 
+ul.cols5 li
+{
+	border: 1px solid;
+	padding: 10px;
+}
 
 
 .navbar-nav{
@@ -68,6 +74,7 @@ ul.cols5 {
         margin: 0 auto;
         display: table;
         table-layout: fixed;
+		
     }
 
- 
+
