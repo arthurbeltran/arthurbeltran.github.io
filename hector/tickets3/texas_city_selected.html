@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-md-12">
             <h3 class="text-muted">
-              <a href="texas.html">Choose a City</a>/ Abilene</h3>
+              <a href="texas.html">Choose a City</a>&nbsp;/ Abilene</h3>
             <br>
           </div>
         </div>
@@ -98,6 +98,78 @@
               </div>
             </div>
           </div>
+          <!--judicial court--->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <h3 class="panel-title" style="color:white;">Judicial Court</h3>
+              </div>
+              <div class="panel-body">
+                <div class="col-md-6">
+                  <h4 class="text-success">
+                    <i class="fa fa-location-arrow fa-fw"></i>Address</h4>
+                  <p>Office:
+                    <br>555 Walnut Street
+                    <br>Abilene, TX 79601</p>
+                  <p>Mail:
+                    <br>P.O Box 60
+                    <br>Abilene, TX 79601</p>
+                  <hr>
+                  <!--phone-->
+                  <h4 class="text-success">
+                    <i class="fa fa-phone fa-fw"></i>Phone</h4>
+                  <p>Landline: 325-676-6333
+                    <br>Fax: 325-676-6286</p>
+                  <hr>
+                  <!--online-->
+                  <h4 class="text-success">
+                    <i class="fa fa-globe fa-fw"></i>Online</h4>
+                  <p class="text-success">
+                    <a href="http://www.abilenetx.com/MunicipalCourt/location.htm" target="_blank">Website</a>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div style="width:300px;overflow:hidden;height:300px;max-width:100%;">
+                    <div id="embedded-map-canvas" style="height:500px;width:500px;max-width:100%;">
+                      <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=555+Walnut+Street+Abilene,+TX+79601&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                    </div>
+                    <a class="embed-map-html" href="https://www.bootstrapskins.com" id="make-map-data">bootstrap</a>
+                    <style>
+                      #embedded-map-canvas .text-marker{max-width:none!important;background:none!important;}img{max-width:none}
+                    </style>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--map scripts-->
+          <script src="js/raphael.min.js" type="text/javascript"></script>
+          <script src="js/scale.raphael.js" type="text/javascript"></script>
+          <script src="js/paths.js" type="text/javascript"></script>
+          <script src="js/init.js" type="text/javascript"></script>
+          <script type="text/javascript" src="js/jquery-columns-plugin.js"></script>
+          <script type="text/javascript">
+            $(window).load(function(){
+                                                    		$('.cols2').cols(2);
+                                                    		$('.cols5').cols(7);
+                                                    		});
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="section section-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images\ad_1.jpg" class="center-block img-responsive">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-center">Advertise with us!</h4>
+          </div>
         </div>
       </div>
     </div>
@@ -135,18 +207,6 @@
         </div>
       </div>
     </footer>
-    <!--map scripts-->
-    <script src="js/raphael.min.js" type="text/javascript"></script>
-    <script src="js/scale.raphael.js" type="text/javascript"></script>
-    <script src="js/paths.js" type="text/javascript"></script>
-    <script src="js/init.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/jquery-columns-plugin.js"></script>
-    <script type="text/javascript">
-      $(window).load(function(){
-                              		$('.cols2').cols(2);
-                              		$('.cols5').cols(7);
-                              		});
-    </script>
   
 
 </body></html>
