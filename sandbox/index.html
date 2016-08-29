@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html style="width:700px;">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" >
+    <link href="scripts/css/bootstrap.min.css" rel="stylesheet">
+    <!--use inline css-->
+    
+    <style>
+        .iContent {width:750px; border: 0px solid; font-size: 14px; font-family: 'Open Sans', sans-serif;}
+        .module1_topic1_equation{width:40%; height: 45%}
+        .italic_font{font-family: serif; font-weight: bold; font-size: 14px;}
+        .serif_font{font-family: serif; font-weight: bold;}
+        .center-block {display: block; margin-left: auto; margin-right: auto;}
+        .space_between1{margin-top:10px;}        
+        .dropZone{ border:1px dotted gray; width: 225px; height:60px; padding-top: 9px;  }
+        .droppedAnswer { text-align: center; font-weight: bold; background-color:#e9e9e9;  }
+        .dragWord {width: 225px; height:60px;/*60px*/; background-color:#e9e9e9; text-align: center; font-weight: bold; margin-bottom: 10px;/*15px*/; margin-left: 10px; z-index:100; display: inline-block; padding:20px;}
+        .choice1_space{padding-top: 20px;}
+        .choice2_space{margin-top: -100px;}
+        .hidden_class{display:none;}
+        .border1{border: 1px solid;}
+        .dragWordArea{ border:1px solid lightgray; padding:10px 10px 10px 50px;}
+        /*#fixed_menu2{position:fixed}*/
+
+        #fixed_menu{z-index:100; background-color: white; border: 1px solid lightgray; padding:5px;}
+        .graph{z-index:-1}
+        
+    </style>
+</head>
+<body>
+<div class="container iContent">
+<p><strong>Drag and Drop Matching-Type.</strong> Match the following graphs by matching the correct logarithmic function from the <strong> Logarithmic Functions Box</strong>. Drag and drop your answer on the space provided. You can overwrite your answer by dragging again a logarithmic function.</p>
+    
+    
+<div class="row space_between1" >
+    <div class="col-xs-6">
+        
+        <div class="graph">
+        <p><strong>Graph A:</strong></p>
+            
+         <img style="height:70%; width:70%" src="media/module3_graph_41.jpg"><br>        
+            <div class="dropZone" id="q1item1_drop">               
+            </div>
+            <div class="hidden_class" id="q1item1">`y = log_2 (x+3)`</div>
+        </div>
+        <div class="space_between1">
+        <p><strong>Graph C:</strong></p>    
+        <img style="height:70%; width:70%" src="media/module3_graph_43.jpg">
+        <div class="dropZone" id="q1item3_drop"></div>
+            <div class="hidden_class" id="q1item3">`y = log_(1/2) (-x)`</div> 
+                 
+        </div>
+    </div>
+    
+    <div class="col-xs-6">
+        <div>
+        <p><strong>Graph B:</strong></p>        
+        <img style="height:70%; width:70%" src="media/module3_graph_42.jpg">
+        <div class="dropZone" id="q1item2_drop"></div>
+                <div class="hidden_class" id="q1item2">`y = log_2 x+3`</div> 
+        </div>
+        
+    </div>
+    
+
+</div>     
+ 
+    
+<div class="row space_between1" id="fixed_menu">
+    <p class="text-center"><strong>Logarithmic Functions Box</strong></p>
+    
+        <div class="dragWord" data-match="q1item1c1">`y = log_2 x+3`</div>
+        <div class="dragWord" data-match="q1item1c4">`y = log_(1/2) (-x)`</div>
+    
+    <div class="dragWord" data-match="q1item1c2" >`y = log_2 (x-3)`</div>
+        
+    <div class="dragWord" data-match="q1item1c5">`y = log_2 (x-3)`</div>
+            
+    <div class="dragWord" data-match="q1item1c3" >`y = log_2 (x+3)`</div>    
+</div>        
+    
+ 
+    
+    <div class="col-xs-6 col-xs-offset-4 space_between1">
+    <button class="btn btn-primary" id="submitAnswers">Submit Answers</button>&nbsp;
+    <button class="btn btn-success" id="tryAgain">Try Again</button></div>
+    <br>
+    <br>
+    <br>
+        
+   
+
+
+
+
+
+
+
+
+<br>    
+    
+
+</div>
+
+    
+<script   src="scripts/jquery-2.2.3.min.js"></script>
+<script   src="scripts/jquery-ui.min.js"></script>
+<script src="scripts/jquery.ui.touch-punch.min.js"></script>    
+<script src="scripts/jquery.sticky-kit.min.js"></script>    
+<script src="scripts/js/bootstrap.min.js"></script>    
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
+
+<script>
+$(document).ready(function() {
+    $('.center_item').addClass('center-block');
+    $('#q1item1_incorrect, #q1item1_incorrect2, #q1item1_correct').hide();
+    $('#q1item2_incorrect, #q1item2_incorrect2, #q1item2_correct').hide();
+    $('#q1item3_incorrect, #q1item3_incorrect2, #q1item3_correct').hide();
+    $("#fixed_menu").stick_in_parent();   
+
+
+    $('#fixed_menu').each(function(){
+        // get current ul
+        var $ul = $(this);
+        // get array of list items in current ul
+        var $liArr = $ul.children('.dragWord');
+        // sort array of list items in current ul randomly
+        $liArr.sort(function(a,b){
+            // Get a random number between 0 and 10
+            var temp = parseInt( Math.random()*1000 );
+            // Get 1 or 0, whether temp is odd or even
+            var isOddOrEven = temp%2;
+            // Get +1 or -1, whether temp greater or smaller than 5
+            var isPosOrNeg = temp>5 ? 1 : -1;
+            // Return -1, 0, or +1
+            return( isOddOrEven*isPosOrNeg );
+        })
+        // append list items to ul
+            .appendTo($ul);            
+    }); 
+    
+    
+});
+
+    
+$('.dragWord').draggable({
+        snapMode: "inner", 
+        snap: ".dropZone",
+        cursor:"pointer",
+        helper: "clone"
+        
+    });    
+    
+$('.dropZone').droppable({drop: function (event, ui){    
+                
+       
+            $(this).html(ui.draggable.html()).addClass('droppedAnswer');
+             
+              
+        }                      
+    });
+
+    
+$('#submitAnswers').click(function(){
+    //$('#submitAnswers').prop('disabled',true);
+    
+    var q1 = $('#q1item1').text();
+    var mq1 = $('#q1item1_drop').text();
+    
+    var q2 = $('#q1item2').text();
+    var mq2 = $('#q1item2_drop').text();
+    
+    var q3 = $('#q1item3').text();
+    var mq3 = $('#q1item3_drop').text();
+    
+    var q4 = $('#q1item4').text();
+    var mq4 = $('#q1item4_drop').text();
+    
+    $('.dragWord').draggable('disable');
+    
+    
+    if (q1==mq1)
+        {
+            $('#q1item1_drop').prepend('<span style="font-size:20px; color:green">&#x2714;</span>&nbsp');
+        }
+    else
+        {
+            $('#q1item1_drop').prepend('<span style="font-size:20px; color:red">&#x2718;</span>&nbsp');
+        }
+    
+    if (q2==mq2)
+        {
+            $('#q1item2_drop').prepend('<span style="font-size:20px; color:green">&#x2714;</span>&nbsp');
+        }
+    else
+        {
+            $('#q1item2_drop').prepend('<span style="font-size:20px; color:red">&#x2718;</span>&nbsp');
+        }
+    if (q3==mq3)
+        {
+             $('#q1item3_drop').prepend('<span style="font-size:20px; color:green">&#x2714;</span>&nbsp');
+        }
+    else
+        {
+            $('#q1item3_drop').prepend('<span style="font-size:20px; color:red">&#x2718;</span>&nbsp');
+        }
+    if (q4==mq4)
+        {
+             $('#q1item4_drop').prepend('<span style="font-size:20px; color:green">&#x2714;</span>&nbsp');
+        }
+    else
+        {
+            $('#q1item4_drop').prepend('<span style="font-size:20px; color:red">&#x2718;</span>&nbsp');
+        }
+});    
+
+
+    
+$('#tryAgain').click(function(){
+    
+    location.reload();});
+    
+</script>
+    
+    
+</body>
+</html>
