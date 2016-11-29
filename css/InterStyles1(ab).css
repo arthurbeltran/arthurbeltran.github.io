@@ -17,11 +17,11 @@
     margin: 0px auto 0px auto;
     clear: both;
 }
-.i-image img,
+/*.i-image img,
 .i-image-center img {
     width: 150px;
     height: 154px
-}
+}*/
 /*control width and height of images in PLE, exact dimensions*/
 
 .i-attention {
