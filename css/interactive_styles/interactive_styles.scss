@@ -1,0 +1,189 @@
+$color_interactive_attention_background: #ffefd5;
+$color_interactive_retryButton_background: #228b22;
+$color_interactive_successButton_background: #228b22;
+$color_interactive_errorButton_background: #dc143c;
+$color_interactive_clearButton_background: #dc143c;
+
+$color_interactive_defaultButton_background: #337ab7;
+
+$color_intereactive_defaultfeedbackPanelContent_border: #337ab7;
+$color_intereactive_defaultfeedbackPanelHeader_background: #337ab7;
+$color_intereactive_defaultfeedbackPanelHeader_border: #337ab7;
+
+$color_intereactive_successfeedbackPanelContent_border: #D9EDF7;
+$color_intereactive_successFeedbackPanelHeader_background: #D9EDF7;
+$color_intereactive_successFeedbackPanelHeader_border: #D9EDF7;
+$color_intereactive_successFeedbackPanelHeader_text: #0a68db;
+
+$color_intereactive_errorfeedbackPanelContent_border: #F2DEDE;
+$color_intereactive_errorFeedbackPanelHeader_background: #F2DEDE; 
+$color_intereactive_errorFeedbackPanelHeader_border:#F2DEDE;
+$color_intereactive_errorFeedbackPanelHeader_text:#7c0101;
+
+$color_intereactive_retryfeedbackPanelContent_border: #DFF0D8;
+$color_intereactive_retryFeedbackPanelHeader_background: #DFF0D8; 
+$color_intereactive_retryFeedbackPanelHeader_border: #DFF0D8;
+$color_intereactive_retryFeedbackPanelHeader_text: #247702;
+
+$margin_interactive_contentCenter: 0px auto 0px auto;
+$font_interactive_font_smaller: 12px;
+$font_interactive_font_default: 14px;
+$border_interactive_panel: 1px solid;
+
+
+@mixin odu_i_default_bg_text{
+    background: white;
+    color: black;
+}
+
+
+.odu_i_content_area{
+    margin: $margin_interactive_contentCenter;
+    font-size: $font_interactive_font_default;    
+    min-width: 730px;
+    
+    h4{
+    font-size: $font_interactive_font_default;
+    line-height: 140%;
+    font-weight: 100;    
+    }
+}
+
+.odu_i_row{    
+    margin: $margin_interactive_contentCenter;
+    clear: both;
+}
+
+.odu_i_attention{
+    padding:10px;
+    background: $color_interactive_attention_background;
+}
+
+.odu_i_clear{
+    clear:both;
+}
+
+.odu_i_hidden{
+    display: none;
+}
+
+.odu_i_screen_reader_label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.odu_i_button{
+    font-size: $font_interactive_font_default;    
+    background: $color_interactive_defaultButton_background;
+    border:0px;
+    padding: 8px 18px;
+    margin: 0px 3px 0px 3px;
+    text-align: center;
+    display: inline-block;
+    opacity: 1.90;
+    color: white;
+    filter: alpha(opacity=80);
+    border-radius: 4px;         
+}
+
+
+.odu_i_button_small{
+    @extend .odu_i_button;
+    padding: 6px 12px;
+    margin: 0px 2px;
+    font-size: $font_interactive_font_smaller;
+}
+
+
+.odu_i_button_error{
+    @extend .odu_i_button;
+    background: $color_interactive_errorButton_background;     
+}
+
+.odu_i_button_retry{
+    @extend .odu_i_button;
+    background: $color_interactive_retryButton_background;     
+}
+
+
+.odu_i_button:hover {
+    background: $color_interactive_defaultButton_background;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;    
+}
+
+.odu_i_button_retry:hover {
+	@extend .odu_i_button:hover ;
+    background: $color_interactive_retryButton_background;     
+}
+
+.odu_i_button_error:hover {
+	@extend .odu_i_button:hover ;
+    background: $color_interactive_errorButton_background;     
+}
+
+.odu_i_panel, .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {
+    margin:10px auto;
+}
+
+.odu_i_panel_header{
+    background: $color_intereactive_defaultfeedbackPanelHeader_background;
+    padding:10px;
+    color: white;
+    border-radius: 4px 4px 0px 0px;
+    border:$border_interactive_panel $color_intereactive_defaultfeedbackPanelContent_border;
+}
+
+.odu_i_panel_content{
+    @extend .odu_i_panel_header;
+    @include odu_i_default_bg_text;
+    border-top: 0px;
+    border-radius: 0px 0px 4px 4px;    
+}
+
+.odu_i_panel_success{
+    .odu_i_panel_header{
+        background: $color_intereactive_successFeedbackPanelHeader_background;
+        border: $border_interactive_panel $color_intereactive_successFeedbackPanelHeader_border;
+        color: $color_intereactive_successFeedbackPanelHeader_text;
+    }
+    
+    .odu_i_panel_content{
+        border: $border_interactive_panel $color_intereactive_successfeedbackPanelContent_border;
+        @include odu_i_default_bg_text;
+        
+    }
+}
+
+.odu_i_panel_error{
+    .odu_i_panel_header{
+        background: $color_intereactive_errorFeedbackPanelHeader_background;
+        border: $border_interactive_panel $color_intereactive_errorFeedbackPanelHeader_border;
+        color: $color_intereactive_errorFeedbackPanelHeader_text;
+    }
+    
+    .odu_i_panel_content{
+        border: $border_interactive_panel $color_intereactive_errorfeedbackPanelContent_border;
+        @include odu_i_default_bg_text;
+        
+    }
+}
+
+.odu_i_panel_retry{
+    .odu_i_panel_header{
+        background: $color_intereactive_retryFeedbackPanelHeader_background;
+        border: $border_interactive_panel $color_intereactive_retryFeedbackPanelHeader_border;
+        color: $color_intereactive_retryFeedbackPanelHeader_text;
+    }
+    
+    .odu_i_panel_content{
+        border: $border_interactive_panel $color_intereactive_retryfeedbackPanelContent_border;
+        @include odu_i_default_bg_text;
+        
+    }
+}
+
