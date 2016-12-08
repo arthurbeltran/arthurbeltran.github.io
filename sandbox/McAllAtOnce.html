@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" async  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/arthurbeltran/arthurbeltran.github.io/master/css/interactive_styles/interactive_styles.css">
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/arthurbeltran/arthurbeltran.github.io/master/css/interactive_styles/interactive_styles.css">
     
     
     
@@ -19,40 +19,45 @@
 /*add custom styles here*/
 /*multiple-choice*/
 .odu_i_mc{padding:10px;}
-.odu_i_mc .odu_i_panel_success, .odu_i_mc .odu_i_panel_error, .odu_i_mc .odu_i_panel_retry {margin-left: 0px; width: 500px;}    
+.odu_i_mc .odu_i_panel_success, .odu_i_mc .odu_i_panel_error, .odu_i_mc .odu_i_panel_retry {margin-left: 0px; width: 80%;}    
 .odu_i_mc fieldset, .odu_i_mc legend {margin:0px 0px 10px 0px; padding:0px; border:none 0px; font-size:14px;}
 .odu_i_mc_item {margin-left:10px; clear: both;}
 .odu_i_mark_area, .odu_i_mc_item input[type=radio], .odu_i_mc_item label  {float:left; cursor: pointer;}
-    .odu_i_mark_area {width:15px;}    
-.odu_i_mc_item label {width:80%; max-width: 700px;}
+.odu_i_mark_area {width:15px;}    
+.odu_i_mc_item label {width:80%;}
 .odu_i_add_margin_bottom{margin-bottom:10px;} 
 .odu_i_mc_key{font-weight: bold;}
-.odu_i_mc_item{background: whitesmoke; padding:10px; margin-bottom: 10px; border:1px solid lightgray;}     
+.odu_i_mc_item{background: whitesmoke; padding:10px; margin-bottom: 10px; border:1px solid lightgray;}
+.odu_i_display_score{display: none;}    
+.odu_i_score{color:forestgreen; font-weight: bold;}
+.odu_i_score_total{font-weight: bold;}    
 </style>
 
     
 <div class="odu_i_content_area"><!--start of interactive activity-->
 <h4><strong>Multiple-Choice.</strong> Select the best answer to the following multiple choice questions.</h4>
-<ul class="odu_i_directions">    
-    <li>Click the <strong>Check Answer</strong> button to verify your answer.</li>
+<ul class="odu_i_directions">        
     <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with a X mark (<span style="color:red">✘</span>).</li>    
 </ul>
+
+    
+<p class="odu_i_attention odu_i_display_score">Score: <span class="odu_i_score"></span> / <span class="odu_i_score_total"></span></p><!--remove if not needed-->    
     
 <div class="odu_i_mc">
     
 <div class="odu_i_mc_item" id="odu_i_item_1"><!--start item 1-->    
 <fieldset>
 <legend>Multple-choice question.</legend><!--question-->
-<input type="radio" class="choice1" data-value="correct" >    
-<label>A. Corect choice</label>
+<input type="radio" data-value="" >    
+<label>A. Corect choiceCorect choiceCorect choiceCorect choiceCorect choiceCorect choice</label>
     
-<input type="radio"  class="choice2" data-value="">    
+<input type="radio" data-value="correct">    
 <label>B. The sentence for a choice.</label>
 
-<input type="radio"  class="choice3" data-value="">    
+<input type="radio" data-value="">    
 <label>C. The sentence for a choice.</label>
 
-<input type="radio"  class="choice4" data-value="">    
+<input type="radio" data-value="">    
 <label>D. The sentence for a choice.</label>    
     
 </fieldset>   
@@ -61,16 +66,16 @@
 <div class="odu_i_mc_item" id="odu_i_item_2">  
 <fieldset>
 <legend>Multple-choice question.</legend>
-<input type="radio" class="choice1" data-value="" >    
+<input type="radio" data-value="" >    
 <label>A. The sentence for a choice.</label>
     
-<input type="radio"  class="choice2" data-value="correct">    
+<input type="radio" data-value="correct">    
 <label>B. Correct choice.</label>
 
-<input type="radio"  class="choice3" data-value="">    
+<input type="radio" data-value="">    
 <label>C. The sentence for a choice.</label>
 
-<input type="radio"  class="choice4" data-value="">    
+<input type="radio" data-value="">    
 <label>D. The sentence for a choice.</label>    
     
 </fieldset>
@@ -79,7 +84,7 @@
  
 </div><!--end of mc-->
     
-<div class="odu_i_row" style="text-align:center"><button class="odu_i_button odu_i_submit">Check Answer</button></div>    
+<div class="odu_i_row" style="text-align:center"><button class="odu_i_button odu_i_submit">Submit Answers</button></div>    
 </div><!--end of interactive activity-->
     
    
@@ -88,88 +93,81 @@
     
 <script>
 //add custom scripts here
+var odu_i_totalItems =$('.odu_i_mc_item').length;//global variable, total number of items
     
-var odu_i_looper_totalItems = 1;//initializer variable for total items
-var odu_i_looper_totalChoices = 1;//initializer variable for total choices for each item (mc)
-var odu_i_array_totalChoices = [];//array to hold the odu_i_looper_totalChoices//    
-var odu_i_totalItems =$('.odu_i_mc_item').length;//total number of items
-var odu_i_totalChoices = 6;// total choices for each item (mc), contact arthur(aabeltra@odu.edu) for 6+ choices    
-var odu_i_get_mc_number = [];//get the id of the item
-var odu_i_store_panel = [];
-var odu_i_get_item_answer = [];    
-
-    
-    
-$(document).ready(function(){
+$(document).ready(function(){//start of document ready
+$('.odu_i_content_area').css('width','70%');    
 $('label').after('<div class="odu_i_clear odu_i_add_margin_bottom"></div>');//add clear and margin bottom
 $('input').before('<div class="odu_i_mark_area">&nbsp;</div>');//add the check or x area
-$('input[type=radio]').removeAttr('disabled');
-$('input[type=radio]').removeAttr('checked');
-//labelling the choices for mc // 
-    
-    
-    
-do{//label the items
-odu_i_get_mc_number[odu_i_looper_totalItems] = $('#odu_i_item_'+odu_i_looper_totalItems).attr('id').substr($('#odu_i_item_'+odu_i_looper_totalItems).attr('id').length - 1);    
-$('#odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]+' legend').prepend(odu_i_get_mc_number[odu_i_looper_totalItems]+'. ');   
-do{//label the choices
-if (odu_i_looper_totalChoices<=odu_i_totalChoices){        $('#odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]).find('.choice'+odu_i_looper_totalChoices).attr('id','odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]+'_choice'+odu_i_looper_totalChoices);//add a specific id to the choice    
-    $('#odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]).find('.choice'+odu_i_looper_totalChoices).next('label').attr('for','odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]+'_choice'+odu_i_looper_totalChoices); //add name to the corresponding <label> of the choice    
-    $('#odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]).find('.choice'+odu_i_looper_totalChoices).attr('name','odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]);//add a name to the choice
-    $('#odu_i_item_'+odu_i_get_mc_number[odu_i_looper_totalItems]).find('.choice'+odu_i_looper_totalChoices).attr('autocomplete','off');//add the autocomplete=off to the choice, firefox bug      
-}
-else{
-    odu_i_looper_totalChoices =0;
-}    
-    
-++odu_i_looper_totalChoices; 
-}while(odu_i_looper_totalChoices<=odu_i_totalChoices);//end of label the choices     
-++odu_i_looper_totalItems;    
-}while(odu_i_looper_totalItems<=odu_i_totalItems);//end of label the items      
+$('input[type=radio]').removeAttr('disabled');//enable radio buttons
+$('input[type=radio]').removeAttr('checked');//remove selected state of the radio buttons
+$('.odu_i_score_total').text(odu_i_totalItems);//total score area    
+
+
+$('.odu_i_mc_item').each(function(){//labelling the choices for mc // 
+odu_i_get_mc_id = $(this).attr('id');//get the id of the item    
+odu_i_get_mc_id_for_numbering = odu_i_get_mc_id.substring(11);//get the number at the end of the id for numbering purposes
+$(this).find('legend').prepend(odu_i_get_mc_id_for_numbering+'. ');    
+odu_i_mc_index=1;//number used for looping    
+    $(this).find('input[type=radio]').each(function(){//labelling for item choices    
+        $(this).attr('id',odu_i_get_mc_id+'_choice'+odu_i_mc_index++);//label the choice with an id
+        $(this).attr('name',odu_i_get_mc_id);//label the choice with a name
+        odu_i_mc_get_choice_value = $(this).next('label').text();//get the label text, choice text
+        $(this).attr('value',odu_i_mc_get_choice_value);//label the value of the choice
+        odu_i_mc_get_label_for = $(this).attr('id');//get the choice id
+       $(this).next('label').attr('for',odu_i_mc_get_label_for);//label the 'for' of the <label>
+    });//end of labelling for item choices   
+});//end of labelling        
  
 });//end of document ready
     
     
 $('.odu_i_submit').click(function(){//start of odu_i_submit
-$(this).hide();
-$(this).parent('.odu_i_row').show().append('<div class="odu_i_button_retry odu_i_retry">Start Over</div>');
-$('input[type=radio], label').css('cursor','not-allowed');    
-$('input[type=radio]').prop('disabled',true);
+$(this).hide();//hide submit button
+$(this).parent('.odu_i_row').show().append('<div class="odu_i_button_retry odu_i_retry">Start Over</div>');//show Start Over button
+$('input[type=radio], label').css('cursor','not-allowed');//disable radio buttons    
+$('input[type=radio]').prop('disabled',true);//disable radio buttons  
     
 $('.odu_i_mc_item').each(function(){// start of evaluation
 
-odu_i_this_id = $(this).attr('id');
-odu_i_answer = $(this).find('input[type=radio]:checked').next('label').text();
-odu_i_correct = $(this).find('input[data-value="correct"]').next('label').text();
-
-if(odu_i_answer==odu_i_correct){
+odu_i_this_id = $(this).attr('id');//get item id
+odu_i_answer = $(this).find('input[type=radio]:checked').next('label').text();//get the label text of the selected choice
+odu_i_correct = $(this).find('input[data-value="correct"]').next('label').text();//get the label text of the correct choice
+if(odu_i_answer==odu_i_correct){//if the selected answer is correct
 
 odu_i_store_panel = '<div class="odu_i_panel_success odu_i_mc_panel_margin i-mc-panel-correct"> \
                                               <div class="odu_i_panel_header"><strong>Feedback</strong></div> \
                                               <div class="odu_i_panel_content"> \
-                                              <p>The selected is correct!</p></div></div>';
-odu_i_remark = '<span style="color:forestgreen">&#x2714;</span>'    
-}    
-else{
+                                              <p>The selected choice: <strong>'+odu_i_correct+'</strong> is correct!</p></div></div>';
+odu_i_remark = '<span  class="odu_i_c" style="color:forestgreen">&#x2714;</span>'
+
+}//end if the selected answer is correct    
+else{//if the selected anwer is incorrect
 odu_i_store_panel = '<div class="odu_i_panel_error odu_i_mc_panel_margin i-mc-panel-correct"> \
                                               <div class="odu_i_panel_header"><strong>Feedback</strong></div> \
                                               <div class="odu_i_panel_content"> \
-                                              <p>The selected is incorrect!</p></div></div>'; 
-odu_i_remark = '<span style="color:crimson">&#x2718;</span>'        
-}    
-$(this).hide().append(odu_i_store_panel).fadeIn();
-$(this).find('input[type=radio]:checked').prev('.odu_i_mark_area').append(odu_i_remark);    
+                                              <p>The selected choice is incorrect.<br> The correct choice is: <strong>'+odu_i_correct+'</strong></p></div></div>'; 
+odu_i_remark = '<span  class="odu_i_x" style="color:crimson">&#x2718;</span>'        
+}//end of if the selected anwer is incorrect
+    
+$(this).hide().append(odu_i_store_panel).fadeIn();//display the panel either correct/incorrect
+$(this).find('input[type=radio]:checked').prev('.odu_i_mark_area').append(odu_i_remark);//display the mark if check or x
+var odu_i_total_correct =$('.odu_i_c').length;//total number of correct items
+$('.odu_i_score').text(odu_i_total_correct);//display the score
+$('.odu_i_display_score').fadeIn();//display the score    
 });//end of evaluation
 
     
-$('.odu_i_retry').click(function(){
-$(this).hide();
-$('.odu_i_submit').fadeIn();    
-$('input[type=radio], label').css('cursor','pointer');    
-$('input[type=radio]').removeAttr('disabled');
-$('input[type=radio]').removeAttr('checked');
-$('.odu_i_mark_area').find('span').remove();
-$('.odu_i_panel_error, .odu_i_panel_success').hide().remove();    
+$('.odu_i_retry').click(function(){//start over
+$(this).hide();//hide start over button
+$('.odu_i_submit').fadeIn();//show submit button    
+$('input[type=radio], label').css('cursor','pointer');//enable radio buttons    
+$('input[type=radio]').removeAttr('disabled');//enable radio buttons
+$('input[type=radio]').removeAttr('checked');//remove selected state
+$('.odu_i_mark_area').find('span').remove();//remove check or x
+$('.odu_i_panel_error, .odu_i_panel_success').hide().remove();//hide panels
+$('.odu_i_score').text(0);//remove score, reset to 0
+$('.odu_i_display_score').fadeOut();//hide score area        
 });      
     
     
