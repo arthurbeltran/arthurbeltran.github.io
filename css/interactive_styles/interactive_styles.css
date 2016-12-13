@@ -145,6 +145,9 @@
   margin-bottom: 10px;
   border: 1px solid #D3D3D3; }
 
+.odu_i_mc_all {
+  display: block; }
+
 .odu_i_display_score, .odu_i_start_over {
   display: none; }
 
