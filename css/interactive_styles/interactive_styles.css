@@ -123,7 +123,7 @@
   margin-left: 10px;
   clear: both; }
 
-.odu_i_mark_area, .odu_i_mc_item input[type=radio], .odu_i_mc_item label {
+.odu_i_mark_area, .odu_i_mc_item input[type=radio], .odu_i_mc_item input[type=checkbox], .odu_i_mc_item label {
   float: left;
   cursor: pointer; }
 
