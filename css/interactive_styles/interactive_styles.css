@@ -140,7 +140,7 @@
   float: left;
   cursor: pointer; }
 
-.odu_i_mc_item label {
+.odu_i_mc_item label, .odu_i_cb_item label {
   width: 80%; }
 
 .odu_i_add_margin_bottom {
