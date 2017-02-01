@@ -38,19 +38,19 @@ $border_interactive_panel: 1px solid;
 
 $color_interactive_mcItemBackground: #f5f5f5;
 $color_interactive_mcItemBorder:#D3D3D3;
-
-
+$almostBlack: #000000;
+$white: #ffffff;
 
 @mixin odu_i_default_bg_text{
-    background: white;
-    color: black;
+    background: $white;
+    color: $almostBlack;
 }
 
-
+.odu_i_stuff{}
 .odu_i_content_area{
     margin: $margin_interactive_contentCenter;
     font-size: $font_interactive_font_default;    
-    
+    min-width: 730px;
     
     h4{
     font-size: $font_interactive_font_default;
