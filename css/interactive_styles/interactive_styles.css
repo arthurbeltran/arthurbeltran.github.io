@@ -1,6 +1,7 @@
 .odu_i_content_area {
   margin: 0px auto 0px auto;
-  font-size: 14px; }
+  font-size: 14px;
+  min-width: 730px; }
   .odu_i_content_area h4 {
     font-size: 14px;
     line-height: 140%;
@@ -74,8 +75,8 @@
   border: 1px solid #337ab7; }
 
 .odu_i_panel_content {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
   border-top: 0px;
   border-radius: 0px 0px 4px 4px; }
 
@@ -85,8 +86,8 @@
   color: #0a68db; }
 .odu_i_panel_success .odu_i_panel_content {
   border: 1px solid #D9EDF7;
-  background: white;
-  color: black; }
+  background: #ffffff;
+  color: #000000; }
 
 .odu_i_panel_error .odu_i_panel_header, .odu_i_panel_error .odu_i_panel_content {
   background: #F2DEDE;
@@ -94,8 +95,8 @@
   color: #7c0101; }
 .odu_i_panel_error .odu_i_panel_content {
   border: 1px solid #F2DEDE;
-  background: white;
-  color: black; }
+  background: #ffffff;
+  color: #000000; }
 
 .odu_i_panel_retry .odu_i_panel_header, .odu_i_panel_retry .odu_i_panel_content {
   background: #DFF0D8;
@@ -103,8 +104,8 @@
   color: #247702; }
 .odu_i_panel_retry .odu_i_panel_content {
   border: 1px solid #DFF0D8;
-  background: white;
-  color: black; }
+  background: #ffffff;
+  color: #000000; }
 
 .odu_i_display_block {
   display: block; }
