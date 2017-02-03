@@ -212,7 +212,8 @@ $white: #ffffff;
         margin: 0%;
 	 }
     
-    fieldset, legend{    
+    fieldset, legend{
+         margin-left: 0px;
 		margin-bottom: 10px;
 		padding: 0px;
 		border: none 0px; /*remove the border of fieldset*/
@@ -242,6 +243,7 @@ $white: #ffffff;
 .odu_i_mc_item, .odu_i_cb_item {
 	background: $color_interactive_mcItemBackground;
 	padding: 10px;
+   
 	margin-bottom: 10px;
 	border: $border_interactive_panel $color_interactive_mcItemBorder;
  }
@@ -257,7 +259,12 @@ $white: #ffffff;
 	font-weight: bold;
 }
  
-
+.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
+  vertical-align: bottom;
+  position: relative;
+  top: 4px;
+  *overflow: hidden;
+}
  
  
  
