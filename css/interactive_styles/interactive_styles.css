@@ -127,9 +127,9 @@
 
 /*global, margin-bottom*/
 /*multiple-choice styles*/
-.odu_i_mc_item .odu_i_panel_success, .odu_i_mc_item .odu_i_panel_error, .odu_i_mc_item .odu_i_panel_retry, .odu_i_cb_item .odu_i_panel_success, .odu_i_cb_item .odu_i_panel_error, .odu_i_cb_item .odu_i_panel_retry {
+.odu_i_mc .odu_i_panel_success, .odu_i_mc .odu_i_panel_error, .odu_i_mc .odu_i_panel_retry, .odu_i_cb .odu_i_panel_success, .odu_i_cb .odu_i_panel_error, .odu_i_cb .odu_i_panel_retry, .odu_i_mc_item .odu_i_panel_success, .odu_i_mc_item .odu_i_panel_error, .odu_i_mc_item .odu_i_panel_retry, .odu_i_cb_item .odu_i_panel_success, .odu_i_cb_item .odu_i_panel_error, .odu_i_cb_item .odu_i_panel_retry {
   margin: 0%; }
-.odu_i_mc_item fieldset, .odu_i_mc_item legend, .odu_i_cb_item fieldset, .odu_i_cb_item legend {
+.odu_i_mc fieldset, .odu_i_mc legend, .odu_i_cb fieldset, .odu_i_cb legend, .odu_i_mc_item fieldset, .odu_i_mc_item legend, .odu_i_cb_item fieldset, .odu_i_cb_item legend {
   margin-left: 0px;
   margin-bottom: 10px;
   padding: 0px;

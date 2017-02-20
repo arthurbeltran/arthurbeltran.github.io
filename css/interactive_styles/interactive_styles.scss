@@ -209,7 +209,7 @@ $white: #ffffff;
 .odu_i_add_margin_bottom {margin-bottom: 10px;}/*global, margin-bottom*/
 
 /*multiple-choice styles*/
-.odu_i_mc_item, .odu_i_cb_item { 
+.odu_i_mc, .odu_i_cb, .odu_i_mc_item, .odu_i_cb_item  { 
     .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {				
         margin: 0%;
 	 }
