@@ -122,10 +122,14 @@
   margin-bottom: 10px; }
 
 /*global, margin-bottom*/
+.odu_i_add_margin_bottom {
+  margin-bottom: 10px; }
+
+/*global, margin-bottom*/
 /*multiple-choice styles*/
-.odu_i_mc .odu_i_panel_success, .odu_i_mc .odu_i_panel_error, .odu_i_mc .odu_i_panel_retry, .odu_i_cb .odu_i_panel_success, .odu_i_cb .odu_i_panel_error, .odu_i_cb .odu_i_panel_retry {
+.odu_i_mc_item .odu_i_panel_success, .odu_i_mc_item .odu_i_panel_error, .odu_i_mc_item .odu_i_panel_retry, .odu_i_cb_item .odu_i_panel_success, .odu_i_cb_item .odu_i_panel_error, .odu_i_cb_item .odu_i_panel_retry {
   margin: 0%; }
-.odu_i_mc fieldset, .odu_i_mc legend, .odu_i_cb fieldset, .odu_i_cb legend {
+.odu_i_mc_item fieldset, .odu_i_mc_item legend, .odu_i_cb_item fieldset, .odu_i_cb_item legend {
   margin-left: 0px;
   margin-bottom: 10px;
   padding: 0px;
@@ -137,6 +141,12 @@
   margin-left: 10px;
   clear: both; }
 
+.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
+  vertical-align: bottom;
+  position: relative;
+  top: 4px;
+  *overflow: hidden; }
+
 .odu_i_mark_area, .odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox], .odu_i_mc_item label, .odu_i_mc_item input[type=checkbox] {
   float: left;
   cursor: pointer; }
@@ -144,10 +154,6 @@
 .odu_i_mc_item label, .odu_i_cb_item label {
   width: 80%; }
 
-.odu_i_add_margin_bottom {
-  margin-bottom: 10px; }
-
-/*global, margin-bottom*/
 .odu_i_mc_key, .odu_i_score_total {
   font-weight: bold; }
 
@@ -166,11 +172,5 @@
 .odu_i_score {
   color: forestgreen;
   font-weight: bold; }
-
-.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
-  vertical-align: bottom;
-  position: relative;
-  top: 4px;
-  *overflow: hidden; }
 
 /*# sourceMappingURL=interactive_styles.css.map */
