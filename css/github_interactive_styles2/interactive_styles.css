@@ -1,3 +1,6 @@
+/*add*/
+/*add*/
+/*add*/
 .odu_i_content_area {
   margin: 0px auto 0px auto;
   font-size: 14px; }
@@ -37,7 +40,7 @@
   text-align: center;
   display: inline-block;
   opacity: 1.90;
-  color: white;
+  color: #ffffff;
   filter: alpha(opacity=80);
   border-radius: 4px; }
 
@@ -69,7 +72,7 @@
 .odu_i_panel_header, .odu_i_panel_content {
   background: #337ab7;
   padding: 10px;
-  color: white;
+  color: #ffffff;
   border-radius: 4px 4px 0px 0px;
   border: 1px solid #337ab7; }
 
@@ -106,27 +109,76 @@
   background: #ffffff;
   color: #000000; }
 
+.odu_i_validate {
+  background: #F0FFFF;
+  border: 1px solid #286171;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 5px 0px;
+  color: #286171;
+  font-weight: bold; }
+
+.odu_i_circle {
+  border: 2px solid #286171;
+  border-radius: 20px;
+  padding: 0px 7px;
+  font-size: 12px; }
+
 .odu_i_display_block {
   display: block; }
 
-/*global, display-block*/
 .odu_i_display_none {
   display: none; }
 
-/*global, display-none*/
 .odu_i_mark_area {
   width: 15px; }
 
-/* global, check or x area*/
-.odu_i_margin_bottom {
+.odu_i_margin_bottom, .odu_i_add_margin_bottom {
   margin-bottom: 10px; }
 
-/*global, margin-bottom*/
-.odu_i_add_margin_bottom {
+.odu_i_column {
+  float: left; }
+
+.odu_i_column .column_title {
+  text-align: center;
+  font-weight: bold; }
+
+.odu_i_instructions {
+  background: #F0F8FF;
+  padding: 0px 10px;
+  border: 1px solid #337ab7;
   margin-bottom: 10px; }
 
-/*global, margin-bottom*/
-/*multiple-choice styles*/
+.odu_i_instructions h4 {
+  color: #337ab7;
+  padding: 0px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  border-bottom: 1px dotted;
+  font-size: 16px; }
+
+.odu_i_instructions ul {
+  padding-left: 25px; }
+
+.odu_i_special_box {
+  border: 1px solid #D3D3D3;
+  padding: 10px;
+  margin: 0px auto; }
+
+.odu_i_special_indent5 {
+  margin-left: 5%; }
+
+.odu_i_bold_centered {
+  font-weight: bold;
+  text-align: center; }
+
+.odu_i_text_center {
+  text-align: center; }
+
+/*_mc(radio button), _cb(checkbox), _fi(type-in), _drop (dropdown), _dr(drag and drop)*/
+.odu_i_content_area label {
+  font-weight: 100 !important; }
+
 .odu_i_mc .odu_i_panel_success, .odu_i_mc .odu_i_panel_error, .odu_i_mc .odu_i_panel_retry, .odu_i_cb .odu_i_panel_success, .odu_i_cb .odu_i_panel_error, .odu_i_cb .odu_i_panel_retry, .odu_i_mc_item .odu_i_panel_success, .odu_i_mc_item .odu_i_panel_error, .odu_i_mc_item .odu_i_panel_retry, .odu_i_cb_item .odu_i_panel_success, .odu_i_cb_item .odu_i_panel_error, .odu_i_cb_item .odu_i_panel_retry {
   margin: 0%; }
 .odu_i_mc fieldset, .odu_i_mc legend, .odu_i_cb fieldset, .odu_i_cb legend, .odu_i_mc_item fieldset, .odu_i_mc_item legend, .odu_i_cb_item fieldset, .odu_i_cb_item legend {
@@ -138,16 +190,16 @@
   font-size: 14px; }
 
 .odu_i_mc_item, .odu_i_cb_item {
-  margin-left: 10px;
   clear: both; }
 
 .odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
-  vertical-align: bottom;
-  position: relative;
-  top: 4px;
-  *overflow: hidden; }
+  margin-right: 3px; }
 
-.odu_i_mark_area, .odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox], .odu_i_mc_item label, .odu_i_mc_item input[type=checkbox] {
+.odu_i_mark_area,
+.odu_i_mc_item input[type=radio],
+.odu_i_cb_item input[type=checkbox],
+.odu_i_mc_item label,
+.odu_i_mc_item input[type=checkbox] {
   float: left;
   cursor: pointer; }
 
@@ -157,7 +209,7 @@
 .odu_i_mc_key, .odu_i_score_total {
   font-weight: bold; }
 
-.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item {
+.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item, .odu_i_fi_item_n_items {
   background: #f5f5f5;
   padding: 10px;
   margin-bottom: 10px;
@@ -166,11 +218,96 @@
 .odu_i_mc_all, .odu_i_cb_all {
   display: block; }
 
-.odu_i_display_score, .odu_i_start_over {
+.odu_i_display_score,
+.odu_i_start_over,
+.odu_i_fi_A,
+.odu_i_fi_explanation,
+.odu_i_drop_item_question,
+.odu_i_drop_item_a,
+.odu_i_drop_explanation,
+.odu_i_mc_explanation,
+.odu_i_cb_explanation {
   display: none; }
 
 .odu_i_score {
-  color: forestgreen;
+  color: #228b22;
   font-weight: bold; }
+
+.odu_i_fi_item {
+  margin-top: 10px; }
+
+.odu_i_fi_item label {
+  padding-bottom: 10px; }
+
+.odu_i_fi_item input[type=text] {
+  width: 85%;
+  padding: 5px;
+  float: left;
+  margin: 0px 5px 0px 0px; }
+
+.odu_i_fi_item .odu_i_mark_area {
+  margin-right: 2px;
+  display: none;
+  float: left;
+  margin-top: 5px; }
+
+.odu_i_drop_columns {
+  margin: 10px auto;
+  background: #f5f5f5;
+  border: 1px solid #D3D3D3;
+  padding: 5px; }
+
+.odu_i_drop_item label {
+  float: left;
+  max-width: 70%;
+  padding: 0px 5px; }
+
+.odu_i_drop_item select {
+  float: left;
+  margin: 0px 2px; }
+
+.odu_i_drop_choices_list {
+  list-style: none; }
+
+.odu_i_drop_main_question {
+  padding: 5px; }
+
+/*dr=drag and drop*/
+.odu_i_dr_drop_A {
+  display: none; }
+
+.odu_i_dr_drag_area div {
+  margin: 10px auto; }
+
+.odu_i_dr_mark_area {
+  margin: 2px;
+  display: none; }
+
+.odu_i_dr_mark_area,
+.odu_i_dr_drop {
+  float: left; }
+
+.odu_i_dr_incorrect,
+.odu_i_dr_correct {
+  display: none; }
+
+.odu_i_dr_incorrect {
+  color: #990000;
+  float: left;
+  width: 10px;
+  font-weight: bold; }
+
+.odu_i_dr_correct {
+  color: #228b22;
+  float: left;
+  width: 10px;
+  font-weight: bold; }
+
+.odu_i_dr_drop_wrapper {
+  margin-top: 10px;
+  width: 220px; }
+
+.odu_i_dr_answer_column_name {
+  display: none; }
 
 /*# sourceMappingURL=interactive_styles.css.map */

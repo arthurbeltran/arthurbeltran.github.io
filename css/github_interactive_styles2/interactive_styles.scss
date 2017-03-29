@@ -36,17 +36,22 @@ $font_interactive_font_default: 14px;
 $border_interactive_panel: 1px solid;
 
 
-$color_interactive_mcItemBackground: #f5f5f5;
+$color_interactive_mcItemBackground:#f5f5f5;
 $color_interactive_mcItemBorder:#D3D3D3;
 $almostBlack: #000000;
 $white: #ffffff;
+
+
+$color_interactive_ItemValidationBackground:#F0FFFF;/*add*/
+$color_interactive_ItemValidationBorder:#286171;/*add*/
+$color_interactive_DirectionBackground:#F0F8FF;/*add*/
 
 @mixin odu_i_default_bg_text{
     background: $white;
     color: $almostBlack;
 }
 
-.odu_i_stuff{}
+
 .odu_i_content_area{
     margin: $margin_interactive_contentCenter;
     font-size: $font_interactive_font_default;    
@@ -95,7 +100,7 @@ $white: #ffffff;
     text-align: center;
     display: inline-block;
     opacity: 1.90;
-    color: white;
+    color: $white;
     filter: alpha(opacity=80);
     border-radius: 4px;         
 }
@@ -143,7 +148,7 @@ $white: #ffffff;
 .odu_i_panel_header{
     background: $color_intereactive_defaultfeedbackPanelHeader_background;
     padding:10px;
-    color: white;
+    color: $white;
     border-radius: 4px 4px 0px 0px;
     border:$border_interactive_panel $color_intereactive_defaultfeedbackPanelContent_border;
 }
@@ -198,17 +203,97 @@ $white: #ffffff;
 }
 
 
-.odu_i_display_block{display: block}/*global, display-block*/
+.odu_i_validate{
+    background:$color_interactive_ItemValidationBackground; 
+    border:1px solid $color_interactive_ItemValidationBorder; 
+    padding:10px; 
+    border-radius:4px;
+    margin:5px 0px; 
+    color:$color_interactive_ItemValidationBorder; 
+    font-weight: bold;
+}  
 
-.odu_i_display_none{display: none}/*global, display-none*/
 
-.odu_i_mark_area {width: 15px;}/* global, check or x area*/
+.odu_i_circle{
+    border:2px solid $color_interactive_ItemValidationBorder;
+    border-radius:20px; 
+    padding:0px 7px; 
+    font-size:12px;
+} 
 
-.odu_i_margin_bottom {margin-bottom: 10px;}/*global, margin-bottom*/
 
-.odu_i_add_margin_bottom {margin-bottom: 10px;}/*global, margin-bottom*/
+.odu_i_display_block{
+    display: block
+}
 
-/*multiple-choice styles*/
+.odu_i_display_none{
+    display: none
+}
+
+.odu_i_mark_area {
+    width: 15px;
+}
+
+.odu_i_margin_bottom, .odu_i_add_margin_bottom {
+    margin-bottom: 10px;
+}
+
+.odu_i_column{
+    float:left;
+}
+
+.odu_i_column .column_title {
+    text-align: center; 
+    font-weight: bold;
+}
+
+
+.odu_i_instructions{
+    background:$color_interactive_DirectionBackground;
+    padding:0px 10px; border:1px solid $color_intereactive_defaultfeedbackPanelContent_border; 
+    margin-bottom: 10px;}
+
+.odu_i_instructions h4{
+    color:$color_intereactive_defaultfeedbackPanelContent_border; 
+    padding:0px; 
+    letter-spacing:-1px; 
+    font-weight:bold; 
+    border-bottom:1px dotted;
+    font-size:16px;
+}
+
+.odu_i_instructions ul {
+    padding-left: 25px;
+}  
+
+.odu_i_special_box{
+    border: 1px solid $color_interactive_mcItemBorder;
+    padding:10px;
+    margin: 0px auto;    
+    }  
+
+.odu_i_special_indent5{
+    margin-left:5%;
+}
+
+.odu_i_bold_centered {
+    font-weight: bold;
+    text-align: center;
+}
+
+.odu_i_text_center{
+    text-align: center;
+}
+
+
+
+/*_mc(radio button), _cb(checkbox), _fi(type-in), _drop (dropdown), _dr(drag and drop)*/
+
+
+.odu_i_content_area label{
+	font-weight: 100 !important;
+}
+
 .odu_i_mc, .odu_i_cb, .odu_i_mc_item, .odu_i_cb_item  { 
     .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {				
         margin: 0%;
@@ -224,21 +309,21 @@ $white: #ffffff;
 }
 
  
-.odu_i_mc_item, .odu_i_cb_item  {
-	margin-left: 10px;
+.odu_i_mc_item, .odu_i_cb_item  {	
 	clear: both;	
  }
  
 
 .odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
-  vertical-align: bottom;
-  position: relative;
-  top: 4px;
-  *overflow: hidden;
+  margin-right:3px;
 }
 
 
-.odu_i_mark_area, .odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox], .odu_i_mc_item label, .odu_i_mc_item input[type=checkbox] {
+.odu_i_mark_area, 
+.odu_i_mc_item input[type=radio], 
+.odu_i_cb_item input[type=checkbox], 
+.odu_i_mc_item label, 
+.odu_i_mc_item input[type=checkbox] {
 	float: left;
 	cursor: pointer;
 }
@@ -253,10 +338,9 @@ $white: #ffffff;
     font-weight: bold;
 }
  
-.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item {
+.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item, .odu_i_fi_item_n_items {
 	background: $color_interactive_mcItemBackground;
-	padding: 10px;
-   
+	padding: 10px;   
 	margin-bottom: 10px;
 	border: $border_interactive_panel $color_interactive_mcItemBorder;
  }
@@ -266,22 +350,109 @@ $white: #ffffff;
     display:block
 }
 
-.odu_i_display_score, .odu_i_start_over {
+.odu_i_display_score, 
+.odu_i_start_over,
+.odu_i_fi_A, 
+.odu_i_fi_explanation, 
+.odu_i_drop_item_question, 
+.odu_i_drop_item_a, 
+.odu_i_drop_explanation,
+.odu_i_mc_explanation, 
+.odu_i_cb_explanation {
     display: none;
 }
  
 .odu_i_score {
-	color: forestgreen;
+	color: $color_interactive_font_correct;
 	font-weight: bold;
 }
  
+.odu_i_fi_item{
+    margin-top:10px;
+}
 
+.odu_i_fi_item label{
+    padding-bottom: 10px;
+}
+
+.odu_i_fi_item input[type=text] {	 
+    width:85%;
+    padding:5px;
+    float:left; 
+    margin:0px 5px 0px 0px;
+}
  
- 
- 
- 
+.odu_i_fi_item .odu_i_mark_area {
+    margin-right: 2px;
+    display:none; 
+    float:left; 
+    margin-top:5px;
+}
 
 
+.odu_i_drop_columns{
+    margin: 10px auto; 
+    background: $color_interactive_mcItemBackground;; 
+    border: $border_interactive_panel $color_interactive_mcItemBorder;
+    padding:5px;
+}
 
+.odu_i_drop_item label{
+    float: left; 
+    max-width: 70%; 
+    padding:0px 5px;
+}
 
+.odu_i_drop_item select{
+    float: left; 
+    margin:0px 2px
+}
+
+.odu_i_drop_choices_list{
+    list-style: none;
+}
+
+.odu_i_drop_main_question{
+    padding:5px;
+}
+
+/*dr=drag and drop*/
+
+.odu_i_dr_drop_A {
+    display: none;
+}
+.odu_i_dr_drag_area div {
+    margin: 10px auto;
+}
+.odu_i_dr_mark_area {
+    margin: 2px;
+    display: none;
+}
+.odu_i_dr_mark_area,
+.odu_i_dr_drop {
+    float: left;
+}
+.odu_i_dr_incorrect,
+.odu_i_dr_correct {
+    display: none;
+}
+.odu_i_dr_incorrect {
+    color: $color_interactive_font_incorrect;
+    float: left;
+    width: 10px;
+    font-weight: bold
+}
+.odu_i_dr_correct {
+    color: $color_interactive_font_correct;
+    float: left;
+    width: 10px;
+    font-weight: bold
+}
+.odu_i_dr_drop_wrapper {
+    margin-top: 10px;
+    width: 220px;
+}
+.odu_i_dr_answer_column_name {
+    display: none;
+}
 
