@@ -1,3 +1,4 @@
+//add custom scripts here
 var odu_i_total_items_All = $('[id^="odu_i_item_"]').length;//count all items     
 var odu_i_total_items_mc =$('.odu_i_mc_item').length;//global variable, total number of mc items
 var odu_i_totalItemsDrop =$('.odu_i_drop_item').length;//global variable, total number of items   
@@ -145,7 +146,7 @@ $(this).find('select').before('<div class="odu_i_mark_area">&nbsp;</div>');//add
 });//end of label the elements for drop item        
  
     
-    
+ odu_i_all_good1=0;   
 
 $('.odu_i_submit').click(function(){//start of odu_i_submit     
 
@@ -198,7 +199,7 @@ case 'odu_i_mc_item'://if item is mc
 
         $('#'+odu_i_this_id_mc).find('input[type=radio]:checked').prev('.odu_i_mark_area').append(odu_i_remark);//display the mark if check or x       
         $(this).next().show();
-        odu_i_all_good1 = 1;
+        odu_i_all_good1++;
     }//end if there is answer
         
         
@@ -277,7 +278,7 @@ case 'odu_i_cb_item'://if item is checkbox
     odu_i_cb_explanation = $('#'+odu_i_this_id_cb).find('.odu_i_cb_explanation').html();
     $('#'+odu_i_this_id_cb).find('.odu_i_panel_content').append(odu_i_cb_explanation);
      $(this).next().show();
-    odu_i_all_good1 = 1;    
+    odu_i_all_good1++;    
     }//end of if cb has answer
 
 break;//end if ite is checkbox
@@ -343,7 +344,7 @@ else{
 
     $('#'+odu_i_fi_id_2+' .odu_i_next').before(odu_i_fi_store_panel+'<br>').fadeIn();//display feedback  
     $(this).next().show();
-    odu_i_all_good1 = 1;
+    odu_i_all_good1++;
     
     
 }
@@ -414,7 +415,7 @@ break;//if item is fi
 
 
 get_odu_i_current_id_number =  odu_i_current_id.substring(11);       
-if (get_odu_i_current_id_number==odu_i_total_items_All && odu_i_all_good1 == 1){
+if (get_odu_i_current_id_number==odu_i_total_items_All && odu_i_all_good1 == odu_i_total_items_All){
     $('.odu_i_next').hide();
     $('.odu_i_review').fadeIn();
 }    
@@ -445,7 +446,3 @@ location.reload();
     
     
 });//end of document ready
-    
-    
-
-    
