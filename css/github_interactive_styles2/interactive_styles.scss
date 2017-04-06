@@ -45,6 +45,8 @@ $white: #ffffff;
 $color_interactive_ItemValidationBackground:#F0FFFF;/*add*/
 $color_interactive_ItemValidationBorder:#286171;/*add*/
 $color_interactive_DirectionBackground:#F0F8FF;/*add*/
+$color_interactive_fbBox:#ADD8E6;/*add*/
+
 
 @mixin odu_i_default_bg_text{
     background: $white;
@@ -447,7 +449,7 @@ $color_interactive_DirectionBackground:#F0F8FF;/*add*/
     color: $color_interactive_font_correct;
     float: left;
     width: 10px;
-    font-weight: bold
+    font-weight: bold;
 }
 .odu_i_dr_drop_wrapper {
     margin-top: 10px;
@@ -457,3 +459,27 @@ $color_interactive_DirectionBackground:#F0F8FF;/*add*/
     display: none;
 }
 
+/*fb = fill in the blanks*/
+.odu_i_fb_input,
+.odu_i_fb_phrase {
+    display: inline-block
+}
+.odu_i_fb_mark_box {
+    padding: 3px;
+    background: $color_interactive_ItemValidationBackground;
+    border: 1px solid $color_interactive_fbBox;
+}
+.odu_i_fb_mark {
+    display: none;
+    text-align: center;
+}
+.odu_i_fb_item input[type="text"] {
+    width: 150px;
+}
+.odu_i_fb_A {
+    display: none;
+}
+.odu_i_c_fb,
+.odu_i_x_fb {
+    font-size: 14px;
+}
