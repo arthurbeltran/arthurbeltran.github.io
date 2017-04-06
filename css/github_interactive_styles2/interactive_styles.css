@@ -209,7 +209,7 @@
 .odu_i_mc_key, .odu_i_score_total {
   font-weight: bold; }
 
-.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item, .odu_i_fi_item_n_items {
+.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item, .odu_i_fi_item_n_items, .odu_i_fb_item {
   background: #f5f5f5;
   padding: 10px;
   margin-bottom: 10px;
