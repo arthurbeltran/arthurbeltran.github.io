@@ -483,3 +483,74 @@ $color_interactive_fbBox:#ADD8E6;/*add*/
 .odu_i_x_fb {
     font-size: 14px;
 }
+
+/*tbl = complete the table*/
+
+
+.odu_i_table_area{
+        overflow-x:auto;
+        margin:0px auto;
+    }    
+    
+    
+.odu_i_table_wborder {
+	width: 100%;
+    border: 1px solid $color_interactive_mcItemBackground;
+    border-collapse: collapse;
+   
+}    
+
+.odu_i_table_wborder th{	
+    background-color: $color_interactive_defaultButton_background;
+    color: $white;
+}        
+
+.odu_i_table_wborder th,.odu_i_table_wborder td {
+	vertical-align: middle;
+    padding:10px;
+    border: 1px solid $color_interactive_mcItemBorder;
+}            
+
+
+.odu_i_table_area h4{
+	text-align: center;
+    font-weight: bold;
+}    
+    
+.odu_i_table_area td input[type=text]{
+	padding:5px;
+    width:90%;
+    margin:0px;
+    
+}   
+    
+.odu_i_tbl_mark_box{
+    border: 1px solid $color_interactive_fbBox;/*fbBox*/ 
+    background:$color_interactive_DirectionBackground; /*directionBackground*/
+    padding:10px;    
+}    
+
+.odu_i_tbl_mark{
+    text-align:center; 
+    font-weight:bold;
+    display: none;
+}    
+    
+    
+.odu_i_tbl_item_A{
+display: none;
+text-align: center;
+font-weight: bold;
+}    
+
+    
+.odu_i_validate2 {
+	padding:5px; 
+    font-size:13px; 
+    text-align:center; 
+    font-weight: 100;
+}    
+  
+
+
+
