@@ -14,7 +14,11 @@ $('div[class$="_item"]').each(function(){
 });    
     
     
-    
+$('div[class$="_explanation"]').each(function(){
+    if ($(this).length==0){
+        $(this).empty();
+    }
+});
     
 $('.odu_i_mc_item label, .odu_i_cb_item label ').after('<div class="odu_i_clear odu_i_add_margin_bottom"></div>');//add clear and margin bottom
 $('.odu_i_mc_item input, .odu_i_cb_item input').before('<div class="odu_i_mark_area">&nbsp;</div>');//add the check or x area
