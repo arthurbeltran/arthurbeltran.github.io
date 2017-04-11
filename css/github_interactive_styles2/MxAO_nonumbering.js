@@ -327,13 +327,15 @@ $('#'+odu_i_cb_item_id).find('.odu_i_panel_content').append(odu_i_cb_explanation
 });//end of evaluate cb      
     
 
-odu_i_fi_store_panel_count1 = '';//variable for 's' or no 's' for fi
-odu_i_fi_store_panel_count2 = 'is';//variable for 'is' or 'are' for fi
-odu_i_fi_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for fi 
-odu_i_fi_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for fi  
+
 
 $('.odu_i_fi_item').each(function(){ //evaluate text input fi    
 odu_i_fi_id_2 = $(this).attr('id');        
+
+odu_i_fi_store_panel_count1 = '';//variable for 's' or no 's' for fi
+odu_i_fi_store_panel_count2 = 'is';//variable for 'is' or 'are' for fi
+odu_i_fi_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for fi 
+odu_i_fi_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for fi     
     
     
     odu_i_fi_all_correct = [];    
@@ -351,7 +353,7 @@ odu_i_fi_id_2 = $(this).attr('id');
             odu_i_fi_all_correct.push($(this).text());    
         });//end of add answer key to an array for evaluation
 
-    alert(odu_i_fi_id_2+': '+odu_i_fi_all_correct.length);
+    
     if (odu_i_fi_all_answer_array.length>=2){
     odu_i_fi_store_panel_count1 = 's';
     odu_i_fi_store_panel_count2 = 'are';    
