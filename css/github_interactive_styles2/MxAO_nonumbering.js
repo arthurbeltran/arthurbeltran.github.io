@@ -351,6 +351,7 @@ odu_i_fi_id_2 = $(this).attr('id');
             odu_i_fi_all_correct.push($(this).text());    
         });//end of add answer key to an array for evaluation
 
+    alert(odu_i_fi_id_2+': '+odu_i_fi_all_correct.length);
     if (odu_i_fi_all_answer_array.length>=2){
     odu_i_fi_store_panel_count1 = 's';
     odu_i_fi_store_panel_count2 = 'are';    
