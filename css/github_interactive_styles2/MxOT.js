@@ -1,5 +1,5 @@
 //add custom scripts here
-var odu_i_total_items_All = $('[id^="odu_i_item_"]').length;//count all items     
+    
 var odu_i_total_items_mc =$('.odu_i_mc_item').length;//global variable, total number of mc items
 var odu_i_totalItemsDrop =$('.odu_i_drop_item').length;//global variable, total number of items   
 var odu_i_totalPredefinedChoicesDrop = $('.odu_i_drop_choices_list li').length;//global variable, total number of predefined choices
@@ -35,7 +35,8 @@ $('div[class$="_item"]').each(function(){
     odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
     $(this).attr('id','odu_i_item_'+odu_i_index_numbering);
 });    
-    
+ 
+var odu_i_total_items_All = $('[id^="odu_i_item_"]').length;//count all items     
     
 $('div[class$="_explanation"]').each(function(){
     if ($(this).length==0){
