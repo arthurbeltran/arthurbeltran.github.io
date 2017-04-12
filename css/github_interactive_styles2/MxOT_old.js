@@ -28,24 +28,7 @@ function odu_i_compareArrays(odu_i_arr1, odu_i_arr2) {//compare simple arrays fo
     
     
     
-$('.odu_i_clear').empty();
-    
-    
-$('div[class$="_item"]').each(function(){
-    odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
-    $(this).attr('id','odu_i_item_'+odu_i_index_numbering);
-});    
-    
-    
-$('div[class$="_explanation"]').each(function(){
-    if ($(this).length==0){
-        $(this).empty();
-    }
-});    
-    
-    
-    
-    
+$('.odu_i_clear').empty();    
 $('.odu_i_mc_item label, .odu_i_cb_item label ').after('<div class="odu_i_clear odu_i_add_margin_bottom"></div>');//add clear and margin bottom
 $('.odu_i_mc_item input, .odu_i_cb_item input').before('<div class="odu_i_mark_area">&nbsp;</div>');//add the check or x area
 $('.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox]').removeAttr('disabled');//enable radio buttons
