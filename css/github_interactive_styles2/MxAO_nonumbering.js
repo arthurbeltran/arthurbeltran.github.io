@@ -425,16 +425,17 @@ $(this).hide().append(odu_i_drop_store_panel).fadeIn();//display the panel eithe
 $(this).find('select').prev('.odu_i_mark_area').append(odu_i_remark);//display the mark if check or x  
 });//end of evaluation drop
     
-    
-odu_i_fb_store_panel_count1 = '';//variable for 's' or no 's' for fb
-odu_i_fb_store_panel_count2 = 'is';//variable for 'is' or 'are' for fb
-odu_i_fb_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for fb 
-odu_i_fb_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for fb  
 
 $('.odu_i_fb_input input[type="text"]').each(function(){ //evaluate text input fb    
 odu_i_fb_id_2 = $(this).attr('id');
 $(this).parent().find('.odu_i_fb_mark').show();        
-$(this).parent().addClass('odu_i_fb_mark_box');     
+$(this).parent().addClass('odu_i_fb_mark_box'); 
+
+
+odu_i_fb_store_panel_count1 = '';//variable for 's' or no 's' for fb
+odu_i_fb_store_panel_count2 = 'is';//variable for 'is' or 'are' for fb
+odu_i_fb_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for fb 
+odu_i_fb_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for fb     
         
 
     odu_i_fb_all_answer = $('#'+odu_i_fb_id_2).val();//get the answer from text input           
