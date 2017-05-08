@@ -368,68 +368,7 @@ else{
 }
 break;//if item is fi                
 
-//case 'odu_i_drop_columns'://if item is matching type
-//odu_i_this_id_drop_main = odu_i_current_id;//get item id    
-//odu_i_count_drop = $('.odu_i_drop_item').length;//count drop
-//odu_i_count_drop_value_array=[];
-////alert('odu_i_count_drop: '+odu_i_count_drop);        
-//
-//
-//$('#'+odu_i_this_id_drop_main+' .odu_i_drop_item').each(function(){// start of evaluation drop   
-//odu_i_drop_answer_2 = $(this).find('select option:selected').val();//get the selected answer  
-//odu_i_this_id = $(this).attr('id');//get item id     
-//    
-//if(odu_i_drop_answer_2.length>0){
-//   odu_i_count_drop_value_array.push(odu_i_drop_answer_2);       
-//}    
-//else if(odu_i_drop_answer_2.length==0){
-//     $(this).before(odu_i_notification_validate).fadeIn();
-//    $(this).find('select').click(function(){
-//        $(this).parent().prev().slideUp();
-//    });
-//} 
-//
-//                                  
-//if(odu_i_count_drop_value_array.length==odu_i_count_drop){    
-//    $('#'+odu_i_this_id_drop_main+' .odu_i_drop_item select').css('cursor','not-allowed');//disable radio buttons    
-//    $('#'+odu_i_this_id_drop_main+' .odu_i_drop_item select').prop('disabled',true);//disable radio buttons
-//    $('#'+odu_i_this_id_drop_main+' .odu_i_drop_item select').css('color','black');         
-//
-//
-//    odu_i_drop_correct = $('#'+odu_i_this_id).find('.odu_i_drop_item_a').html().substr(0, 1);//get the text of odu_i_drop_item_a class to compare
-//    odu_i_drop_explanation = $('#'+odu_i_this_id).find('.odu_i_drop_explanation').html();//get the text of the explanation    
-//    odu_i_drop_correct_complete = $('#'+odu_i_this_id).find('.odu_i_drop_item_a').html();//get the complete text of odu_i_drop_item_a
-//
-//
-//    if(odu_i_drop_answer==odu_i_drop_correct){//if the selected answer is correct
-//    odu_i_drop_store_panel = '<div class="odu_i_panel_success odu_i_mc_panel_margin i-mc-panel-correct"> \
-//                                                  <div class="odu_i_panel_header"><strong>Feedback</strong></div> \
-//                                                  <div class="odu_i_panel_content"> \
-//                                                  <p>The selected choice: <strong>'+odu_i_drop_correct_complete+'</strong> is correct!</p><p>'+odu_i_drop_explanation+'</p></div></div>';
-//    odu_i_remark = '<span  class="odu_i_c" style="color:#228b22">&#x2714;</span>';
-//
-//    }//end if the selected answer is correct    
-//    else{//if the selected anwer is incorrect
-//    odu_i_drop_store_panel = '<div class="odu_i_panel_error odu_i_drop_panel_margin i-mc-panel-correct"> \
-//                                                  <div class="odu_i_panel_header"><strong>Feedback</strong></div> \
-//                                                  <div class="odu_i_panel_content"> \
-//                                                  <p>The selected choice is incorrect.<br> The correct choice is: <strong>'+odu_i_drop_correct_complete +'</strong></p><p>'+odu_i_drop_explanation+'</p></div></div>'; 
-//    odu_i_remark = '<span  class="odu_i_x" style="color:crimson">&#x2718;</span>'        
-//    }//end of if the selected anwer is incorrect
-//
-//    $('#'+odu_i_this_id).hide().append(odu_i_drop_store_panel).fadeIn();//display the panel either correct/incorrect
-//    $('#'+odu_i_this_id).find('select').prev('.odu_i_mark_area').append(odu_i_remark);//display the mark if check or x
-//    //next button should show up//    
-//}
-//    
-//    
-//});//end of validation for drop         
-//break;                 
 
-    
-        
-        
-}//end of switch
 
 
 get_odu_i_current_id_number =  odu_i_current_id.substring(11);       
