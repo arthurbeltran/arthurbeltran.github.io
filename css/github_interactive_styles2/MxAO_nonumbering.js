@@ -432,10 +432,7 @@ $(this).parent().find('.odu_i_fb_mark').show();
 $(this).parent().addClass('odu_i_fb_mark_box'); 
 
 
-odu_i_fb_store_panel_count1 = '';//variable for 's' or no 's' for fb
-odu_i_fb_store_panel_count2 = 'is';//variable for 'is' or 'are' for fb
-odu_i_fb_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for fb 
-odu_i_fb_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for fb     
+     
         
 
     odu_i_fb_all_answer = $('#'+odu_i_fb_id_2).val();//get the answer from text input           
@@ -462,6 +459,12 @@ odu_i_fb_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' 
 $('.odu_i_fb_item').each(function(){//fb display feedback
 
     odu_i_fb_all_correct = [];
+    
+    odu_i_fb_store_panel_count1 = '';//variable for 's' or no 's' for fb
+odu_i_fb_store_panel_count2 = 'is';//variable for 'is' or 'are' for fb
+odu_i_fb_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for fb 
+odu_i_fb_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for fb
+    
     
     odu_i_fb_explanation = '<p>'+$(this).find('.odu_i_fb_explanation').html()+'</p>';
         $(this).find('.odu_i_fb_A').each(function(){//add answer key to an array for evaluation
