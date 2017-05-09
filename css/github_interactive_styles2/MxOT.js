@@ -8,16 +8,17 @@ var odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_
     
 $(document).ready(function(){//start of document ready    
     
-function odu_i_formatArray(odu_i_arr){//array value formatting cb and fi
+
+function odu_i_formatArray(odu_i_arr){//array value formatting cb, fi and fb
     var odu_i_outStr = '';
-    if (odu_i_arr.length === 1) { 
+    if (odu_i_arr.length === 1) {
         odu_i_outStr = odu_i_arr[0];
     } else if (odu_i_arr.length === 2) {
         //joins all with "and" but no commas        
-        odu_i_outStr = odu_i_arr.join(' and ');
+        odu_i_outStr = odu_i_arr.join(' <span style="font-weight:100">and</span> ');
     } else if (odu_i_arr.length > 2) {
         //joins all with commas, but last one gets ", and"        
-        odu_i_outStr = odu_i_arr.slice(0, -1).join(', ') + ', and ' + odu_i_arr.slice(-1);
+        odu_i_outStr = odu_i_arr.slice(0, -1).join(', ') + ', <span style="font-weight:100">and</span> ' + odu_i_arr.slice(-1);
     }
     return odu_i_outStr;
 }//end of array value formatting cb and fi            
@@ -464,3 +465,4 @@ location.reload();
     
     
 });//end of document ready
+
