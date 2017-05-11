@@ -204,8 +204,13 @@
   float: left;
   cursor: pointer; }
 
-.odu_i_mc_item label, .odu_i_cb_item label {
-  width: 80%; }
+.odu_i_mc_item label {
+  width: 80%;
+  margin-top: 4px; }
+
+.odu_i_cb_item fieldset label {
+  padding-top: 4px;
+  vertical-align: -15%; }
 
 .odu_i_mc_key, .odu_i_score_total {
   font-weight: bold; }
