@@ -67,7 +67,10 @@
 .odu_i_button_error:hover {
   background: #dc143c; }
 
-.odu_i_panel, .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {
+.odu_i_panel,
+.odu_i_panel_success,
+.odu_i_panel_error,
+.odu_i_panel_retry {
   margin: 10px auto; }
 
 .odu_i_panel_header, .odu_i_panel_content {
@@ -134,7 +137,8 @@
 .odu_i_mark_area {
   width: 15px; }
 
-.odu_i_margin_bottom, .odu_i_add_margin_bottom {
+.odu_i_margin_bottom,
+.odu_i_add_margin_bottom {
   margin-bottom: 10px; }
 
 .odu_i_column {
@@ -180,9 +184,27 @@
 .odu_i_content_area label {
   font-weight: 100 !important; }
 
-.odu_i_mc .odu_i_panel_success, .odu_i_mc .odu_i_panel_error, .odu_i_mc .odu_i_panel_retry, .odu_i_cb .odu_i_panel_success, .odu_i_cb .odu_i_panel_error, .odu_i_cb .odu_i_panel_retry, .odu_i_mc_item .odu_i_panel_success, .odu_i_mc_item .odu_i_panel_error, .odu_i_mc_item .odu_i_panel_retry, .odu_i_cb_item .odu_i_panel_success, .odu_i_cb_item .odu_i_panel_error, .odu_i_cb_item .odu_i_panel_retry {
+.odu_i_mc .odu_i_panel_success,
+.odu_i_mc .odu_i_panel_error,
+.odu_i_mc .odu_i_panel_retry,
+.odu_i_cb .odu_i_panel_success,
+.odu_i_cb .odu_i_panel_error,
+.odu_i_cb .odu_i_panel_retry,
+.odu_i_mc_item .odu_i_panel_success,
+.odu_i_mc_item .odu_i_panel_error,
+.odu_i_mc_item .odu_i_panel_retry,
+.odu_i_cb_item .odu_i_panel_success,
+.odu_i_cb_item .odu_i_panel_error,
+.odu_i_cb_item .odu_i_panel_retry {
   margin: 0%; }
-.odu_i_mc fieldset, .odu_i_mc legend, .odu_i_cb fieldset, .odu_i_cb legend, .odu_i_mc_item fieldset, .odu_i_mc_item legend, .odu_i_cb_item fieldset, .odu_i_cb_item legend {
+.odu_i_mc fieldset,
+.odu_i_mc legend,
+.odu_i_cb fieldset,
+.odu_i_cb legend,
+.odu_i_mc_item fieldset,
+.odu_i_mc_item legend,
+.odu_i_cb_item fieldset,
+.odu_i_cb_item legend {
   margin-left: 0px;
   margin-bottom: 10px;
   padding: 0px;
@@ -190,10 +212,12 @@
   /*remove the border of fieldset*/
   font-size: 14px; }
 
-.odu_i_mc_item, .odu_i_cb_item {
+.odu_i_mc_item,
+.odu_i_cb_item {
   clear: both; }
 
-.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
+.odu_i_mc_item input[type=radio],
+.odu_i_cb_item input[type=checkbox] {
   margin-right: 3px; }
 
 .odu_i_mark_area,
@@ -212,16 +236,22 @@
   padding-top: 4px;
   vertical-align: -15%; }
 
-.odu_i_mc_key, .odu_i_score_total {
+.odu_i_mc_key,
+.odu_i_score_total {
   font-weight: bold; }
 
-.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item, .odu_i_fi_item_n_items, .odu_i_fb_item {
+.odu_i_mc_item,
+.odu_i_cb_item,
+.odu_i_fi_item,
+.odu_i_fi_item_n_items,
+.odu_i_fb_item {
   background: #f5f5f5;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #D3D3D3; }
 
-.odu_i_mc_all, .odu_i_cb_all {
+.odu_i_mc_all,
+.odu_i_cb_all {
   display: block; }
 
 .odu_i_display_score,
@@ -355,7 +385,8 @@
   background-color: #337ab7;
   color: #ffffff; }
 
-.odu_i_table_wborder th, .odu_i_table_wborder td {
+.odu_i_table_wborder th,
+.odu_i_table_wborder td {
   vertical-align: middle;
   padding: 10px;
   border: 1px solid #D3D3D3; }
@@ -391,5 +422,26 @@
   font-size: 13px;
   text-align: center;
   font-weight: 100; }
+
+/*sr short response*/
+.odu_i_sr_item {
+  background: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #D3D3D3; }
+
+.odu_i_sr_item label {
+  margin-bottom: 10px; }
+
+.odu_i_sr_item textarea {
+  width: 100%;
+  height: 120px;
+  margin: 5px auto; }
+
+.odu_i_sr_item_explanation {
+  display: none; }
+
+.odu_i_display_print_div, .odu_i_sr_panel_explanation {
+  display: none; }
 
 /*# sourceMappingURL=interactive_styles.css.map */

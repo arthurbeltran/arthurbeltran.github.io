@@ -3,84 +3,78 @@ $color_interactive_retryButton_background: #228b22;
 $color_interactive_successButton_background: #228b22;
 $color_interactive_errorButton_background: #dc143c;
 $color_interactive_clearButton_background: #dc143c;
-
 $color_interactive_defaultButton_background: #337ab7;
-
 $color_intereactive_defaultfeedbackPanelContent_border: #337ab7;
 $color_intereactive_defaultfeedbackPanelHeader_background: #337ab7;
 $color_intereactive_defaultfeedbackPanelHeader_border: #337ab7;
-
 $color_intereactive_successfeedbackPanelContent_border: #D9EDF7;
 $color_intereactive_successFeedbackPanelHeader_background: #D9EDF7;
 $color_intereactive_successFeedbackPanelHeader_border: #D9EDF7;
 $color_intereactive_successFeedbackPanelHeader_text: #0a68db;
-
 $color_intereactive_errorfeedbackPanelContent_border: #F2DEDE;
-$color_intereactive_errorFeedbackPanelHeader_background: #F2DEDE; 
+$color_intereactive_errorFeedbackPanelHeader_background: #F2DEDE;
 $color_intereactive_errorFeedbackPanelHeader_border:#F2DEDE;
 $color_intereactive_errorFeedbackPanelHeader_text:#7c0101;
-
 $color_intereactive_retryfeedbackPanelContent_border: #DFF0D8;
-$color_intereactive_retryFeedbackPanelHeader_background: #DFF0D8; 
+$color_intereactive_retryFeedbackPanelHeader_background: #DFF0D8;
 $color_intereactive_retryFeedbackPanelHeader_border: #DFF0D8;
 $color_intereactive_retryFeedbackPanelHeader_text: #247702;
-
 $color_interactive_font_incorrect:#990000;
 $color_interactive_font_correct:#228b22;
-
-
-
 $margin_interactive_contentCenter: 0px auto 0px auto;
 $font_interactive_font_smaller: 12px;
 $font_interactive_font_default: 14px;
 $border_interactive_panel: 1px solid;
-
-
 $color_interactive_mcItemBackground:#f5f5f5;
 $color_interactive_mcItemBorder:#D3D3D3;
 $almostBlack: #000000;
 $white: #ffffff;
+$color_interactive_ItemValidationBackground:#F0FFFF;
 
+/*add*/
 
-$color_interactive_ItemValidationBackground:#F0FFFF;/*add*/
-$color_interactive_ItemValidationBorder:#286171;/*add*/
-$color_interactive_DirectionBackground:#F0F8FF;/*add*/
-$color_interactive_fbBox:#ADD8E6;/*add*/
+$color_interactive_ItemValidationBorder:#286171;
 
+/*add*/
 
-@mixin odu_i_default_bg_text{
+$color_interactive_DirectionBackground:#F0F8FF;
+
+/*add*/
+
+$color_interactive_fbBox:#ADD8E6;
+
+/*add*/
+
+@mixin odu_i_default_bg_text {
     background: $white;
     color: $almostBlack;
 }
 
-
-.odu_i_content_area{
+.odu_i_content_area {
     margin: $margin_interactive_contentCenter;
-    font-size: $font_interactive_font_default;    
-    
-    
-    h4{
     font-size: $font_interactive_font_default;
-    line-height: 140%;
-    font-weight: 100;    
+    h4 {
+        font-size: $font_interactive_font_default;
+        line-height: 140%;
+        font-weight: 100;
     }
 }
 
-.odu_i_row{    
+.odu_i_row {
     margin: $margin_interactive_contentCenter;
     clear: both;
 }
 
-.odu_i_attention{
-    padding:10px;
+.odu_i_attention {
+    padding: 10px;
     background: $color_interactive_attention_background;
 }
 
-.odu_i_clear{
-    clear:both;
+.odu_i_clear {
+    clear: both;
 }
 
-.odu_i_hidden{
+.odu_i_hidden {
     display: none;
 }
 
@@ -93,10 +87,10 @@ $color_interactive_fbBox:#ADD8E6;/*add*/
     overflow: hidden;
 }
 
-.odu_i_button{
-    font-size: $font_interactive_font_default;    
+.odu_i_button {
+    font-size: $font_interactive_font_default;
     background: $color_interactive_defaultButton_background;
-    border:0px;
+    border: 0px;
     padding: 8px 18px;
     margin: 0px 3px 0px 3px;
     text-align: center;
@@ -104,131 +98,122 @@ $color_interactive_fbBox:#ADD8E6;/*add*/
     opacity: 1.90;
     color: $white;
     filter: alpha(opacity=80);
-    border-radius: 4px;         
+    border-radius: 4px;
 }
 
-
-.odu_i_button_small{
+.odu_i_button_small {
     @extend .odu_i_button;
     padding: 6px 12px;
     margin: 0px 2px;
     font-size: $font_interactive_font_smaller;
 }
 
-
-.odu_i_button_error{
+.odu_i_button_error {
     @extend .odu_i_button;
-    background: $color_interactive_errorButton_background;     
+    background: $color_interactive_errorButton_background;
 }
 
-.odu_i_button_retry{
+.odu_i_button_retry {
     @extend .odu_i_button;
-    background: $color_interactive_retryButton_background;     
+    background: $color_interactive_retryButton_background;
 }
-
 
 .odu_i_button:hover {
     background: $color_interactive_defaultButton_background;
-	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
-    cursor: pointer;    
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 .odu_i_button_retry:hover {
-	@extend .odu_i_button:hover ;
-    background: $color_interactive_retryButton_background;     
+    @extend .odu_i_button:hover;
+    background: $color_interactive_retryButton_background;
 }
 
 .odu_i_button_error:hover {
-	@extend .odu_i_button:hover ;
-    background: $color_interactive_errorButton_background;     
+    @extend .odu_i_button:hover;
+    background: $color_interactive_errorButton_background;
 }
 
-.odu_i_panel, .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {
-    margin:10px auto;
+.odu_i_panel,
+.odu_i_panel_success,
+.odu_i_panel_error,
+.odu_i_panel_retry {
+    margin: 10px auto;
 }
 
-.odu_i_panel_header{
+.odu_i_panel_header {
     background: $color_intereactive_defaultfeedbackPanelHeader_background;
-    padding:10px;
+    padding: 10px;
     color: $white;
     border-radius: 4px 4px 0px 0px;
-    border:$border_interactive_panel $color_intereactive_defaultfeedbackPanelContent_border;
+    border: $border_interactive_panel $color_intereactive_defaultfeedbackPanelContent_border;
 }
 
-.odu_i_panel_content{
+.odu_i_panel_content {
     @extend .odu_i_panel_header;
     @include odu_i_default_bg_text;
     border-top: 0px;
-    border-radius: 0px 0px 4px 4px;    
+    border-radius: 0px 0px 4px 4px;
 }
 
-.odu_i_panel_success{
-    .odu_i_panel_header{
+.odu_i_panel_success {
+    .odu_i_panel_header {
         background: $color_intereactive_successFeedbackPanelHeader_background;
         border: $border_interactive_panel $color_intereactive_successFeedbackPanelHeader_border;
         color: $color_intereactive_successFeedbackPanelHeader_text;
     }
-    
-    .odu_i_panel_content{
+    .odu_i_panel_content {
         border: $border_interactive_panel $color_intereactive_successfeedbackPanelContent_border;
         @include odu_i_default_bg_text;
-        
     }
 }
 
-.odu_i_panel_error{
-    .odu_i_panel_header{
+.odu_i_panel_error {
+    .odu_i_panel_header {
         background: $color_intereactive_errorFeedbackPanelHeader_background;
         border: $border_interactive_panel $color_intereactive_errorFeedbackPanelHeader_border;
         color: $color_intereactive_errorFeedbackPanelHeader_text;
     }
-    
-    .odu_i_panel_content{
+    .odu_i_panel_content {
         border: $border_interactive_panel $color_intereactive_errorfeedbackPanelContent_border;
         @include odu_i_default_bg_text;
-        
     }
 }
 
-.odu_i_panel_retry{
-    .odu_i_panel_header{
+.odu_i_panel_retry {
+    .odu_i_panel_header {
         background: $color_intereactive_retryFeedbackPanelHeader_background;
         border: $border_interactive_panel $color_intereactive_retryFeedbackPanelHeader_border;
         color: $color_intereactive_retryFeedbackPanelHeader_text;
     }
-    
-    .odu_i_panel_content{
+    .odu_i_panel_content {
         border: $border_interactive_panel $color_intereactive_retryfeedbackPanelContent_border;
         @include odu_i_default_bg_text;
-        
     }
 }
 
-
-.odu_i_validate{
-    background:$color_interactive_ItemValidationBackground; 
-    border:1px solid $color_interactive_ItemValidationBorder; 
-    padding:10px; 
-    border-radius:4px;
-    margin:5px 0px; 
-    color:$color_interactive_ItemValidationBorder; 
+.odu_i_validate {
+    background: $color_interactive_ItemValidationBackground;
+    border: 1px solid $color_interactive_ItemValidationBorder;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0px;
+    color: $color_interactive_ItemValidationBorder;
     font-weight: bold;
-}  
+}
 
+.odu_i_circle {
+    border: 2px solid $color_interactive_ItemValidationBorder;
+    border-radius: 20px;
+    padding: 0px 7px;
+    font-size: 12px;
+}
 
-.odu_i_circle{
-    border:2px solid $color_interactive_ItemValidationBorder;
-    border-radius:20px; 
-    padding:0px 7px; 
-    font-size:12px;
-} 
-
-
-.odu_i_display_block{
+.odu_i_display_block {
     display: block
 }
 
-.odu_i_display_none{
+.odu_i_display_none {
     display: none
 }
 
@@ -236,46 +221,48 @@ $color_interactive_fbBox:#ADD8E6;/*add*/
     width: 15px;
 }
 
-.odu_i_margin_bottom, .odu_i_add_margin_bottom {
+.odu_i_margin_bottom,
+.odu_i_add_margin_bottom {
     margin-bottom: 10px;
 }
 
-.odu_i_column{
-    float:left;
+.odu_i_column {
+    float: left;
 }
 
 .odu_i_column .column_title {
-    text-align: center; 
+    text-align: center;
     font-weight: bold;
 }
 
+.odu_i_instructions {
+    background: $color_interactive_DirectionBackground;
+    padding: 0px 10px;
+    border: 1px solid $color_intereactive_defaultfeedbackPanelContent_border;
+    margin-bottom: 10px;
+}
 
-.odu_i_instructions{
-    background:$color_interactive_DirectionBackground;
-    padding:0px 10px; border:1px solid $color_intereactive_defaultfeedbackPanelContent_border; 
-    margin-bottom: 10px;}
-
-.odu_i_instructions h4{
-    color:$color_intereactive_defaultfeedbackPanelContent_border; 
-    padding:0px; 
-    letter-spacing:-1px; 
-    font-weight:bold; 
-    border-bottom:1px dotted;
-    font-size:16px;
+.odu_i_instructions h4 {
+    color: $color_intereactive_defaultfeedbackPanelContent_border;
+    padding: 0px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    border-bottom: 1px dotted;
+    font-size: 16px;
 }
 
 .odu_i_instructions ul {
     padding-left: 25px;
-}  
+}
 
-.odu_i_special_box{
+.odu_i_special_box {
     border: 1px solid $color_interactive_mcItemBorder;
-    padding:10px;
-    margin: 0px auto;    
-    }  
+    padding: 10px;
+    margin: 0px auto;
+}
 
-.odu_i_special_indent5{
-    margin-left:5%;
+.odu_i_special_indent5 {
+    margin-left: 5%;
 }
 
 .odu_i_bold_centered {
@@ -283,280 +270,323 @@ $color_interactive_fbBox:#ADD8E6;/*add*/
     text-align: center;
 }
 
-.odu_i_text_center{
+.odu_i_text_center {
     text-align: center;
 }
 
 
-
 /*_mc(radio button), _cb(checkbox), _fi(type-in), _drop (dropdown), _dr(drag and drop)*/
 
-
-.odu_i_content_area label{
-	font-weight: 100 !important;
+.odu_i_content_area label {
+    font-weight: 100 !important;
 }
 
-.odu_i_mc, .odu_i_cb, .odu_i_mc_item, .odu_i_cb_item  { 
-    .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {				
+.odu_i_mc,
+.odu_i_cb,
+.odu_i_mc_item,
+.odu_i_cb_item {
+    .odu_i_panel_success,
+    .odu_i_panel_error,
+    .odu_i_panel_retry {
         margin: 0%;
-	 }
-    
-    fieldset, legend{
+    }
+    fieldset,
+    legend {
         margin-left: 0px;
-		margin-bottom: 10px;
-		padding: 0px;
-		border: none 0px; /*remove the border of fieldset*/
-		font-size: $font_interactive_font_default;
+        margin-bottom: 10px;
+        padding: 0px;
+        border: none 0px;
+        /*remove the border of fieldset*/
+        font-size: $font_interactive_font_default;
     }
 }
 
- 
-.odu_i_mc_item, .odu_i_cb_item  {	
-	clear: both;	
- }
- 
-
-.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
-  margin-right:3px;
+.odu_i_mc_item,
+.odu_i_cb_item {
+    clear: both;
 }
 
+.odu_i_mc_item input[type=radio],
+.odu_i_cb_item input[type=checkbox] {
+    margin-right: 3px;
+}
 
-.odu_i_mark_area, 
-.odu_i_mc_item input[type=radio], 
-.odu_i_cb_item input[type=checkbox], 
-.odu_i_mc_item label, 
+.odu_i_mark_area,
+.odu_i_mc_item input[type=radio],
+.odu_i_cb_item input[type=checkbox],
+.odu_i_mc_item label,
 .odu_i_mc_item input[type=checkbox] {
-	float: left;
-	cursor: pointer;
+    float: left;
+    cursor: pointer;
 }
-
 
 .odu_i_mc_item label {
     width: 80%;
-    margin-top:4px;
+    margin-top: 4px;
 }
 
-
-.odu_i_cb_item fieldset label{
-    padding-top:4px; 
+.odu_i_cb_item fieldset label {
+    padding-top: 4px;
     vertical-align: -15%;
 }
- 
-.odu_i_mc_key, .odu_i_score_total {
+
+.odu_i_mc_key,
+.odu_i_score_total {
     font-weight: bold;
 }
- 
-.odu_i_mc_item, .odu_i_cb_item, .odu_i_fi_item, .odu_i_fi_item_n_items, .odu_i_fb_item {
-	background: $color_interactive_mcItemBackground;
-	padding: 10px;   
-	margin-bottom: 10px;
-	border: $border_interactive_panel $color_interactive_mcItemBorder;
- }
- 
 
-.odu_i_mc_all, .odu_i_cb_all{
-    display:block
+.odu_i_mc_item,
+.odu_i_cb_item,
+.odu_i_fi_item,
+.odu_i_fi_item_n_items,
+.odu_i_fb_item {
+    background: $color_interactive_mcItemBackground;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: $border_interactive_panel $color_interactive_mcItemBorder;
 }
 
-.odu_i_display_score, 
+.odu_i_mc_all,
+.odu_i_cb_all {
+    display: block
+}
+
+.odu_i_display_score,
 .odu_i_start_over,
-.odu_i_fi_A, 
-.odu_i_fi_explanation, 
-.odu_i_drop_item_question, 
-.odu_i_drop_item_a, 
+.odu_i_fi_A,
+.odu_i_fi_explanation,
+.odu_i_drop_item_question,
+.odu_i_drop_item_a,
 .odu_i_drop_explanation,
-.odu_i_mc_explanation, 
+.odu_i_mc_explanation,
 .odu_i_cb_explanation,
-.odu_i_fb_explanation{
+.odu_i_fb_explanation {
     display: none;
 }
- 
+
 .odu_i_score {
-	color: $color_interactive_font_correct;
-	font-weight: bold;
-}
- 
-.odu_i_fi_item{
-    margin-top:10px;
+    color: $color_interactive_font_correct;
+    font-weight: bold;
 }
 
-.odu_i_fi_item label{
+.odu_i_fi_item {
+    margin-top: 10px;
+}
+
+.odu_i_fi_item label {
     padding-bottom: 10px;
 }
 
-.odu_i_fi_item input[type=text] {	 
-    width:85%;
-    padding:5px;
-    float:left; 
-    margin:0px 5px 0px 0px;
+.odu_i_fi_item input[type=text] {
+    width: 85%;
+    padding: 5px;
+    float: left;
+    margin: 0px 5px 0px 0px;
 }
- 
+
 .odu_i_fi_item .odu_i_mark_area {
     margin-right: 2px;
-    display:none; 
-    float:left; 
-    margin-top:5px;
+    display: none;
+    float: left;
+    margin-top: 5px;
 }
 
-
-.odu_i_drop_columns{
-    margin: 10px auto; 
-    background: $color_interactive_mcItemBackground;; 
+.odu_i_drop_columns {
+    margin: 10px auto;
+    background: $color_interactive_mcItemBackground;
+    ;
     border: $border_interactive_panel $color_interactive_mcItemBorder;
-    padding:5px;
+    padding: 5px;
 }
 
-.odu_i_drop_item label{
-    float: left; 
-    max-width: 70%; 
-    padding:0px 5px;
+.odu_i_drop_item label {
+    float: left;
+    max-width: 70%;
+    padding: 0px 5px;
 }
 
-.odu_i_drop_item select{
-    float: left; 
-    margin:0px 2px
+.odu_i_drop_item select {
+    float: left;
+    margin: 0px 2px
 }
 
-.odu_i_drop_choices_list{
+.odu_i_drop_choices_list {
     list-style: none;
 }
 
-.odu_i_drop_main_question{
-    padding:5px;
+.odu_i_drop_main_question {
+    padding: 5px;
 }
+
 
 /*dr=drag and drop*/
 
 .odu_i_dr_drop_A {
     display: none;
 }
+
 .odu_i_dr_drag_area div {
     margin: 10px auto;
 }
+
 .odu_i_dr_mark_area {
     margin: 2px;
     display: none;
 }
+
 .odu_i_dr_mark_area,
 .odu_i_dr_drop {
     float: left;
 }
+
 .odu_i_dr_incorrect,
 .odu_i_dr_correct {
     display: none;
 }
+
 .odu_i_dr_incorrect {
     color: $color_interactive_font_incorrect;
     float: left;
     width: 10px;
     font-weight: bold
 }
+
 .odu_i_dr_correct {
     color: $color_interactive_font_correct;
     float: left;
     width: 10px;
     font-weight: bold;
 }
+
 .odu_i_dr_drop_wrapper {
     margin-top: 10px;
     width: 220px;
 }
+
 .odu_i_dr_answer_column_name {
     display: none;
 }
 
+
 /*fb = fill in the blanks*/
+
 .odu_i_fb_input,
 .odu_i_fb_phrase {
     display: inline-block
 }
+
 .odu_i_fb_mark_box {
     padding: 3px;
     background: $color_interactive_ItemValidationBackground;
     border: 1px solid $color_interactive_fbBox;
 }
+
 .odu_i_fb_mark {
     display: none;
     text-align: center;
 }
+
 .odu_i_fb_item input[type="text"] {
     width: 150px;
 }
+
 .odu_i_fb_A {
     display: none;
 }
+
 .odu_i_c_fb,
 .odu_i_x_fb {
     font-size: 14px;
 }
 
+
 /*tbl = complete the table*/
 
+.odu_i_table_area {
+    overflow-x: auto;
+    margin: 0px auto;
+}
 
-.odu_i_table_area{
-        overflow-x:auto;
-        margin:0px auto;
-    }    
-    
-    
 .odu_i_table_wborder {
-	width: 100%;
+    width: 100%;
     border: 1px solid $color_interactive_mcItemBackground;
     border-collapse: collapse;
-   
-}    
+}
 
-.odu_i_table_wborder th{	
+.odu_i_table_wborder th {
     background-color: $color_interactive_defaultButton_background;
     color: $white;
-}        
+}
 
-.odu_i_table_wborder th,.odu_i_table_wborder td {
-	vertical-align: middle;
-    padding:10px;
+.odu_i_table_wborder th,
+.odu_i_table_wborder td {
+    vertical-align: middle;
+    padding: 10px;
     border: 1px solid $color_interactive_mcItemBorder;
-}            
+}
 
-
-.odu_i_table_area h4{
-	text-align: center;
+.odu_i_table_area h4 {
+    text-align: center;
     font-weight: bold;
-}    
-    
-.odu_i_table_area td input[type=text]{
-	padding:5px;
-    width:90%;
-    margin:0px;
-    
-}   
-    
-.odu_i_tbl_mark_box{
-    border: 1px solid $color_interactive_fbBox;/*fbBox*/ 
-    background:$color_interactive_DirectionBackground; /*directionBackground*/
-    padding:10px;    
-}    
+}
 
-.odu_i_tbl_mark{
-    text-align:center; 
-    font-weight:bold;
+.odu_i_table_area td input[type=text] {
+    padding: 5px;
+    width: 90%;
+    margin: 0px;
+}
+
+.odu_i_tbl_mark_box {
+    border: 1px solid $color_interactive_fbBox;
+    /*fbBox*/
+    background: $color_interactive_DirectionBackground;
+    /*directionBackground*/
+    padding: 10px;
+}
+
+.odu_i_tbl_mark {
+    text-align: center;
+    font-weight: bold;
     display: none;
-}    
-    
-    
-.odu_i_tbl_item_A{
-display: none;
-text-align: center;
-font-weight: bold;
-}    
+}
 
-    
+.odu_i_tbl_item_A {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+
 .odu_i_validate2 {
-	padding:5px; 
-    font-size:13px; 
-    text-align:center; 
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
     font-weight: 100;
-}    
-  
+}
 
 
+/*sr short response*/
 
+.odu_i_sr_item {
+    background: $color_interactive_mcItemBackground;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $color_interactive_mcItemBorder;
+}
+
+.odu_i_sr_item label {
+    margin-bottom: 10px;
+}
+
+.odu_i_sr_item textarea {
+    width: 100%;
+    height: 120px;
+    margin: 5px auto;
+}
+
+.odu_i_sr_item_explanation {
+    display: none;
+}
+
+.odu_i_display_print_div, .odu_i_sr_panel_explanation {
+    display: none;
+}
