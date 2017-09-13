@@ -1,0 +1,246 @@
+@import "colors";
+//--------------------------------------
+//COLOR ASSIGNMENTS
+//--------------------------------------
+
+//MESSAGE/ANNOUNCEMENT COLORS
+$urgent: $odu_red;
+$error: $odu_red;
+$errorBackground: $odu_liteRed;
+$success: $odu_darkGreen; 
+$successBackground: $odu_liteGreen;
+$disabled: $liteGray;
+$infoBackground: $odu_liteBlue;
+$info: $odu_briteBlue;
+$warningBackground: $odu_liteYellow;
+$warning: $odu_gold;
+$noticeBackground: $odu_yellow;
+$notice: $odu_gold;
+$announcementBackground: $odu_liteYellow; 
+
+ 
+
+//PLE GENERAL
+$color_assignment_border: $liteGray;
+$color_assignmentIntro_border: $almostBlack;
+
+$color_body: $almostBlack;
+$color_body_background: $white;
+
+$color_header: $white;
+$color_header_background: $ple_blue;
+$color_header_faculty_link: $white;
+$color_header_faculty_link_hover: $odu_yellow;
+
+$color_navRow: $white;
+$color_navRow_link: $white;
+$color_navRow_link_hover: $color_body;
+$color_navRow_background: $ple_briteBlue;
+$color_navRow_background_highlight: $odu_xLiteBlue;
+
+$color_breadCrumb_background: $odu_xLiteBlue;
+$color_breadCrumb: $almostBlack;
+$color_breadCrumb_hover: $almostBlack;
+
+$color_button_backround: $xLiteGray;
+$color_button_border: $mediumGray;
+$color_buttonHover_background: $odu_xLiteBlue;
+
+$color_calendar_moduleEvent: $white;
+$color_calendar_moduleEvent_background: $ple_briteBlue;
+$color_calendar_multipleEvent: $almostBlack;
+$color_calendar_assignmment: $almostBlack;	//not used
+$color_calendar_multipleEvent_background: $ple_darkOrange;
+$color_calendar_assignment_background: $ple_darkOrange;	//not used
+$color_calendar_today_background: $odu_liteYellow;
+$color_calendar_header: $almostBlack;
+
+$color_callOut_background: $white;
+$color_callOut_activity_background: $white;
+$color_callOut_answer_background: $white;
+$color_callOut_blackBoardActivity_background: $white;
+$color_callOut_example_background: $white;
+$color_callOut_externalSource_background: $white;
+$color_callOut_learningCheck_background: $white;
+$color_callOut_note_background: $white;
+$color_callOut_question_background: $white;
+$color_callOut_think_background: $white;
+
+$color_content_border: $ple_darkBlue;
+
+$color_collapseAll_background_hover: $odu_xLiteBlue;
+$color_collapseAll_background: $white;
+$color_collapseAll_border: $liteGray;
+$color_collapseAll_border_hover: $almostBlack;
+$color_collapseAll: $almostBlack;
+$color_collapseAll_hover: $almostBlack;  //not used
+
+$color_checkmark_disabled: $liteGray;
+$color_checkmark: $odu_green;
+
+$color_disabledCheckmarkOnButton: $mediumGray;
+
+$color_donutNotFinished: $liteGray;
+$color_donutFinished: $odu_green;
+
+$color_dl_checklist: $odu_darkGreen;
+
+$color_faculty_section_border: $liteGray;
+$color_faculty_h2: $almostBlack;
+
+$color_activity_feedback: $white;
+$color_activity_feedback_background: $ple_briteBlue;
+$color_activity_background: $liteGray;
+
+$color_figurecaption: $mediumGray;
+
+$color_footer: $white;
+$color_footer_link: $white;
+$color_footer_link_hover: $odu_yellow;
+$color_footer_background: $ple_blue;
+$color_footer_border: $ple_orange;
+
+$color_home_section_border: $liteGray;
+$color_home_section_background: $white;
+$color_home_header: $almostBlack;
+$color_home_header_calendar_background: $xLiteGray;
+$color_home_header_upEvents_background: $xLiteGray;
+$color_home_header_moduleList_background: $xLiteGray;
+$color_home_header_pastDueEvents_background: $xLiteGray;
+$color_home_header_progress_background: $xLiteGray;
+$color_home_header_border: $color_home_section_border;
+$color_home_background: $ple_orange;
+
+$color_illegalTag_background: $error;
+
+$color_link: #006688;
+$color_link_hover: $odu_hotPink;	//maybe this looks good?
+$color_link_visited: #007da7;
+
+$color_loader: $almostBlack;
+
+$color_markCompleteBefore_background: $xLiteGray;
+$color_markCompleteBefore_background_hover: $odu_xLiteBlue;
+$color_markCompleteBefore: $almostBlack;
+
+$color_moduleList_link: $almostBlack;
+$color_moduleList_twisites: $almostBlack;
+
+$color_navigator_background_highlight: $odu_yellow;
+$color_navigatorHeaderBackround: $odu_xLiteBlue;
+$color_navigator_border_bottom: $liteGray;
+
+$color_navButtons_background: $white;
+$color_navButtons_background_hover: $odu_xLiteBlue;
+$color_navButtons: $darkGray; //$almostBlack;
+$color_navButtons_hover: $ple_blue; //$almostBlack;
+$color_navButtons_border: $darkGray; //$almostBlack;
+
+$color_pastDueEvents_border: $almostBlack;				//not used
+$color_pastDueEvents_date_border: $almostBlack;			//not used
+$color_pastDueEvents_header_background: $almostBlack;	//not used
+
+$color_popUp_background: $white;
+
+$color_resumeButton_border: $mediumGray;
+$color_resumeButton_border_hover: $almostBlack;
+$color_resumeButton_background: $white;
+$color_resumeButton_background_hover: $odu_xLiteBlue;
+$color_resumeButtton: $almostBlack;
+$color_resumeButtton_hover: $almostBlack;
+
+$color_schedule_duration: $darkGray;
+
+$color_searchResultsPageTitle: $odu_darkBlue;
+$color_searchResults_border: $liteGray;
+
+$color_syllabus_section_border: $liteGray;
+$color_syllabus_h2: $almostBlack;
+$color_syllabus_h2_warning: $odu_hotPink;
+
+$color_toggle_border: $darkGray;
+$color_toggle_boxShadow: $almostBlack;
+$color_toggle_button: $white;
+$color_toggle_on: $odu_green;
+$color_toggle_off: $xLiteGray;
+
+$color_upEvents_border: $almostBlack;
+$color_upEvents_date_border: $almostBlack;
+$color_upEvents_date_header_background: $ple_briteBlue;
+$color_upEvents_date_header: $white;
+
+$color_tabularData_border: $almostBlack;
+$color_tabularData_th_background: $odu_xLiteBlue;
+$color_tabularData_th: $white;
+$color_tabularData_th_background_darkHeader: $ple_darkBlue;
+$color_tabularData_th_darkHeader: $white; 
+$color_tabularData_highlightRow_background: $odu_liteYellow;
+$color_tabularData_highlightRow_background_hover: $odu_yellow;
+$color_tabularData_tfoot_background: $xxLiteGray;
+$color_tabularData_background: $white;
+$color_table_altColumnsEven_background: $white;
+$color_table_altColumnsOdd_background: $odu_xLiteBlue;
+$color_table_altRowsEven_background: $white;
+$color_table_altRowsOdd_background: $xxLiteGray;
+$color_table_altColumnsHeaderColumn_background: $xLiteGray;
+
+$color_fieldset_border: $almostBlack;
+
+
+//******************************************
+//interactive activities
+//******************************************
+$color_interactive_instructions: $almostBlack;
+$color_interactive_instructionsBackground: $odu_xLiteBlue;
+$color_interactive_instructionsBorder: $ple_briteBlue;//add, update
+
+$color_interactive_font_correct: orange;
+$color_interactive_font_incorrect: purple;
+
+$color_interactive_attention_background: $warningBackground;
+$color_interactive_retryButton_background: $odu_green;
+$color_interactive_successButton_background: $odu_green;
+$color_interactive_errorButton_background: #dc143c;
+$color_interactive_clearButton_background: #dc143c;
+
+//$color_interactive_defaultButton_background: #337ab7;
+$color_interactive_defaultButton_background: $ple_briteBlue;
+
+$color_intereactive_defaultfeedbackPanelContent_border: $liteGray;
+$color_intereactive_defaultfeedbackPanelHeader_background:$odu_xLiteBlue;
+$color_intereactive_defaultfeedbackPanelHeader_border: #337ab7;
+
+
+$color_intereactive_successfeedbackPanelContent_border: $liteGray;
+$color_intereactive_successFeedbackPanelHeader_background: $odu_liteGreen;
+$color_intereactive_successFeedbackPanelHeader_border: $liteGray;
+$color_intereactive_successFeedbackPanelHeader: $almostBlack;
+
+$color_intereactive_errorfeedbackPanelContent_border: $liteGray;
+$color_intereactive_errorFeedbackPanelHeader_background: $errorBackground; 
+$color_intereactive_errorFeedbackPanelHeader_border: $liteGray;
+$color_intereactive_errorFeedbackPanelHeader: $almostBlack;
+
+$color_intereactive_retryfeedbackPanelContent_border: $liteGray;
+$color_intereactive_retryFeedbackPanelHeader_background: $odu_xLiteBlue; 
+$color_intereactive_retryFeedbackPanelHeader_border: $liteGray;
+$color_intereactive_retryFeedbackPanelHeader: $almostBlack;
+
+$margin_interactive_contentCenter: 0px auto 0px auto;
+$font_interactive_font_smaller: 12px;
+$font_interactive_font_default: 14px;
+
+$border_interactive_panel: 1px solid ;	
+
+$color_interactive_questionBackground: $xLiteGray;
+$color_interactive_mcItemBorder:#D3D3D3; 
+
+
+$color_interactive_itemValidation: $almostBlack;
+$color_interactive_itemValidationBackground: $warningBackground;
+$color_interactive_itemValidationBorder: $almostBlack;
+$color_interactive_itemValidationCircleBorder: $almostBlack;
+
+$color_interactive_background: #F0F8FF;
+$color_interactive_fbBox: #ADD8E6; 
+$color_interactive_directionBackground: purple;

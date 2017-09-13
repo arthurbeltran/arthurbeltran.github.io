@@ -1,0 +1,75 @@
+@import "colors";
+@import "colorAssignments";
+//@import "iconAssignments";
+//@import "sizes";
+
+//the rest here are misc
+
+//--------------------------------------
+//FONT
+//--------------------------------------
+$font-stack: "Open Sans", Georgia; 
+
+
+
+//--------------------------------------
+//Animations
+//--------------------------------------
+@mixin transition($duration){
+  transition: transform $duration;
+  -webkit-transition: -webkit-transform $duration;
+  -moz-transition: -moz-transform $duration;
+  -o-transition: -o-transform $duration;
+  -ms-transition: -ms-transform $duration;
+}
+
+@mixin transition-all($duration){
+  transition: all $duration;
+  -webkit-transition: all $duration;
+  -moz-transition: all $duration;
+  -o-transition: all $duration;
+  -ms-transition: all $duration;
+}
+
+@mixin translateX($d){
+  transform: translateX($d);
+  -webkit-transform: translateX($d);
+  -moz-transform: translateX($d);
+  -o-transform: translateX($d);
+  -ms-transform: translateX($d);
+}
+
+@mixin translateY($d){
+  transform: translateY($d);
+  -webkit-transform: translateY($d);
+  -moz-transform: translateY($d);
+  -o-transform: translateY($d);
+  -ms-transform: translateY($d);
+}
+
+@mixin scale($x, $y){
+  transform: scale($x, $y);
+  -webkit-transform: scale($x, $y);
+  -moz-transform: scale($x, $y);
+  -o-transform: scale($x, $y);
+  -ms-transform: scale($x, $y);
+}
+
+@mixin rotate($d){
+  transform: rotate($d);
+  -webkit-transform: rotate($d);
+  -moz-transform: rotate($d);
+  -o-transform: rotate($d);
+  -ms-transform: rotate($d);
+}
+
+@mixin transition($duration){
+  transition: transform $duration;
+  -webkit-transition: -webkit-transform $duration;
+  -moz-transition: -moz-transform $duration;
+  -o-transition: -o-transform $duration;
+  -ms-transition: -ms-transform $duration;
+}
+
+
+

@@ -1,0 +1,250 @@
+<!---do not copy----------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Number</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" async  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="odu_activities[current].css">
+</head>
+<body style="font-family: Open Sans">
+<!--end of do not copy--------------------------------------------------------------------------------------------------------->
+
+<!--start of copy this----------------------------------------------------------------------------------------------------------->    
+
+
+    
+<div class="odu_i_content_area"><!--start of interactive activity-->
+    
+<div class="odu_i_instructions">
+<h4>Directions</h4>
+<p><strong>Complete the Data Table.</strong> Fill-in the missing values to complete the table below.</p>
+    <ul class="odu_i_directions">       
+    <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>    
+</ul>
+</div>
+    
+    
+<div class="odu_i_table_area" style="width:40%">
+<h4>Title of the Table</h4>
+<table class="odu_i_table_wborder" >    
+    <thead>        
+        <th>Column Header</th>
+        <th>Column Header</th>
+    </thead>
+    <tr>
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">Answer to Row 1 Column 1 Cell 1</div>    
+            </div>
+        </td>
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">Answer to Row 1 Column 2 Cell 2</div>    
+            </div>
+        </td>
+        
+        
+    </tr>
+    <tr>                
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">Answer to Row 2 Column 1 Cell 3</div>    
+            </div>
+        </td>
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">Answer to Row 2 Column 2 Cell 4</div>    
+            </div>
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    
+</table>
+</div>    
+ 
+    
+<div class="odu_i_row" id="odu_i_table_feedback" style="width:70%">
+    <div class="odu_i_panel_retry">
+        <div class="odu_i_panel_header"><strong>Feedback</strong></div>
+        <div class="odu_i_panel_content">
+            Explanations or feedback.
+            
+        </div><!--end of odu_i_panel_content-->
+    </div>
+</div><!--end of table feedback-->   
+
+ <div class="odu_i_row" style="text-align:center; margin-top:10px;"><button class="odu_i_button odu_i_submit">Submit Answers</button></div>    
+    
+</div>
+<!--end of interactive activity-->
+    
+   
+<script>
+//Complete table script ver 05092017
+var odu_i_totalItems =$('.odu_i_mc_item').length;//global variable, total number of items
+var odu_i_notification_validate = '<div class="odu_i_validate odu_i_validate2">Please answer this item.</div>';   
+$(document).ready(function(){//start of document ready    
+
+    
+    
+    
+$('div[class$="_item"]').each(function(){
+    odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
+    $(this).attr('id','odu_i_item_'+odu_i_index_numbering);
+});     
+    
+    
+    
+$('.odu_i_tbl_item input[type="text"]').val('');//firefox bug, clear text input upon refresh
+$('.odu_i_tbl_item input[type="text"]').removeAttr('disabled');//firefox bug, enable text input upon refresh     
+//$('#odu_i_table_feedback').hide();     
+    
+$('.odu_i_tbl_item input[type="text"]').each(function(){//label the input[type=text]
+    var odu_i_get_tbl_id = $(this).parent().attr('id');//get id of the item
+    $('#'+odu_i_get_tbl_id).prepend('<div class="odu_i_tbl_mark"></div>');
+    $(this).attr('id',odu_i_get_tbl_id+'_blank');//add label   
+    $(this).attr('aria-label',odu_i_get_tbl_id+'_blank');//add label
+    
+});
+
+ 
+
+    
+$('.odu_i_tbl_item input[type="text"]').each(function(){ //evaluate text input tbl    
+odu_i_tbl_id_2 = $(this).attr('id');
+$(this).parent().find('.odu_i_tbl_mark').show();        
+$(this).parent().addClass('odu_i_tbl_mark_box');     
+    
+        
+
+    odu_i_tbl_all_answer = $('#'+odu_i_tbl_id_2).val();//get the answer from text input           
+    
+    $('#'+odu_i_tbl_id_2).prop('disabled',true);//disable the text input tbl
+    $('#'+odu_i_tbl_id_2).css({color:'black', fontWeight: 'bold'}); //make text input bold                
+        
+       
+    odu_i_tbl_answer = $(this).next().text();    
+    
+    
+    
+      $(this).parent().find('.odu_i_tbl_mark').prepend('<span  class="odu_i_c_tbl" style="color:#228b22">&#x2714; Correct</span>');  
+    
+    
+        
+            $(this).parent().find('.odu_i_tbl_mark').prepend('<span  class="odu_i_x_tbl" style="color:crimson">&#x2718; Incorrect</span>');  
+            $(this).parent().find('.odu_i_tbl_item_A').prepend('<span style="font-weight:normal">Correct Answer:</span><br>');
+            $(this).parent().find('.odu_i_tbl_item_A').show();
+            $(this).parent().find('.odu_i_tbl_mark_box').show();
+        
+    
+          
+});//evaluate text input tbl  
+
+$(this).parent('.odu_i_row').show().append('<div class="odu_i_button_retry odu_i_retry">Start Over</div>');//show Start Over button      
+
+$('.odu_i_tbl_mark').show();    
+    
+    
+ 
+});//end of document ready
+    
+    
+//$('.odu_i_submit').click(function(){//start of odu_i_submit
+$(this).hide();//hide submit button
+
+odu_i_count_tbl = $('.odu_i_tbl_item input[type="text"]').length;//count tbl     
+odu_i_counter_tbl = [];//array to count tbl items
+//$('.odu_i_validate').remove();//remove previous validate box     
+    
+$('.odu_i_tbl_item input[type="text"]').each(function(){//place tbl values to an array
+    odu_i_tbl_value_id = $(this).attr('id');
+    odu_i_tbl_value = $('#'+odu_i_tbl_value_id).val();      
+    
+   
+    
+});//end of place tbl values to an array    
+    
+odu_i_counter_tbl_length = odu_i_counter_tbl.length; //get the length of the tbl array for evaluation        
+
+//if (odu_i_count_tbl==odu_i_counter_tbl_length){//all tbl items has answer
+    
+odu_i_tbl_store_panel_count1 = '';//variable for 's' or no 's' for tbl
+odu_i_tbl_store_panel_count2 = 'is';//variable for 'is' or 'are' for tbl
+odu_i_tbl_store_panel_countA1 = '';//variable for correct answer 's' or no 's' for tbl 
+odu_i_tbl_store_panel_countA2 = 'is';//variable for correct answer 'is' or 'are' for tbl  
+
+$('.odu_i_tbl_item input[type="text"]').each(function(){ //evaluate text input tbl    
+odu_i_tbl_id_2 = $(this).attr('id');
+$(this).parent().find('.odu_i_tbl_mark').show();        
+$(this).parent().addClass('odu_i_tbl_mark_box');     
+    
+        
+
+    odu_i_tbl_all_answer = $('#'+odu_i_tbl_id_2).val();//get the answer from text input           
+    
+    $('#'+odu_i_tbl_id_2).prop('disabled',true);//disable the text input tbl
+    $('#'+odu_i_tbl_id_2).css({color:'black', fontWeight: 'bold'}); //make text input bold                
+        
+       
+    odu_i_tbl_answer = $(this).next().text();    
+    
+    
+    
+      $(this).parent().find('.odu_i_tbl_mark').prepend('<span  class="odu_i_c_tbl" style="color:#228b22">&#x2714; Correct</span>');  
+    
+    
+        
+            $(this).parent().find('.odu_i_tbl_mark').prepend('<span  class="odu_i_x_tbl" style="color:crimson">&#x2718; Incorrect</span>');  
+            $(this).parent().find('.odu_i_tbl_item_A').prepend('<span style="font-weight:normal">Correct Answer:</span><br>');
+            $(this).parent().find('.odu_i_tbl_item_A').show();
+            $(this).parent().find('.odu_i_tbl_mark_box').show();
+        
+    
+          
+});//evaluate text input tbl  
+
+$(this).parent('.odu_i_row').show().append('<div class="odu_i_button_retry odu_i_retry">Start Over</div>');//show Start Over button    
+    
+    
+//}//end of if all tbl items has answers
+    
+
+    
+//});    
+    
+    
+}//end of some tbl items are empty         
+
+       
+});      
+    
+    
+});//end of odu_i_submit    
+</script>
+    
+<!--end of copy this----------------------------------------------------------------------------------------------------------->    
+
+    
+    
+    
+    
+   
+    
+    
+</body>
+</html>

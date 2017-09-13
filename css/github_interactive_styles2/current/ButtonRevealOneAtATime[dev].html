@@ -1,0 +1,161 @@
+<!---do not copy----------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Number</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" async  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" type="text/css" href="odu_activities[current].css">
+</head>
+<body style="font-family: Open Sans">
+<!--end of do not copy--------------------------------------------------------------------------------------------------------->
+
+<!--start of copy this----------------------------------------------------------------------------------------------------------->    
+
+
+<div class="odu_i_content_area">
+        <!--start of interactive activity-->
+        <div class="odu_i_instructions">
+            <h4>Directions</h4>
+            <p><strong>Main Title of the Activity</strong></p>
+            <ul>
+                <li>Click the <strong class="odu_i_button_name">View <span class="odu_i_reveal_panel_title">Solution</span></strong> button to view the solution.</li>
+            </ul>
+        </div>
+
+        
+        <div class="odu_i_mc_item odu_i_reveal_item"><!--item 1-->
+            <div class="odu_i_reveal_item_question">
+                Statement
+            </div>
+
+            <div class="odu_i_reveal_answer">
+                Some text
+            </div>
+
+        </div><!--end of item-->
+
+        <div class="odu_i_mc_item odu_i_reveal_item"><!--item 2-->
+            <div class="odu_i_reveal_item_question">
+                Statement
+            </div>
+
+            <div class="odu_i_reveal_answer">
+                Some more text
+            </div>
+
+        </div><!--end of item-->
+    
+    
+   
+
+
+        <div class="odu_i_row" style="text-align:center; margin-top:10px;"><button class="odu_i_button_retry odu_i_retry">Start Over</button></div>
+
+
+</div>
+    <!--end of interactive activity-->
+    
+<script>
+        $(document).ready(function() { //start of document ready, update 6122017
+
+            $('div[class$="_item"]').each(function() {//item numbering
+                odu_i_index_numbering = $(this).index('div[class$="_item"]') + 1;
+                $(this).attr('id', 'odu_i_item_' + odu_i_index_numbering);
+            });
+
+            
+            
+            var odu_i_total_items_All = $('[id^="odu_i_item_"]').length;//count all items
+            
+            $('.odu_i_reveal_item').each(function() {//labelling each item
+                odu_i_reveal_item_numbering = $(this).attr('id').substr(11);
+                $(this).attr('role', 'region');
+                $(this).append('<button class="odu_i_button odu_i_reveal_button">' + $('.odu_i_button_name').html() + '</button>');
+                $(this).find('.odu_i_reveal_item_question').prepend('<strong>Question '+odu_i_reveal_item_numbering+' of '+odu_i_total_items_All+'</strong><br>'); //add a numbering
+
+            });
+            
+            
+            var odu_i_reveal_panel_title_content = $('.odu_i_reveal_panel_title').html();
+            
+             $('[id^="odu_i_item_"]').hide();//hide all the items
+            
+            $('[id^="odu_i_item_"]').each(function(){//add buttons for each item                 
+            $(this).find('.odu_i_next').hide();//hide the next button
+            $(this).find('.odu_i_review').hide();//hide the next button
+            }); 
+            
+            $('.odu_i_retry').hide();//add the start over/retry button, hide it for now
+            
+            $('[id^="odu_i_item_"]:first').show();//display only the first item  
+            
+            
+
+            $('.odu_i_reveal_button').click(function() {//view or reveal button
+                odu_i_ra_submit_parent_id = $(this).parent().attr('id');
+                odu_i_ra_submit_parent_id_number_only = $(this).parent().attr('id').substr(11);
+                $(this).hide();
+                var odu_i_reveal_panel_answer = $(this).parent().find('.odu_i_reveal_answer').html();
+                odu_i_store_panel_reveal = '<div class="odu_i_panel_success odu_i_mc_panel_margin"> \
+                                              <div class="odu_i_panel_header"><strong>' + odu_i_reveal_panel_title_content + '</strong></div> \
+                                              <div class="odu_i_panel_content"> \
+                                              <p>' + odu_i_reveal_panel_answer + '</p></div></div><br>';
+                $(this).parent().append(odu_i_store_panel_reveal);                
+                $(this).parent().find('.odu_i_panel_success').show('slideDown');
+                
+                if(odu_i_ra_submit_parent_id_number_only==odu_i_total_items_All){
+                    $(this).parent().append('<button class="odu_i_button odu_i_review" style="background:Crimson">Review Activity</button>');
+                    $('#'+odu_i_ra_submit_parent_id).find('.odu_i_review').fadeIn();
+                }
+                   else{
+                       $(this).parent().append('<button class="odu_i_button odu_i_next" style="background:SLATEGRAY">Next</button>');
+                       $('#'+odu_i_ra_submit_parent_id).find('.odu_i_next').fadeIn();              
+                   
+                   }                
+                
+                
+                 $('.odu_i_next').click(function(){//start of next button
+                get_current_odu_i_id = $(this).parent().attr('id');
+                extract_current_odu_i_id = get_current_odu_i_id.substring(11);
+                $('#'+get_current_odu_i_id).next().fadeIn();
+                $('#'+get_current_odu_i_id).hide();
+                 }); 
+                
+                
+                $('.odu_i_review').click(function(){//review button
+                    $('.odu_i_review').hide();
+                    $('[id^="odu_i_item_"]').show();
+                    $('.odu_i_retry').show();
+                    $('.odu_i_next').hide();
+                });
+                            
+            });
+            
+ 
+            $('.odu_i_retry').click(function() {
+                location.reload();
+            });
+
+
+        }); //end of document ready
+</script>
+        
+    
+<!--end of copy this----------------------------------------------------------------------------------------------------------->    
+
+    
+    
+    
+    
+   
+    
+    
+</body>
+</html>

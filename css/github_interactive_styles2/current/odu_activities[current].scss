@@ -1,0 +1,596 @@
+@import "configs";
+
+
+$color_interactive_defaultButton_background: $ple_briteBlue;//update
+$color_interactive_retryButton_background: $odu_darkGreen;//update
+$color_intereactive_defaultfeedbackPanelHeader_background:$odu_xLiteBlue;//update
+$color_intereactive_errorFeedbackPanelHeader_background: #ffdbdb;//update
+$color_interactive_font_incorrect:$odu_red;//update
+$color_interactive_font_correct:$odu_darkGreen;//update
+
+$color_interactive_questionBorder: $liteGray;//add
+$color_interactive_attention_border: #bdbba0;//add
+$color_interactive_miscButton_background:$mediumGray ;//add     
+$color_interactive_instructionTitle: $odu_briteBlue;//add
+
+
+
+@mixin odu_i_default_bg_text{
+    background: $white;
+    color: $almostBlack;
+}
+
+
+.odu_i_content_area{
+    margin: $margin_interactive_contentCenter;    
+    
+    h4{
+    line-height: 140%;
+    font-weight: 100;    
+    }
+}
+
+.odu_i_content_area {
+    border-radius: 0px !important;
+}
+
+
+.odu_i_row{    
+    margin: $margin_interactive_contentCenter;
+    clear: both;
+}
+
+.odu_i_attention{
+    padding:10px;
+    background: $color_interactive_attention_background;
+    border:1px solid $color_interactive_attention_border;
+}
+
+/*utilities*/
+
+.odu_i_clear{//end columns
+    clear:both;
+}
+
+
+.odu_i_hidden{//hide elements
+    display: none;
+}
+
+.odu_i_screen_reader_label {//show hidden content in screen reader mode
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.odu_i_validate{//notification for no answer
+   @extend .odu_i_attention; 
+    font-weight: bold;
+}  
+
+
+.odu_i_circle{//icon area for odu_i_validate
+    border:2px solid $color_interactive_itemValidationCircleBorder;
+    border-radius:20px; 
+    padding:0px 7px; 
+    font-size: smaller
+} 
+
+
+.odu_i_display_block{//show elements
+    display: block;
+}
+
+.odu_i_display_none{
+    @extend .odu_i_hidden;
+}
+
+.odu_i_mark_area {//area for check or x mark
+    width: 15px;
+}
+
+.odu_i_margin_bottom, .odu_i_add_margin_bottom {//margin
+    margin-bottom: 10px;
+}
+
+.odu_i_column{//column
+    float:left;
+}
+
+.odu_i_column .column_title {//column title
+    text-align: center; 
+    font-weight: bold;
+}
+
+
+/*instructions or directions box*/
+
+.odu_i_instructions{
+    background:$color_interactive_instructionsBackground;
+    padding:0px 10px; 
+    border:1px solid $color_interactive_instructionsBorder ; 
+    margin-bottom: 10px;
+
+	h4{
+		font-weight: bold;
+        font-size: large;
+        margin: 10px 0px;
+        color:$color_interactive_instructionsBorder; 						             
+            
+        
+	}
+}
+
+.odu_i_instructions ul {
+    padding-left: 25px;
+}  
+
+.odu_i_special_box{
+    border: 1px solid $color_interactive_questionBorder;
+    padding:10px;
+    margin: 0px auto;    
+    }  
+
+.odu_i_special_indent5{
+    margin-left:5%;
+}
+
+.odu_i_bold_centered {
+    font-weight: bold;
+    text-align: center;
+}
+
+.odu_i_text_center{
+    text-align: center;
+}
+
+
+/*buttons*/
+
+.odu_i_button{//default  
+    background: $color_interactive_defaultButton_background;
+    border:0px;
+    padding: 8px 18px;
+    margin: 0px 3px 0px 3px;
+    text-align: center;
+    display: inline-block;
+    opacity: 1.90;
+    color: $white;
+    filter: alpha(opacity=80); 
+    border-radius: 0px 0px 0px 0px !important;//temporary
+}
+
+
+.odu_i_button_small{//default smaller
+    @extend .odu_i_button;
+    padding: 6px 12px;
+    margin: 0px 2px;
+    font-size: smaller;
+}
+
+
+.odu_i_button:hover {//default hover
+    -webkit-box-shadow: inset 0px 0px 300px -88px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 300px -88px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 300px -88px rgba(0,0,0,1);
+    cursor: pointer;    
+}
+
+
+.odu_i_button_error{//red button
+    @extend .odu_i_button;
+    background: $color_interactive_errorButton_background;     
+}
+
+.odu_i_button_retry{//start over button
+    @extend .odu_i_button;
+    background: $color_interactive_retryButton_background;     
+}
+
+
+.odu_i_button_misc{//gray button
+    @extend .odu_i_button;
+    background: $color_interactive_miscButton_background;     
+}
+
+
+/*panels for feedback or misc*/
+
+.odu_i_panel{//default margin, make it center
+     margin:10px auto;
+    
+}
+
+.odu_i_panel_header{
+    background: $color_intereactive_defaultfeedbackPanelHeader_background;
+    padding:10px;        
+    border:$border_interactive_panel $color_intereactive_defaultfeedbackPanelContent_border;
+    color: $almostBlack;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.odu_i_panel_content{
+    @extend .odu_i_panel_header;
+    @include odu_i_default_bg_text;
+    border-top: 0px !important;
+    border-radius: 0px 0px 0px 0px !important;//temp
+}
+
+.odu_i_panel_success{
+    @extend .odu_i_panel;
+    .odu_i_panel_header{
+        background: $color_intereactive_successFeedbackPanelHeader_background;
+        border: $border_interactive_panel $color_intereactive_successFeedbackPanelHeader_border;
+        color: $color_intereactive_successFeedbackPanelHeader;
+    }
+    
+    .odu_i_panel_content{
+        border: $border_interactive_panel $color_intereactive_successfeedbackPanelContent_border;
+        @include odu_i_default_bg_text;
+        
+    }
+}
+
+.odu_i_panel_error{
+    @extend .odu_i_panel;
+    .odu_i_panel_header{
+        background: $color_intereactive_errorFeedbackPanelHeader_background;
+        border: $border_interactive_panel $color_intereactive_errorFeedbackPanelHeader_border;
+        color: $color_intereactive_errorFeedbackPanelHeader;
+    }
+    
+    .odu_i_panel_content{
+        border: $border_interactive_panel $color_intereactive_errorfeedbackPanelContent_border;
+        @include odu_i_default_bg_text;
+        
+    }
+}
+
+.odu_i_panel_retry{
+    @extend .odu_i_panel;
+    .odu_i_panel_header{
+        background: $odu_liteYellow;
+        padding:10px;        
+        border:$border_interactive_panel $color_intereactive_defaultfeedbackPanelContent_border;
+        color: $almostBlack;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .odu_i_panel_content{
+        @extend .odu_i_panel_header;
+        @include odu_i_default_bg_text;
+        border-top: 0px !important;
+        border-radius: 0px 0px 0px 0px !important;//temp
+    }
+   
+}
+
+
+
+/*utitlies for items*/
+.odu_i_content_area label{
+	font-weight: 100 !important;
+}
+
+
+.odu_i_item_background{//extend this
+    background: $color_interactive_questionBackground;
+	padding: 10px;   
+	margin-bottom: 10px;
+	border: $border_interactive_panel $color_interactive_questionBorder;
+}
+
+.odu_i_score {
+	color: $color_interactive_font_correct;
+	font-weight: bold;
+}
+
+.odu_i_display_score, .odu_i_start_over,{
+    display:none;
+}
+
+
+/* _mc(multiple choice) and _cb (chekcbox, multiple-answers)*/
+
+.odu_i_mc_item, .odu_i_cb_item{
+    @extend .odu_i_item_background;
+}
+
+.odu_i_mc, .odu_i_cb, .odu_i_mc_item, .odu_i_cb_item  {     
+    clear: both;	
+    
+    .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {				
+        margin: 0%;
+	 }
+    
+    fieldset, legend{
+        margin-left: 0px;
+		margin-bottom: 10px;
+		padding: 0px;
+		border: none 0px; //remove the border of fieldset
+    }
+}
+ 
+
+.odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
+  margin-right:3px;
+}
+
+
+.odu_i_mark_area, 
+.odu_i_mc_item input[type=radio], 
+.odu_i_cb_item input[type=checkbox], 
+.odu_i_mc_item label, 
+.odu_i_mc_item input[type=checkbox] {
+	float: left;
+	float: left;
+	cursor: pointer;
+}
+
+
+.odu_i_mc_item label, .odu_i_cb_item label {
+    width: 80%;
+}
+
+ 
+.odu_i_mc_key, .odu_i_score_total {
+    font-weight: bold;
+}
+
+
+.odu_i_mc_all, .odu_i_cb_all{
+    display:block
+}
+
+.odu_i_mc_explanation, .odu_i_cb_explanation{
+    display:none;
+}
+
+/* _fi (identification, fill-in, question and answer)*/
+
+.odu_i_fi_item{
+    @extend .odu_i_item_background;
+    margin-top:10px;    
+}
+
+.odu_i_fi_item label{
+    padding-bottom: 10px;
+}
+
+
+.odu_i_fi_item input[type=text] {	 
+    width:85%;
+    padding:5px;
+    float:left; 
+    margin:0px 5px 0px 0px;
+}
+ 
+.odu_i_fi_item .odu_i_mark_area {
+    margin-right: 2px;
+    display:none; 
+    float:left; 
+    margin-top:5px;
+}
+
+.odu_i_fi_A, .odu_i_fi_explanation{//answer key and explanation area
+    display: none;
+}
+
+
+/* _drop (matching-type, drop-downs)*/
+
+.odu_i_drop_item_question, .odu_i_drop_item_a, .odu_i_drop_explanation{
+    display: none;
+}
+
+
+.odu_i_drop_columns{
+    margin: 10px auto; 
+    background: $color_interactive_questionBackground; 
+    border: $border_interactive_panel $color_interactive_questionBorder;
+    padding:5px;
+}
+
+.odu_i_drop_item label{
+    float: left; 
+    max-width: 70%; 
+    padding:0px 5px;
+}
+
+.odu_i_drop_item select{
+    float: left; 
+    margin:0px 2px
+}
+
+.odu_i_drop_choices_list{
+    list-style: none;
+}
+
+.odu_i_drop_main_question{
+    padding:5px;
+}
+
+/*dr=drag and drop*/
+
+.odu_i_dr_drop_A {
+    display: none;
+}
+.odu_i_dr_drag_area div {
+    margin: 10px auto;
+}
+.odu_i_dr_mark_area {
+    margin: 2px;
+    display: none;
+}
+.odu_i_dr_mark_area,
+.odu_i_dr_drop {
+    float: left;
+}
+.odu_i_dr_incorrect,
+.odu_i_dr_correct {
+    display: none;
+}
+.odu_i_dr_incorrect {
+    color: $color_interactive_font_incorrect;
+    float: left;
+    width: 10px;
+    font-weight: bold
+}
+.odu_i_dr_correct {
+    color: $color_interactive_font_correct;
+    float: left;
+    width: 10px;
+    font-weight: bold;
+}
+.odu_i_dr_drop_wrapper {
+    margin-top: 10px;
+    width: 220px;
+}
+.odu_i_dr_answer_column_name {
+    display: none;
+}
+
+/*fb = fill in the blanks*/
+
+
+.odu_i_fb_item{
+    @extend .odu_i_item_background;
+}
+
+.odu_i_fb_explanation{
+    display: none;
+}
+
+.odu_i_fb_input,
+.odu_i_fb_phrase {
+    display: inline-block;
+}
+.odu_i_fb_mark_box {
+    @extend .odu_i_attention;
+    padding: 3px;
+    
+}
+.odu_i_fb_mark {
+    display: none;
+    text-align: center;
+}
+.odu_i_fb_item input[type="text"] {
+    width: 150px;
+}
+.odu_i_fb_A {
+    display: none;
+}
+
+
+/*tbl = complete the table*/
+
+
+.odu_i_table_area{
+    overflow-x:auto;
+    margin:0px auto;
+	
+	h4{
+		text-align: center;
+        font-weight: bold;
+	}    
+}    
+    
+    
+.odu_i_table_wborder {
+	width: 100%;
+    border: 1px solid $color_interactive_questionBackground;
+    border-collapse: collapse;  
+	
+    th,td{
+        padding:10px;
+        border: 1px solid $color_interactive_questionBorder;        
+    }
+	
+	th{	
+		background-color: $ple_blue;
+		color: $white;         
+	}
+	
+	td {
+		vertical-align: middle;		
+	}            
+   
+}    
+    
+.odu_i_table_area td input[type=text]{
+	padding:5px;
+    width:90%;
+    margin:0px;
+    
+}   
+    
+.odu_i_tbl_mark_box{    
+    padding:10px;
+    @extend .odu_i_attention;
+}    
+
+.odu_i_tbl_mark{
+    text-align:center; 
+    font-weight:bold;
+    display: none;
+}    
+        
+.odu_i_tbl_item_A{
+	display: none;
+	text-align: center;
+	font-weight: bold;
+}   
+    
+.odu_i_validate2 {	
+    @extend .odu_i_attention;
+    padding:5px;
+    font-weight: 100;
+    text-align: center;
+    font-size: smaller;
+}    
+
+
+/* _sr short response, short-answer, open-ended*/
+
+.odu_i_sr_item {
+    @extend .odu_i_item_background;
+}
+
+.odu_i_sr_item label {
+    margin-bottom: 10px;
+}
+
+.odu_i_sr_item textarea {
+    width: 100%;
+    height: 120px;
+    margin: 5px auto;
+}
+
+.odu_i_sr_item_explanation {
+    display: none;
+}
+
+.odu_i_display_print_div, .odu_i_sr_panel_explanation {
+    display: none;
+}
+
+/* _reveal (reveal button, show answer button activity)*/
+
+.odu_i_reveal_item{
+    @extend .odu_i_item_background;
+}
+
+.odu_i_reveal_answer {
+    display: none;
+}
+        
+.odu_i_reveal_item_question {
+    margin-bottom: 10px;
+}
+        
+.odu_i_reveal_button {
+    margin-bottom: 10px;
+}
