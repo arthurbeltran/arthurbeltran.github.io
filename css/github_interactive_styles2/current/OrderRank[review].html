@@ -1,0 +1,558 @@
+<!---do not copy----------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Number</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/arthurbeltran/arthurbeltran.github.io/767df0e2/css/github_interactive_styles2/ple10032017.css">
+        <link rel="stylesheet" type="text/css" href="odu_activities%5Bcurrent%5D.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" async  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>   
+</head>
+<body style="font-family: Open Sans">
+<!--end of do not copy--------------------------------------------------------------------------------------------------------->
+
+<!--start of copy this----------------------------------------------------------------------------------------------------------->    
+
+
+    
+<div class="odu_i_content_area"><!--start of interactive activity-->
+    
+<div class="odu_i_instructions"><!--instructions-->
+    <h4>Directions</h4>
+    
+    <div class="odu_i_instructions_generic"><!--generic-->    
+        <p><strong>Order/Rank</strong>. Drag the following concepts to the correct order.</p>
+            <ul class="odu_i_directions">       
+            <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>    
+        </ul>
+    </div>
+
+    <div class="odu_i_instructions_screen_reader"><!--screen reader-->
+        <p><strong>Order/Rank</strong>. Order the following items by selecting the correct number.</p>
+            <ul class="odu_i_directions">       
+            <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>    
+        </ul>
+    </div>
+    
+</div><!--end of instructions-->
+
+    
+<div class="odu_i_row odu_i_button_area odu_i_switch_area" style="float:right"><!--switch button-->
+    <div class="odu_i_switch_buttons_area">
+    <strong>Switch to:</strong>
+    <button class="odu_i_button_switch odu_i_switch_sr">Screen Reader Mode</button>
+    <button class="odu_i_button_switch odu_i_switch_dr">Drag and Drop Mode</button>
+    </div>    
+</div>
+<div class="odu_i_clear"></div><!--end of switch button-->    
+    
+      
+<div class="odu_i_dd_mode odu_i_row"><!--drag and drop mode-->
+    
+    <ul class="odu_i_order_item">
+
+        <li>
+            <h4>ItemA</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+        </li>
+
+        <li>       
+            <h4>Item B</h4>
+            <p>Contents of item B</p>
+        </li>
+
+        <li>
+            <h4>Item C</h4>
+            <p>Contents of item C</p>
+        </li>
+
+        <li>
+            <h4>Item D</h4>
+            <p>Some contents of item D.</p>
+        </li>
+
+
+    </ul>     
+
+
+    <div class="odu_i_row odu_i_button_area" style="text-align:center">
+        <button class="odu_i_button odu_i_submit">Check Answer(s)</button>
+        <button class="odu_i_button_misc odu_i_reorder">Reorder Incorrect Item(s)</button>
+        <button class="odu_i_button_print odu_i_print">Print Activity</button>
+        <button class="odu_i_button_retry odu_i_restart">Start Over</button>       
+    </div>
+</div><!--end of drag and drop mode-->    
+    
+
+<div class="odu_i_screen_r_mode odu_i_row"><!--screen reader mode-->
+    <div class="odu_i_attention">You are in Screen Reader Mode.</div>
+
+
+    
+<div class="odu_i_dr_sr_item_area">
+    
+       
+   
+    
+
+    
+
+
+    
+    
+    
+</div>        
+    
+    
+    
+<div class="odu_i_row odu_i_button_area" style="text-align:center">
+        <button class="odu_i_button odu_i_submit">Check Answer(s)</button>
+        <button class="odu_i_button_misc odu_i_reorder">Reorder Incorrect Item(s)</button>
+        <button class="odu_i_button_print odu_i_print">Print Activity</button>
+        <button class="odu_i_button_retry odu_i_restart">Start Over</button>       
+</div>    
+    
+    
+    
+    
+</div><!--end of screen reader mode-->    
+    
+  
+    
+    
+    
+</div>
+<!--end of interactive activity-->
+    
+   
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.print/1.5.1/jQuery.print.min.js" integrity="sha256-XN4xbOooWmIOZm8P4np4ggK3SICCxO8mFNPWN8bvbrM=" crossorigin="anonymous"></script>    
+    
+<script>
+//Complete table script ver 10252017    
+$(document).ready(function(){//start of document ready
+//global items    
+odu_i_validate = 0;//validate initial value
+odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_circle">!</span> Please respond to this item or question before you can submit your answers.</div>';//validate text    
+
+    $('.odu_i_instructions_screen_reader').hide();
+    $('.odu_i_switch_dr').hide();
+    $('.odu_i_screen_r_mode').hide();
+    
+    
+    
+    $('.odu_i_print').click(function(){//print the activity, temporary
+      
+        $('.odu_i_content_area').print({
+            addGlobalStyles : true,    
+            rejectWindow : true,    
+            iframe : true,
+            noPrintSelector: '.odu_i_button_area'        
+        });   
+
+    });
+    
+    $('.odu_i_switch_sr').click(function(){//screen reader button
+        $(this).hide();
+        $('.odu_i_instructions_generic').hide();
+        $('.odu_i_dd_mode').hide();
+        $('.odu_i_switch_dr').fadeIn();
+        $('.odu_i_screen_r_mode').fadeIn();
+        $('.odu_i_instructions_screen_reader').fadeIn();
+    });
+    
+    $('.odu_i_switch_dr').click(function(){//drag and drop button
+        $(this).hide();
+        $('.odu_i_screen_r_mode').hide();
+        $('.odu_i_instructions_screen_reader').hide();
+        $('.odu_i_switch_sr').fadeIn();
+        $('.odu_i_instructions_generic').fadeIn();
+        $('.odu_i_dd_mode').fadeIn();
+    });
+    
+    
+    $('.odu_i_print').hide();
+    $('.odu_i_reorder').hide(); 
+    
+        
+    $('.odu_i_order_item li').each(function(){//label the order items
+        var odu_i_li_index = $(this).index()+1;
+        $(this).addClass('odu_i_order_indicator_default');
+        $(this).attr('data-order',odu_i_li_index);
+        $(this).wrapInner('<div class="odu_i_order_content">');
+        $(this).append('<div class="odu_i_clear>');
+        $(this).prepend('<div class="odu_i_mark_area">');        
+        
+    });
+    
+    var odu_i_count_order_items = $('.odu_i_order_item li').length;//count the order items
+    
+    $('.odu_i_order_item li').each(function(){//add the class                
+        $('.odu_i_dr_sr_item_area').prepend('<div class="odu_i_dr_sr_item">');        
+    });
+    
+    $('div[class$="_item"]').each(function(){//add id to each item
+        odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
+        $(this).attr('id','odu_i_item_'+odu_i_index_numbering);
+    });
+    
+        
+    $('.odu_i_dr_sr_item').each(function(){//label the screen reader mode
+        var odu_i_get_id = $(this).attr('id');
+        $(this).attr('aria-describedby','odu_i_dr_sr_content_'+odu_i_get_id.substring(11));
+        $(this).append('<div class="odu_i_mark_area">');
+        $(this).append('<div class="odu_i_dr_sr_wrapper">');
+        $(this).append('<div class="odu_i_clear">');
+    });
+    
+    
+    
+    $.fn.exists = function(){ return this.length > 0; }//utility: check if an element exists
+    
+    $.fn.odu_i_f_randomizeItems = function(itemWrapper){//randomize a div, must have a element wrapper
+        var itemWrapperClass = document.querySelectorAll(itemWrapper);
+        for (var j = 0; j < itemWrapperClass.length; j++) {
+            var ul = itemWrapperClass.item(j);
+            for (var i = ul.children.length; i >= 0; i--) {
+                ul.appendChild(ul.children[Math.random() * i | 0]);
+            }
+        }
+    }
+    
+    $.fn.odu_i_f_sort = function(itemWrapper,itemChild){//sort move
+        $(itemWrapper).sortable({
+            items: itemChild
+        });
+        $(itemWrapper).disableSelection();
+    }
+    
+        
+    $(this).odu_i_f_randomizeItems('.odu_i_order_item');//randomize the items
+    $(this).odu_i_f_sort('.odu_i_order_item','li');//add dragdrop to li
+        
+    
+    $('.odu_i_dr_sr_wrapper').each(function(){//generate the screen reader mode elements
+        var odu_i_get_parent_id = $(this).parent().attr('id');
+        var odu_i_get_parent_id_index = $(this).parent().index();        
+        $(this).append('<div class="odu_i_sr_content">');
+        $(this).find('.odu_i_sr_content').attr('id',odu_i_get_parent_id+'_select');
+        
+        var odu_i_get_order_content = $('.odu_i_order_item li').eq(odu_i_get_parent_id_index).html();
+        $(this).find('.odu_i_sr_content').html(odu_i_get_order_content);
+        $(this).find('.odu_i_sr_content .odu_i_mark_area').remove();
+        
+        $(this).append('<label>');
+        $(this).find('label').attr('for',odu_i_get_parent_id+'_select');
+        $(this).find('label').text('Choose order number: ');
+        
+        $(this).append('<select>');
+        $(this).find('select').attr('id',odu_i_get_parent_id+'_select'); 
+        
+        $(this).append('<div class="odu_i_dr_sr_a">');
+        var odu_i_get_order_answer = $('.odu_i_order_item li').eq(odu_i_get_parent_id_index).attr('data-order');
+        $(this).find('.odu_i_dr_sr_a').text(odu_i_get_order_answer);
+        
+        $(this).append('<button class="odu_i_button_small odu_i_button_misc odu_i_retry">Try Again');
+        $(this).append('<button class="odu_i_button_small odu_i_button odu_i_submit">Check Answer');
+        
+        $(this).find('.odu_i_retry, .odu_i_submit').hide();
+        
+        
+    });
+    
+    $('.odu_i_dr_sr_wrapper select').each(function(){//add the options
+            $(this).append('<option value=0>');
+            for (i = 1; i <= odu_i_count_order_items; i++) {
+                    $(this).append('<option value="'+i+'">'+i);
+                } 
+    });
+   
+    
+    $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear form elements upon refresh   
+        $(contentArea).find('input[type="radio"], input[type="checkbox"], input[type="text"], select, textarea').removeAttr('disabled');//enable form inputs
+        
+        $(contentArea).find('select').prop('selectIndex',0);//bring back selection to blank
+        $(contentArea).find('select').attr('autocomplete', 'off');//remove previous selection upon refresh    
+    }
+    
+    
+   
+    $.fn.odu_i_f_mark = function(itemId,inputType,itemResponse,fbVal){//submit: adding the check or x mark
+    
+        if(fbVal==''|| fbVal===undefined || fbVal==false) fbVal = ''; 
+
+        if (itemResponse == undefined){
+            itemResponse = '';
+        }    
+
+        var odu_i_mark_value_correct = '<br><span  class="odu_i_check" style="color:#228b22">&#x2714; Correct.</span><br>';
+        var odu_i_mark_value_incorrect = '<br><span  class="odu_i_x" style="color:crimson">&#x2718; Incorrect</span><br>';
+        
+        
+
+        switch(inputType){           
+
+            case 'select':
+                var odu_i_mark_value = (itemResponse==1)? odu_i_mark_value_correct:odu_i_mark_value_incorrect;
+                $(itemId).find('.odu_i_dr_sr_wrapper').prepend('<br>');
+                $(itemId).find('.odu_i_dr_sr_wrapper').prepend($(odu_i_mark_value).addClass('odu_i_attention'));
+                $(itemId).find('.odu_i_attention').css('display','none');
+                $(itemId).find('.odu_i_attention').fadeIn();
+                return odu_i_mark_value;
+                break;
+        }
+    }
+
+        
+   $('.odu_i_content_area').odu_i_f_FirefoxFormBug('.odu_i_content_area');//add the form debugger
+   
+   
+   $('div[class$="_item"]').find('select').click(function(){//remove the validation notification
+        $(this).parent().parent().find('.odu_i_validate').slideUp();
+    });    
+       
+   $.fn.odu_i_f_disableSelect = function(itemType,selector){//submit: disable select
+        $(itemType).find(selector).css({'color':'black','font-weight':'bold'});
+        $(itemType).find(selector).prop('disabled',true);
+        $(itemType).find(selector).css('cursor','not-allowed'); 
+    }
+   
+   
+   $.fn.odu_i_f_disableSelectIncorrect = function(itemType,selector){//submit: disable select        
+        $(itemType).find(selector).prop('disabled',true);
+        $(itemType).find(selector).css('cursor','not-allowed'); 
+    }
+   
+   
+   $.fn.odu_i_f_enableSelect = function(itemType,selector){//submit: enable select
+        $(itemType).find(selector).css({'color':'black','font-weight':'100'});
+        $(itemType).find(selector).removeAttr('disabled');
+        $(itemType).find(selector).css('cursor','default'); 
+    }
+    
+   $.fn.odu_i_count_items_validation = function(){// submit: count the items and answers
+    
+        $('.odu_i_content_area').find('div[class$="_item"]').each(function(){
+
+            var odu_i_item_class = $(this).attr('class');
+            var odu_i_item_id = '#'+$(this).attr('id');
+
+            switch(odu_i_item_class){                              
+               case 'odu_i_dr_sr_item':                                    
+                        
+                    var odu_i_get_val = $(this).find('select').val();
+                    if(odu_i_get_val==0){
+                        $(odu_i_item_id).prepend(odu_i_notification_validate);
+                        odu_i_validate++;
+                    }
+                    break;
+
+            }//end of switch
+
+        });
+    
+   }
+
+    
+    $.fn.odu_i_f_check_drSrv2 = function(itemId) {
+     
+           $(this).odu_i_f_disableSelect(itemId,'select');
+           var odu_i_get_val = $(itemId).find('select').val();
+           var odu_i_get_key = $(itemId).find('.odu_i_dr_sr_a').text();    
+           
+           var odu_i_result_mark = (odu_i_get_val==odu_i_get_key) ? 1:0;
+           
+           var odu_i_wrapper_has_class = $(this).find('.odu_i_dr_sr_wrapper .odu_i_attention').length;     
+           
+           if(odu_i_wrapper_has_class<1){
+                $(this).odu_i_f_mark(itemId,'select',odu_i_result_mark);    
+           }          
+           
+           if(odu_i_result_mark==0){
+               var odu_i_check_visible = $(itemId).find('.odu_i_dr_sr_wrapper .odu_i_retry').css('display');               
+                if(odu_i_check_visible=='none'){
+                    $(itemId).find('.odu_i_dr_sr_wrapper .odu_i_retry').fadeIn();                                    
+                }              
+           }
+    } 
+  
+  
+   
+     
+   $('.odu_i_dr_sr_wrapper .odu_i_retry').each(function(){
+        var odu_i_get_parent = '#'+$(this).parent().parent().attr('id');
+        $(this).click(function(){
+            $(this).hide();
+            $(this).parent().find('br').remove();
+            $(this).parent().find('.odu_i_attention').slideUp(function() { 
+                $(this).remove(); 
+            });
+
+            $(this).odu_i_f_enableSelect(odu_i_get_parent,'select');
+            
+            
+            var odu_i_check_visible = $(odu_i_get_parent).find('.odu_i_dr_sr_wrapper .odu_i_submit').css('display');
+            
+            if(odu_i_check_visible=='none'){
+                $(odu_i_get_parent).find('.odu_i_dr_sr_wrapper .odu_i_submit').fadeIn();                
+            }            
+        });
+        
+    });   
+    
+   
+   
+   
+   
+   $('.odu_i_dd_mode').find('.odu_i_submit').click(function(){
+        $('.odu_i_order_item').sortable('disable');        
+        $('.odu_i_order_item li').removeClass('odu_i_order_indicator_default');  
+        $('.odu_i_order_item li').addClass('odu_i_order_indicator_check');
+        $(this).hide();
+        $(this).parent().find('.odu_i_print').fadeIn();
+        
+        $('.odu_i_order_item li').each(function(){
+            var odu_i_get_current_position = $(this).index()+1;//get position through index
+            var odu_i_get_data_order = $(this).attr('data-order');//get data-order value
+            if(odu_i_get_current_position == odu_i_get_data_order){
+                
+                var odu_i_test_if_hasClass_correct = $(this).find('.odu_i_mark_area').hasClass('odu_i_order_correct');
+                
+                if(odu_i_test_if_hasClass_correct==false){
+                        $(this).find('.odu_i_mark_area').addClass('odu_i_order_correct');
+                        $(this).find('.odu_i_mark_area').append('&#x2714; '+odu_i_get_data_order+':');                     
+                    }
+                    $(this).parent().prop('disabled','true');
+            }
+            else{
+                
+                var odu_i_test_if_hasClass_incorrect = $(this).find('.odu_i_mark_area').hasClass('odu_i_order_incorrect');
+                    if(odu_i_test_if_hasClass_incorrect==false){
+                        $(this).find('.odu_i_mark_area').addClass('odu_i_order_incorrect');
+                        $(this).find('.odu_i_mark_area').html('&#x2718;');                        
+                    }
+                $('.odu_i_dd_mode').find('.odu_i_reorder').show();
+            }
+        });     
+        
+        $('.odu_i_mark_area').show();
+        
+        
+    });
+    
+   $('.odu_i_dd_mode').find('.odu_i_reorder').click(function(){
+        $(this).hide();
+        $('.odu_i_print').hide();
+        $('.odu_i_dd_mode').find('.odu_i_submit').show();
+        $('.odu_i_order_item').sortable('enable');
+        $('.odu_i_order_item li').each(function(){
+            var odu_i_get_current_position = $(this).index()+1;//get position through index
+            var odu_i_get_data_order = $(this).attr('data-order');//get data-order value
+            if(odu_i_get_current_position != odu_i_get_data_order){
+               $(this).find('.odu_i_mark_area').html('');
+               $(this).find('.odu_i_mark_area').removeClass('odu_i_order_incorrect');
+               $(this).removeClass('odu_i_order_indicator_check');
+               $(this).addClass('odu_i_order_indicator_default');    
+            }            
+        });
+        
+        
+    });
+  
+     
+    
+    
+    $.fn.odu_i_f_orderSubmit = function(selector){
+        
+        $(selector).click(function(){
+           $('.odu_i_content_area').find('.odu_i_validate').remove();
+           $(this).odu_i_count_items_validation();
+
+           if (odu_i_validate>0){
+                alert('Some items or questions are unanswered.');
+                $(this).show();        
+            }
+            else{
+                $(this).hide();
+                $(this).parent().find('.odu_i_print').fadeIn();
+                $('.odu_i_content_area').find('div[class$="_item"]').each(function(){                                   
+                    var odu_i_item_id = '#'+$(this).attr('id');    
+                    $(this).odu_i_f_check_drSrv2(odu_i_item_id);
+                }); 
+            }
+            odu_i_validate = 0;//reset the validation value;            
+
+       });
+        
+    }
+    
+    
+    
+     $.fn.odu_i_f_orderSubmitEach = function(){ 
+                
+         $(this).click(function(){
+           $(this).parent().parent().find('.odu_i_validate').remove();
+           $(this).odu_i_count_items_validation();
+
+           if (odu_i_validate>0){
+                alert('Some items or questions are unanswered.');
+                $(this).show();        
+            }
+            else{
+                $(this).hide();
+                $('.odu_i_content_area').find('.odu_i_print').fadeIn();
+                var odu_i_item_id = '#'+$(this).parent().parent().attr('id');    
+                $(this).odu_i_f_check_drSrv2(odu_i_item_id);
+            }
+            odu_i_validate = 0;//reset the validation value;            
+
+       });
+        
+    }
+        
+        
+    odu_i_default_order_submit_selector ='.odu_i_screen_r_mode .odu_i_button_area .odu_i_submit';        
+    $(this).odu_i_f_orderSubmit(odu_i_default_order_submit_selector);
+    $('.odu_i_dr_sr_wrapper .odu_i_submit').each(function(){
+            $(this).odu_i_f_orderSubmitEach();
+    });
+
+ 
+    
+
+
+    
+    
+    
+$('.odu_i_restart').click(function(){
+    location.reload();
+});
+    
+   
+   
+   
+    
+
+});//end of document ready
+</script>
+
+
+    
+<!--end of copy this----------------------------------------------------------------------------------------------------------->    
+
+    
+    
+    
+    
+   
+    
+    
+</body>
+</html>

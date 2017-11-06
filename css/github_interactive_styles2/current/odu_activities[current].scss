@@ -12,7 +12,10 @@ $color_interactive_questionBorder: $liteGray;//add
 $color_interactive_attention_border: #bdbba0;//add
 $color_interactive_miscButton_background:$mediumGray ;//add     
 $color_interactive_instructionTitle: $odu_briteBlue;//add
-
+$color_interactive_reviewButton_background: $odu_purple;//add
+$color_interactive_printButton_background: $odu_hotPink;//add
+$color_interactive_lightgray_background: $xLiteGray;//add
+$color_interactive_dragBox_background:$odu_liteYellow;//add
 
 
 @mixin odu_i_default_bg_text{
@@ -31,7 +34,7 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 }
 
 .odu_i_content_area {
-    border-radius: 0px !important;
+    border-radius: 0px ;
 }
 
 
@@ -148,53 +151,78 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 }
 
 
+.odu_i_switch_buttons_area{
+    background: $color_interactive_lightgray_background; 
+    padding:10px; 
+    border:1px $color_interactive_questionBorder solid; 
+    margin-bottom:10px;
+}
+
+
 /*buttons*/
 
-.odu_i_button{//default  
-    background: $color_interactive_defaultButton_background;
-    border:0px;
-    padding: 8px 18px;
-    margin: 0px 3px 0px 3px;
+@mixin colorize($selected_color) {
+    background: $selected_color;    
     text-align: center;
     display: inline-block;
     opacity: 1.90;
     color: $white;
     filter: alpha(opacity=80); 
-    border-radius: 0px 0px 0px 0px !important;//temporary
+    border-radius: 0px;
+    
+
+    &:hover {
+        cursor: pointer;
+        background: darken($selected_color, 10%);
+    }
 }
 
 
-.odu_i_button_small{//default smaller
-    @extend .odu_i_button;
+.odu_i_content_area button{//generic button size
+	border:0px;
+    padding: 8px 18px;
+    margin: 0px 3px 0px 3px;
+	
+}
+
+
+
+.odu_i_button{//default button
+    @include colorize($color_interactive_defaultButton_background);
+}
+
+
+.odu_i_button_small{//default smaller    
+	border:0px;
     padding: 6px 12px;
-    margin: 0px 2px;
-    font-size: smaller;
-}
-
-
-.odu_i_button:hover {//default hover
-    -webkit-box-shadow: inset 0px 0px 300px -88px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 0px 300px -88px rgba(0,0,0,1);
-    box-shadow: inset 0px 0px 300px -88px rgba(0,0,0,1);
-    cursor: pointer;    
+    margin: 0px 2px;    
 }
 
 
 .odu_i_button_error{//red button
-    @extend .odu_i_button;
-    background: $color_interactive_errorButton_background;     
+    @include colorize($color_interactive_errorButton_background);       
 }
 
 .odu_i_button_retry{//start over button
-    @extend .odu_i_button;
-    background: $color_interactive_retryButton_background;     
+    @include colorize($color_interactive_retryButton_background);
 }
-
 
 .odu_i_button_misc{//gray button
-    @extend .odu_i_button;
-    background: $color_interactive_miscButton_background;     
+    @include colorize($color_interactive_miscButton_background);   
 }
+
+.odu_i_button_review{//purple button
+    @include colorize($color_interactive_reviewButton_background);       
+}
+
+.odu_i_button_print{//purple button
+    @include colorize($color_interactive_printButton_background);   
+}
+
+.odu_i_button_switch{
+    @include colorize($color_interactive_reviewButton_background);
+}
+
 
 
 /*panels for feedback or misc*/
@@ -215,8 +243,8 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 .odu_i_panel_content{
     @extend .odu_i_panel_header;
     @include odu_i_default_bg_text;
-    border-top: 0px !important;
-    border-radius: 0px 0px 0px 0px !important;//temp
+    border-top: 0px ;
+    border-radius: 0px 0px 0px 0px ;//temp
 }
 
 .odu_i_panel_success{
@@ -262,8 +290,8 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
     .odu_i_panel_content{
         @extend .odu_i_panel_header;
         @include odu_i_default_bg_text;
-        border-top: 0px !important;
-        border-radius: 0px 0px 0px 0px !important;//temp
+        border-top: 0px ;
+        border-radius: 0px 0px 0px 0px ;//temp
     }
    
 }
@@ -272,7 +300,7 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 
 /*utitlies for items*/
 .odu_i_content_area label{
-	font-weight: 100 !important;
+	font-weight: 100 ;
 }
 
 
@@ -297,6 +325,7 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 
 .odu_i_mc_item, .odu_i_cb_item{
     @extend .odu_i_item_background;
+    margin-left: 0px;
 }
 
 .odu_i_mc, .odu_i_cb, .odu_i_mc_item, .odu_i_cb_item  {     
@@ -317,6 +346,8 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 
 .odu_i_mc_item input[type=radio], .odu_i_cb_item input[type=checkbox] {
   margin-right:3px;
+  margin-top:0px;    
+  
 }
 
 
@@ -351,33 +382,39 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 
 /* _fi (identification, fill-in, question and answer)*/
 
-.odu_i_fi_item{
+.odu_i_fi_item, .odu_i_qna_item{
     @extend .odu_i_item_background;
     margin-top:10px;    
 }
 
-.odu_i_fi_item label{
+.odu_i_fi_item label, .odu_i_qna_item{
     padding-bottom: 10px;
 }
 
 
-.odu_i_fi_item input[type=text] {	 
+.odu_i_fi_item input[type=text], .odu_i_qna_item textarea {	 
     width:85%;
     padding:5px;
     float:left; 
     margin:0px 5px 0px 0px;
 }
  
-.odu_i_fi_item .odu_i_mark_area {
+.odu_i_fi_item .odu_i_mark_area, .odu_i_qna_item .odu_i_mark_area {
     margin-right: 2px;
     display:none; 
     float:left; 
     margin-top:5px;
 }
 
-.odu_i_fi_A, .odu_i_fi_explanation{//answer key and explanation area
+.odu_i_fi_A, .odu_i_fi_explanation, .odu_i_qna_a, .odu_i_qna_explanation{//answer key and explanation area
     display: none;
 }
+
+.odu_i_qna_item textarea{    
+    padding:5px;
+    font-size:13px;
+    font-family: inherit;
+}    
 
 
 /* _drop (matching-type, drop-downs)*/
@@ -476,6 +513,7 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 .odu_i_fb_mark {
     display: none;
     text-align: center;
+    padding:2px 0px;
 }
 .odu_i_fb_item input[type="text"] {
     width: 150px;
@@ -484,13 +522,20 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
     display: none;
 }
 
+.odu_i_fb_incorrect_feedback{
+    text-align:left;
+    padding-top:3px; 
+    border-top:1px solid $color_interactive_questionBorder;
+}
+
+
 
 /*tbl = complete the table*/
 
 
 .odu_i_table_area{
     overflow-x:auto;
-    margin:0px auto;
+    margin:15px auto;
 	
 	h4{
 		text-align: center;
@@ -521,29 +566,37 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 }    
     
 .odu_i_table_area td input[type=text]{
-	padding:5px;
-    width:90%;
-    margin:0px;
+	padding:5px 0px 5px 2px;
+    width:96%; 
     
 }   
     
-.odu_i_tbl_mark_box{    
-    padding:10px;
-    @extend .odu_i_attention;
+.odu_i_tbl_mark_box{     
+    @extend .odu_i_attention;    
 }    
 
 .odu_i_tbl_mark{
-    text-align:center; 
-    font-weight:bold;
+    text-align:center;     
     display: none;
+    padding: 3px 0px;
 }    
         
 .odu_i_tbl_item_A{
 	display: none;
-	text-align: center;
-	font-weight: bold;
+	text-align: center;	
 }   
-    
+
+.odu_i_tbl_explanation {
+	display: none;
+}
+
+  
+.odu_i_tbl_incorrect_feedback{
+    @extend .odu_i_fb_incorrect_feedback;
+}
+
+
+
 .odu_i_validate2 {	
     @extend .odu_i_attention;
     padding:5px;
@@ -567,6 +620,8 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
     width: 100%;
     height: 120px;
     margin: 5px auto;
+    font-family: inherit;
+    font-size:small;
 }
 
 .odu_i_sr_item_explanation {
@@ -594,3 +649,85 @@ $color_interactive_instructionTitle: $odu_briteBlue;//add
 .odu_i_reveal_button {
     margin-bottom: 10px;
 }
+/* _order*/
+
+
+.odu_i_order_item{	
+	margin:10px auto;
+	padding:0px;
+	width:80%;
+}
+
+.odu_i_order_item_content{
+float:left;
+}
+
+
+.odu_i_order_item li{
+	border:1px solid $color_interactive_questionBorder;	 
+	list-style: none; 	
+	cursor:pointer;
+	margin: 10px 0px;
+	padding: 5px;
+}
+
+.odu_i_order_indicator_default{
+	background: $color_interactive_lightgray_background;
+}
+
+
+.odu_i_order_indicator_check{
+	background:$color_interactive_dragBox_background;
+} 
+
+.odu_i_order_index{
+	display:none;
+}
+
+.odu_i_order_correct{
+	font-weight:bold;
+	font-size:medium;
+	color:$color_interactive_font_correct;
+	width:35px;	
+}
+
+.odu_i_order_incorrect{
+	font-weight:bold;
+	font-size:medium;
+	color:$color_interactive_font_incorrect;
+	width:20px;	
+}
+
+
+/*dr_sr screen reader version of sort/order */
+.odu_i_dr_sr_item{
+	@extend .odu_i_item_background;
+	margin:10px;
+}
+
+.odu_i_dr_sr_wrapper{
+float:left;
+width:90%;
+}
+
+.odu_i_dr_sr_wrapper label{
+	font-size:small;
+	font-weight:bold;
+}
+
+.odu_i_dr_sr_wrapper select{
+	padding: 5px;
+}
+
+.odu_i_dr_sr_a{
+	display:none;
+	}
+.odu_i_dr_sr_wrapper .odu_i_mark_area{
+	width:35px;
+	font-size:medium;
+}
+
+
+
+
+
