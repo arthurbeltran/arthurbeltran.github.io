@@ -56,6 +56,15 @@
   text-align: center;
   font-weight: bold; }
 
+.odu_i_test_border {
+  border: 1px solid #bdbba0; }
+
+.odu_i_c {
+  color: #0c6006; }
+
+.odu_i_x {
+  color: #be1e2d; }
+
 /*instructions or directions box*/
 .odu_i_instructions {
   background: aliceblue;
@@ -186,6 +195,9 @@
   .odu_i_button_switch:hover {
     cursor: pointer;
     background: #4b216a; }
+
+.odu_i_button_area {
+  margin-top: 10px; }
 
 /*panels for feedback or misc*/
 .odu_i_panel, .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {
@@ -477,7 +489,7 @@
 .odu_i_reveal_button {
   margin-bottom: 10px; }
 
-/* _order*/
+/* _order=rank/order */
 .odu_i_order_item {
   margin: 10px auto;
   padding: 0px;
@@ -497,7 +509,7 @@
   background: #fafafa; }
 
 .odu_i_order_indicator_check {
-  background: #fffdd9; }
+  background: #d4fecc; }
 
 .odu_i_order_index {
   display: none; }
@@ -514,7 +526,70 @@
   color: #be1e2d;
   width: 20px; }
 
-/*dr_sr screen reader version of sort/order */
+/* drag drop */
+.odu_i_dr_basket_item {
+  float: left;
+  border: 1px solid #c8c8c8;
+  background: #fafafa;
+  width: 80%; }
+
+.odu_i_dr_drag_object {
+  padding: 10px;
+  background: white;
+  border: 1px solid #c8c8c8;
+  margin: 0px auto 5px auto;
+  text-align: center;
+  max-width: 90%; }
+
+.odu_i_dr_phrase {
+  text-align: left; }
+
+.odu_i_dr_drag_object .odu_i_mark_area {
+  width: 20px;
+  display: none; }
+
+.odu_i_dr_text {
+  width: 90%; }
+
+.odu_i_dr_a {
+  display: none; }
+
+.odu_i_dr_drag_object_box_title {
+  font-weight: bold;
+  display: none;
+  margin: 5px;
+  text-align: center; }
+
+.odu_i_dr_drag_object_box {
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+  background: #fafafa;
+  float: left;
+  max-width: 25%;
+  position: relative; }
+
+.odu_i_dr_basket_text {
+  padding: 10px; }
+
+.odu_i_dr_drag_object_box h4, .odu_i_dr_basket_text h4 {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px; }
+
+.odu_i_dr_basket_area {
+  float: right;
+  width: 65%; }
+
+.odu_i_state_drop {
+  background: aliceblue;
+  border: 1px solid #0095c8;
+  cursor: not-allowed; }
+
+.odu_i_dr_set {
+  background: #fffdd9;
+  border: 1px solid #bdbba0; }
+
+/*dr_sr screen reader version of dragdrop */
 .odu_i_dr_sr_item {
   margin: 10px; }
 
@@ -534,6 +609,7 @@
 
 .odu_i_dr_sr_wrapper .odu_i_mark_area {
   width: 35px;
-  font-size: medium; }
+  font-size: medium;
+  font-weight: bold; }
 
 /*# sourceMappingURL=odu_activities[current].css.map */
