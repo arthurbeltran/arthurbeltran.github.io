@@ -342,7 +342,7 @@ Fill-in-the-Blanks item explanation.
     
 <!--JS Script version 10062017-->    
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.print/1.5.1/jQuery.print.min.js" integrity="sha256-XN4xbOooWmIOZm8P4np4ggK3SICCxO8mFNPWN8bvbrM=" crossorigin="anonymous" type="text/javascript"></script>
+
 
 <script>
 $(document).ready(function(){//start of document ready     
@@ -352,16 +352,7 @@ odu_i_validate = 0;//validate initial value
 odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_circle">!</span> Please respond to this item or question before you can check your answer(s).</div>';//validate text    
     
 
-$('.odu_i_print').click(function(){//print the activity, temporary
-      
-    $('.odu_i_content_area').print({
-        addGlobalStyles : true,    
-        rejectWindow : true,    
-        iframe : true,
-        noPrintSelector: '.odu_i_button_area'       
-    });   
 
-});
 
     
 $('div[class$="_item"]').each(function(){//add id to each item
@@ -945,7 +936,28 @@ $.fn.odu_i_f_textConditions = function(dataCondition, userInputArray,userInputAr
                 var odu_i_response_qna = (odu_i_get_answer_key_low_value<=odu_i_user_input_to_number && odu_i_user_input_to_number<=odu_i_get_answer_key_high_value)? 1:0;
                 var odu_i_numStatement = 'The answer should be <strong>greater than or equal to '+odu_i_get_answer_key_low_value+' but than or equal to ' +odu_i_get_answer_key_high_value+'</strong>.';
                    
-                break;                    
+                break;
+                    
+                    
+                case 'gtlte':
+                var odu_i_get_answer_key_high_value = Math.max.apply(null,answerKeyArray);
+                var odu_i_get_answer_key_low_value = Math.min.apply(null,answerKeyArray);
+                var odu_i_user_input_to_number = parseInt(userInputArray.toString());
+                var odu_i_response_qna = (odu_i_get_answer_key_low_value<odu_i_user_input_to_number && odu_i_user_input_to_number<=odu_i_get_answer_key_high_value)? 1:0;
+                var odu_i_numStatement = 'The answer should be <strong>greater than '+odu_i_get_answer_key_low_value+' but less than or equal to ' +odu_i_get_answer_key_high_value+'</strong>.';
+                   
+                break;  
+                    
+                    
+                case 'gtelt':
+                var odu_i_get_answer_key_high_value = Math.max.apply(null,answerKeyArray);
+                var odu_i_get_answer_key_low_value = Math.min.apply(null,answerKeyArray);
+                var odu_i_user_input_to_number = parseInt(userInputArray.toString());
+                var odu_i_response_qna = (odu_i_get_answer_key_low_value<=odu_i_user_input_to_number && odu_i_user_input_to_number<odu_i_get_answer_key_high_value)? 1:0;
+                var odu_i_numStatement = 'The answer should be <strong>greater than or equal to '+odu_i_get_answer_key_low_value+' but less than ' +odu_i_get_answer_key_high_value+'</strong>.';
+                   
+                break;          
+                    
                                     
                     
                 default:                    
@@ -1284,6 +1296,25 @@ $('.odu_i_retry').click(function(){//start over or try again
 });
     
     
+$('.odu_i_print').on('click', function () {//print answers button
+                $('.odu_i_button_area').remove();                
+                var divContents = $('.odu_i_content_area').html();//div which have to print
+                var printWindow = window.open('', '', 'height=700,width=900');
+                printWindow.document.write('<html><head><title></title>');
+                printWindow.document.write('<link rel="stylesheet" href="https://cdn.rawgit.com/arthurbeltran/arthurbeltran.github.io/f85bad88/css/github_interactive_styles2/current/odu_activities%5Bcurrent%5D.css" >');//external styles               
+                printWindow.document.write('</head><body>');
+                printWindow.document.write('<p style="font-size:smaller">For Internet Explorer users, please right-click then choose Print.');
+                printWindow.document.write(divContents);                
+                printWindow.document.write('</body></html>');
+                printWindow.document.close();
+
+                printWindow.onload=function(){
+                printWindow.focus();                                         
+                printWindow.print();
+                printWindow.close();
+                }
+            });
+
 });//end of document ready    
     
 

@@ -1,322 +1,9 @@
-<!---do not copy----------------------------------------------------------------------------------------------------------->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Course Number</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/arthurbeltran/arthurbeltran.github.io/767df0e2/css/github_interactive_styles2/ple10032017.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="odu_activities%5Bcurrent%5D.css">
-
-     
-</head>
-<body style="font-family: Open Sans">
-<!--end of do not copy--------------------------------------------------------------------------------------------------------->
-
-<!--start of copy this----------------------------------------------------------------------------------------------------------->    
-
-
-<div class="odu_i_content_area" id="print_content_area"><!--start of interactive activity-->
-<div class="odu_i_instructions">
-<h4>Directions</h4>
-
-<p><strong>Answer the following items.</strong></p>
-
-<ul>
-	<li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>
-	<li>***You can only mix <strong>Multiple-choice, Multiple Answers, Identification and Fill-in-the-Blanks</strong>.***</li>
-</ul>
-</div>
-
-
-<!--
-<div class="odu_i_mc_item">
-<fieldset><legend>Multple-choice question.</legend> 
-<input data-value="correct" type="radio" /><label>A. Correct choice</label>
-<input data-value="" type="radio" /><label>B. The sentence for a choice.</label> 
-<input data-value="" type="radio" /><label>C. The sentence for a choice.</label> 
-<input data-value="" type="radio" /><label>D. The sentence for a choice.</label>
-</fieldset>
-
-<div class="odu_i_mc_explanation">Some explanation</div>
-</div>
-    
-    
-    
-<div class="odu_i_mc_item">
-<fieldset><legend>Multple-choice question 2.</legend> 
-<input data-value="correct" type="radio" /><label>A. Correct choice</label>
-<input data-value="" type="radio" /><label>B. The sentence for a choice.</label> 
-<input data-value="" type="radio" /><label>C. The sentence for a choice.</label> 
-<input data-value="" type="radio" /><label>D. The sentence for a choice.</label>
-</fieldset>
-
-<div class="odu_i_mc_explanation">&nbsp;</div>
-</div>    
-    
-
-    
-<div class="odu_i_qna_item">
-<label>
-    New identification or question and answer question 2. <em>Separate your answers by pressing the Enter key</em>.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a">Answer 1</div>
-<div class="odu_i_qna_a">Answer 1</div>
-<div class="odu_i_qna_a">Answer 1</div>    
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>
-    
-    
-<div class="odu_i_qna_item">
-<label>
-    An OR question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="or">Answer 1</div>
-<div class="odu_i_qna_a" data-condition="or">Answer 2</div>    
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>     
-    
-
-    
-<div class="odu_i_qna_item">
-<label>
-    An gt question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="gt">1</div>
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>     
-    
-
-<div class="odu_i_qna_item">
-<label>
-    An gte question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="gte">1</div>
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>    
-    
-
-    
-<div class="odu_i_qna_item">
-<label>
-    An lt question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="lt">1</div>
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>    
-    
-
-    
-    
-<div class="odu_i_qna_item">
-<label>
-    An lte question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="lte">1</div>
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>
-    
-  
-<div class="odu_i_qna_item">
-<label>
-    An ne question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="ne">1</div>
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>    
-    
-    
-<div class="odu_i_qna_item">
-<label>
-    An eq question.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="eq">1</div>
-
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>    
-
-    
-<div class="odu_i_qna_item">
-<label>
-    An greater than 1 or less than 5.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="gtlt">5</div>
-<div class="odu_i_qna_a" data-condition="gtlt">1</div>
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>
-    
-    
-<div class="odu_i_qna_item">
-<label>
-    An greater than or equal to 1 or less than or equal to 5.
-</label>     
-<textarea></textarea>
-<div class="odu_i_qna_a" data-condition="gtelte">5</div>
-<div class="odu_i_qna_a" data-condition="gtelte">1</div>
-<div class="odu_i_clear"></div>
-<div class="odu_i_qna_explanation">
-QnA item explanation.    
-</div>
-</div>    
-    
-
- 
-<div class="odu_i_cb_item">
-<fieldset>
-<legend>Multple answer question.</legend> 
-<input data-value="correct" type="checkbox" /><label>A. Correct choice 1</label>
-<input data-value="correct" type="checkbox" /><label>B. Correct choice 2</label> 
-<input data-value="" type="checkbox" /><label>C. The sentence for a choice.</label> 
-<input data-value="" type="checkbox" /><label>D. The sentence for a choice.</label>
-</fieldset>
-
-<div class="odu_i_cb_explanation">
-Multiple answers explanation for this item.
-</div>
-</div>
--->
-  
-    
-    
-    
-  
-    
-
-    
-<div class="odu_i_fb_item">   
-    
-<div class="odu_i_fb_phrase">The quick brown</div>
-    
-<div class="odu_i_fb_input">
-<input type="text">     
-<div class="odu_i_fb_A" data-condition="or" >fox</div>
-<div class="odu_i_fb_A" data-condition="or" >cat</div>    
-
-</div>    
-
-<div class="odu_i_fb_phrase">jumps over the</div>
-    
-<div class="odu_i_fb_input">
-<input type="text">     
-<div class="odu_i_fb_A">lazy</div>
-</div>    
-
-<div class="odu_i_fb_phrase">dog.</div>    
-    
-    
-<div class="odu_i_fb_explanation">
-Fill-in-the-Blanks item explanation.    
-</div>    
-    
-</div>
-    
-    
-<div class="odu_i_fb_item">     
-    
-<div class="odu_i_fb_phrase">Mary had a little</div>
-    
-<div class="odu_i_fb_input">
-    <input type="text">     
-    <div class="odu_i_fb_A" data-condition="or">lamb</div>
-    <div class="odu_i_fb_A" data-condition="or">goat</div>
-
-</div>
-    
-<div class="odu_i_fb_input">
-    <input type="text">     
-    <div class="odu_i_fb_A">3</div>
-    
-</div>     
-    
-
-<div class="odu_i_fb_phrase">.</div>    
- 
-    
-    
-<div class="odu_i_fb_explanation">
-Fill-in-the-Blanks item explanation.    
-</div>    
-    
-</div>    
-    
-
-
-<div class="odu_i_sr_item">
-    <label>Short response question or statement 1.</label>
-    <textarea></textarea>
-
-    <div class="odu_i_sr_item_explanation">
-        Short response explanation1.
-    </div>
-</div>
-    
- <div class="odu_i_row odu_i_button_area" style="text-align:center">
-    <button class="odu_i_button odu_i_submit">Check Answer(s)</button>
-    <button class="odu_i_button_print odu_i_print">Print Activity</button>
-    <button class="odu_i_button_retry odu_i_retry">Start Over</button>    
-   
-    </div>
-</div>
-<!--end of interactive activity-->    
-
-    
-<!--JS Script version 10062017-->    
-    
-
-
-<script>
+//mixed one version 111417
 $(document).ready(function(){//start of document ready     
 
 //global items    
 odu_i_validate = 0;//validate initial value
-odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_circle">!</span> Please respond to this item or question before you can submit your answers.</div>';//validate text    
+odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_circle">!</span> Please respond to this item or question before you can check your answer(s).</div>';//validate text    
     
 
 
@@ -325,10 +12,19 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
 $('div[class$="_item"]').each(function(){//add id to each item
     odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
     $(this).attr('id','odu_i_item_'+odu_i_index_numbering);
-});    
+});
+$('[id^="odu_i_item_"]').hide();//hide all items
+$('[id^="odu_i_item_"]').each(function(){//add the buttons
+    $(this).append('<button class="odu_i_button odu_i_submit" style="margin-top:5px">Check Answer(s)</button>');
+});
     
+$('.odu_i_content_area').find('.odu_i_button_area').hide();    
+    
+$('[id^="odu_i_item_"]:first').show();//show only the first item    
+    
+var odu_i_total_items_All = $('[id^="odu_i_item_"]').length;//count all items     
    
-    
+
 $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear form elements upon refresh   
     $(contentArea).find('input[type="radio"], input[type="checkbox"], input[type="text"], select, textarea').removeAttr('disabled');//enable form inputs
     
@@ -347,8 +43,8 @@ $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear f
 $.fn.odu_i_f_getIDandOrder = function(itemType,labelArea){//get id and numbering    
     $(itemType).each(function(){
         var odu_i_get_item_id = $(this).attr('id');
-        var odu_i_get_item_id_order = odu_i_get_item_id.substring(11);
-        $(this).find(labelArea).prepend(odu_i_get_item_id_order+'. ');
+        var odu_i_get_item_id_order = '<span style="font-size:small; font-weight:bold">Question ' +odu_i_get_item_id.substring(11)+' of '+odu_i_total_items_All+'</span>';
+        $(this).find(labelArea).prepend(odu_i_get_item_id_order+'<br>');
     }); 
 } 
 
@@ -434,13 +130,14 @@ function odu_i_formatArray2(odu_i_arr){//utility: array value formatting fi_or
     return odu_i_outStr;
 }//end of array value formatting fi_or
     
-
+//compare an element of an array if it exist with another array
 function odu_i_f_containsAny(sourceArray,targetArray){//compare an element of an array if it exist with another array
     var result = sourceArray.filter(function(item){ 
         return targetArray.indexOf(item) > -1;
     });   
-    return (result.length > 0);//true or false  
+    return (result.length > 0);  
 } 
+
 
 
 $.fn.odu_i_f_mark = function(itemId,inputType,itemResponse,fbVal){//submit: adding the check or x mark
@@ -477,13 +174,18 @@ $.fn.odu_i_f_mark = function(itemId,inputType,itemResponse,fbVal){//submit: addi
             break;
             
         case 'text':
-            var odu_i_fb_val_formatted = '<div class="odu_i_fb_incorrect_feedback"><div style="font-size:small; text-align:left">Correct Answer:</div><span style="font-weight:bold;">'+fbVal+'</span></div>';
+             var odu_i_fb_val_formatted = '<div class="odu_i_fb_incorrect_feedback"><div style="font-size:small; text-align:left">Correct Answer:</div><span style="font-weight:bold">'+fbVal+'</span></div>';
             var odu_i_mark_value = (itemResponse===1)? odu_i_mark_value_correct+' <strong style="color:green">Correct</strong>':odu_i_mark_value_incorrect+' <strong style="color:crimson">Incorrect</strong>'+odu_i_fb_val_formatted;            
             $(itemId).find('.odu_i_fb_mark').show();
             $(itemId).addClass('odu_i_fb_mark_box');            
             $(itemId).find('.odu_i_fb_mark').prepend(odu_i_mark_value);  
             var odu_i_input_width = $(itemId).find('.odu_i_fb_mark').width();
             $(itemId).find('input[type="text"]').css('width',odu_i_input_width);            
+            break;
+            
+            
+//            $(itemId).find('input[type="text"]').css('width',$('.odu_i_fb_mark').width());
+            
             break;
             
     }
@@ -505,19 +207,26 @@ $('.odu_i_mc_item').odu_i_f_labelMcCb('.odu_i_mc_item','radio');//label mc items
 $('.odu_i_cb_item').odu_i_f_getIDandOrder('.odu_i_cb_item','legend');//numbering for cb items
 $('.odu_i_mc_item').odu_i_f_labelMcCb('.odu_i_cb_item','checkbox');//label the cb item     
     
+    
+    
+    
 $('.odu_i_qna_item').odu_i_f_getIDandOrder('.odu_i_qna_item','label');//numbering for qna item
 $('.odu_i_qna_item').odu_i_f_labelQnA('.odu_i_qna_item');//label for qna 
     
 $('.odu_i_sr_item').odu_i_f_getIDandOrder('.odu_i_sr_item','label');//numbering for sr item
    
-    
-    
-    
+$('.odu_i_content_area').find('textarea').each(function(){
+        $(this).attr('autofocus','');    
+});
 
 $('.odu_i_fb_item').each(function(){//label for fb item
-    odu_i_get_fb_id = $(this).attr('id');
-    odu_i_get_fb_id_for_numbering = odu_i_get_fb_id.substring(11);//get the number at the end of the id for numbering purposes
-    $(this).prepend(odu_i_get_fb_id_for_numbering+'. ');    
+    odu_i_get_fb_id = $(this).attr('id');    
+    odu_i_get_fb_id_for_numbering = '<span style="font-size:small; font-weight:bold">Question ' +odu_i_get_fb_id.substring(11)+' of '+odu_i_total_items_All+'</span>';
+    
+    $(this).prepend( odu_i_get_fb_id_for_numbering+'<br>'); 
+    
+    $(this).find('div[class$="_explanation"]').before('<div class="odu_i_clear"></div>');
+    
 });    
 
 $('.odu_i_fb_item input[type="text"]').each(function(){//label each fb input
@@ -528,17 +237,16 @@ $('.odu_i_fb_item input[type="text"]').each(function(){//label each fb input
     $(this).attr('id',odu_i_get_fb_input_id+'_fb_blank'+odu_i_get_fb_input_index);//add id to input     
 });//end of label each fb input    
     
+$('.odu_i_content_area').find('input[type="text"]').each(function(){
+        $(this).attr('autofocus','');    
+});
+
     
     
 $('div[class$="_explanation"]').each(function(){//remove empty explanation divs
     if ($(this).length==0 || $(this).html()=='&nbsp;'){
         $(this).empty();
     }
-});    
-    
-        
-$('div[class$="_item"]').click(function(){//remove the validation notification
-    $(this).find('.odu_i_validate').slideUp();
 });    
     
  
@@ -557,9 +265,9 @@ $.fn.odu_i_f_disableQnaFb = function(itemType,selector){//submit: disable text i
 }
 
 
-$.fn.odu_i_count_items_validation = function(){// submit: count the items and answers
+$.fn.odu_i_count_items_validationOA = function(itemId){// submit: count the items and answers
     
-    $('.odu_i_content_area').find('div[class$="_item"]').each(function(){
+    $('#'+itemId).each(function(){
         
         var odu_i_item_class = $(this).attr('class');
         
@@ -613,11 +321,38 @@ $.fn.odu_i_count_items_validation = function(){// submit: count the items and an
 }
 
 
+$.fn.odu_i_f_hideNotification = function (itemType){
+    
+    
+    switch(itemType){
+        case '.odu_i_mc_item':
+        case '.odu_i_cb_item':        
+        case '.odu_i_fb_item':
+            var itemSelector = 'input';
+            break;
+        
+        case '.odu_i_qna_item':
+        case '.odu_i_sr_item':
+            var itemSelector = 'textarea';
+            break
+            
+            }
+    
+    
+    $(itemType).find(itemSelector).click(function(){
+        var odu_i_get_selector_id =   '#'+$(this).closest('div[class$="_item"]').attr('id');
+        $(odu_i_get_selector_id).find('.odu_i_validate').slideUp();
+        odu_i_validate=0;
+        $(odu_i_get_selector_id).find('.odu_i_submit').removeAttr('disabled');
+            
+    });
+
+}
+
+
 $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerKey,answerFeedback,itemUserInputCount,answerKeyCount,numStatement){//submit: contents of the feedback panel   
     var odu_i_format_user_input = '<strong>'+userInput+'</strong>';
     var odu_i_format_answer_key = '<strong>'+answerKey+'</strong>';
-    
-    
     
     if (answerFeedback.length == 0 || answerFeedback==='undefined'){//if explanation is empty
         answerFeedback = '';
@@ -660,11 +395,13 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
             
         default:
             var odu_i_incorrect_statement = 'The answer'+odu_i_user_input_s+' '+odu_i_user_input_are+' incorrect.';
+            
+            
       }
     
     
     
-    if(numStatement.length== 0 || numStatement == 'undefined' ){
+    if(numStatement.length== 0 || numStatement == undefined ){
         numStatement =  'The correct answer'+odu_i_answer_key_s+' '+odu_i_answer_key_are+' '+odu_i_format_answer_key+'.';
     }
     
@@ -674,7 +411,7 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
                                 <div class="odu_i_panel_header"><strong>Feedback</strong></div>\
                                 <div class="odu_i_panel_content">\
                                 '+odu_i_correct_statement+answerFeedback+'\
-                                </div>';
+                                </div><br>';
     }
     else {//if user input is incorrect                
         var odu_i_feedback_panel = '<div class="odu_i_panel odu_i_panel_error" style="display:none">\
@@ -683,7 +420,7 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
                               <p>\
                                '+odu_i_incorrect_statement+'\
                                '+numStatement+'</p>\
-                               '+answerFeedback+'</div>';
+                               '+answerFeedback+'</div><br>';
     }
     
     $(this).append(odu_i_feedback_panel);
@@ -692,10 +429,9 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
 }
 
 
+$.fn.odu_i_f_checkMcCb = function (itemType,inputType,itemId){//submit: check mc cb
     
-$.fn.odu_i_f_checkMcCb = function (itemType,inputType){//submit: check mc cb
-    
-    $(itemType).each(function(){
+    $(itemId).each(function(){
         var odu_i_numStatement = '';
         var odu_i_count_item_answered = $(this).find('input[type="'+inputType+'"]:checked').length;//count the user input
         var odu_i_count_answer_key = $(this).find('input[data-value="correct"]').length; //count the number of answer key
@@ -757,8 +493,7 @@ $.fn.odu_i_f_checkMcCb = function (itemType,inputType){//submit: check mc cb
                     odu_i_get_explanation,
                     odu_i_count_item_answered,
                     odu_i_count_answer_key,
-                    odu_i_numStatement    
-                    );                     
+                    odu_i_numStatement);                     
                     break;
             }            
         
@@ -768,13 +503,15 @@ $.fn.odu_i_f_checkMcCb = function (itemType,inputType){//submit: check mc cb
 
 
 
+
+
+
 $.fn.odu_i_f_textConditions = function(dataCondition, userInputArray,userInputArrayNoFormat,answerKeyArray,answerKeyArrayNoFormat){//different conditions
     
                     
             switch(dataCondition){//assess the conditions
                     
                 case 'or'://if 1 or more possible answers
-                    
                 var odu_i_response_qna  = (odu_i_f_containsAny(userInputArray,answerKeyArray)==true)? 1:0;   
                 var odu_i_answer_key_formatted_qna = odu_i_formatArray2(answerKeyArrayNoFormat);
                 var odu_i_user_input_qna = odu_i_formatArray2(answerKeyArrayNoFormat);
@@ -851,7 +588,7 @@ $.fn.odu_i_f_textConditions = function(dataCondition, userInputArray,userInputAr
                 var odu_i_get_answer_key_low_value = Math.min.apply(null,answerKeyArray);
                 var odu_i_user_input_to_number = parseInt(userInputArray.toString());
                 var odu_i_response_qna = (odu_i_get_answer_key_low_value<=odu_i_user_input_to_number && odu_i_user_input_to_number<=odu_i_get_answer_key_high_value)? 1:0;
-                var odu_i_numStatement = 'The answer should be <strong>greater than or equal to '+odu_i_get_answer_key_low_value+' but less than or equal to ' +odu_i_get_answer_key_high_value+'</strong>.';
+                var odu_i_numStatement = 'The answer should be <strong>greater than or equal to '+odu_i_get_answer_key_low_value+' but than or equal to ' +odu_i_get_answer_key_high_value+'</strong>.';
                    
                 break;
                     
@@ -874,7 +611,6 @@ $.fn.odu_i_f_textConditions = function(dataCondition, userInputArray,userInputAr
                 var odu_i_numStatement = 'The answer should be <strong>greater than or equal to '+odu_i_get_answer_key_low_value+' but less than ' +odu_i_get_answer_key_high_value+'</strong>.';
                    
                 break;          
-                    
                     
                                     
                     
@@ -957,10 +693,76 @@ $.fn.odu_i_f_checkQna = function(itemType){ //submit: check fi or qna
     });//end each function
 }
 
+$.fn.odu_i_f_checkQna = function(itemType,itemId){ //submit: check fi or qna   
+    
+            
+    $(itemId).each(function(){
+        $(this).odu_i_f_disableQnaFb(this,'textarea');//get selector
+        var odu_i_numStatement = '';//variable for additional explanation statement
+        var odu_i_get_item_id = '#'+$(this).attr('id');//get id          
+        var odu_i_get_explanation = $(this).find('div[class$="_explanation"]').text();//get the value of the explanation
+            
+        var odu_i_get_user_input = $(this).find('textarea').val();//get user input
+        var odu_i_get_user_input_format = odu_i_get_user_input.toLocaleLowerCase().split(/\r|\n/);//textarea: change to lowercase and split the user input per line (enter key)
+        var odu_i_count_user_input = odu_i_get_user_input_format.length;//count the answers
+        var odu_i_get_user_input_format_array = $.map(odu_i_get_user_input_format,function(e){//format each user input
+                    e = e.replace(/ +/g,'');//remove the whitespace in between
+                    e.trim;//remove the space at the beginning and end    
+                    return e;
+                });
+        
+        
+        var odu_i_get_user_input_no_format = odu_i_get_user_input.split(/\r|\n/);//get user input without formatting, use for feedback panel
+        var odu_i_get_user_input_no_format_array = $.map(odu_i_get_user_input_no_format,function(i){//remove trailing spaces for user input                    
+                    i.trim;//remove the space at the beginning and end    
+                    return i;
+                });          
+        var odu_i_user_input_qna = odu_i_formatArray(odu_i_get_user_input_no_format_array);//format the user input with a comma and 'and'
+        
+        var odu_i_count_answer_key = $(this).find('.odu_i_qna_a').length;//count answer key
+        var odu_i_answer_key_array = [];//array for answer key
+        var odu_i_answer_key_array_no_format = [];//array for answer key with no formatting, based on what is typed in html
+        $(this).find('.odu_i_qna_a').each(function(){//get answer key, format and add to the array
+            var odu_i_get_answer_key = $(this).text();                
+            var odu_i_get_answer_key_format = odu_i_get_answer_key.split('').join('').toLocaleLowerCase().replace(/ +/g,'');
+            odu_i_answer_key_array_no_format.push(odu_i_get_answer_key);
+            odu_i_answer_key_array.push(odu_i_get_answer_key_format);
+         });
+        
+       
+        
+        var odu_i_get_condition = $(this).find('.odu_i_qna_a').attr('data-condition');//get the condition
+        
+        //object var for assessing text conditions see odu_i_f_textConditions         
+        var odu_i_eval = $(this).odu_i_f_textConditions(odu_i_get_condition,  
+                                       odu_i_get_user_input_format_array,
+                                       odu_i_get_user_input_no_format_array,
+                                       odu_i_answer_key_array,
+                                       odu_i_answer_key_array_no_format);
+        
+        var odu_i_count_answer_key_qna = (odu_i_eval.odu_i_count_answer_key===1)? odu_i_eval.odu_i_count_answer_key:odu_i_count_answer_key; 
+        $(this).odu_i_f_mark(this,'textarea',odu_i_eval.odu_i_response_qna); 
+        $(this).odu_i_f_FeedbackPanel(
+                    odu_i_eval.odu_i_response_qna,
+                    this,
+                    itemType,    
+                    odu_i_user_input_qna,
+                    odu_i_eval.odu_i_answer_key_formatted_qna,
+                    odu_i_get_explanation,
+                    odu_i_count_user_input,
+                    odu_i_count_answer_key_qna,
+                    odu_i_eval.odu_i_numStatement
+                    );
+        
+    });//end each function
+}
 
 
-$.fn.odu_i_f_checkFb  = function(itemType){
-    $(itemType).each(function(){
+
+
+
+$.fn.odu_i_f_checkFb  = function(itemType, itemId){
+    $(itemId).each(function(){
         $(this).odu_i_f_disableQnaFb(this,'input[type="text"]');//get selector
         var odu_i_numStatement = '';//variable for additional explanation statement
         var odu_i_get_item_id = '#'+$(this).attr('id');//get id          
@@ -1042,8 +844,8 @@ $.fn.odu_i_f_checkFb  = function(itemType){
 }
 
 
-$.fn.odu_i_f_checkSr = function(itemType){
-    $(itemType).each(function(){
+$.fn.odu_i_f_checkSr = function(itemType,itemId){
+    $(itemId).each(function(){
         $(this).odu_i_f_disableQnaFb(this,'textarea');//get selector;
         var odu_i_get_item_id = '#'+$(this).attr('id');//get id          
         var odu_i_get_explanation = $(this).find('div[class$="_explanation"]').text();//get the value of the explanation
@@ -1059,6 +861,8 @@ $.fn.odu_i_f_checkSr = function(itemType){
                     1,
                     odu_numStatement = ''
                     );
+        
+        
     });
     
     
@@ -1067,27 +871,79 @@ $.fn.odu_i_f_checkSr = function(itemType){
 
 
 
-$('.odu_i_submit').click(function(){
+    $('.odu_i_submit').each(function(){
+        var odu_i_submit_get_id = $(this).parent().attr('id');
+        var odu_i_submit_get_class = '.'+$(this).parent().attr('class');
+        var odu_i_submit_get_item_number = odu_i_submit_get_id.substr(11);//get item number        
+        
+        $(this).click(function(){      
+            $(this).odu_i_count_items_validationOA(odu_i_submit_get_id); 
+        
+
+         if (odu_i_validate>0){
+            alert('This item or question is unanswered.');        
+            $(this).show();
+            $(this).prop('disabled',true); 
+            $(this).odu_i_f_hideNotification(odu_i_submit_get_class);
+          
+         }
+        else{
+            $(this).hide();
+            $(this).parent().find('.odu_i_next').detach();
+            odu_i_validate = 0;
+            
+            switch(odu_i_submit_get_class){
+                case '.odu_i_mc_item':                   
+                    $(this).odu_i_f_checkMcCb(odu_i_submit_get_class,'radio','#'+odu_i_submit_get_id);
+                    break;
+                    
+                 case '.odu_i_cb_item':
+                    $(this).odu_i_f_checkMcCb(odu_i_submit_get_class,'checkbox','#'+odu_i_submit_get_id);
+                    break;
+                    
+                case '.odu_i_qna_item':
+                    $(this).odu_i_f_checkQna(odu_i_submit_get_class,'#'+odu_i_submit_get_id);
+                    break;
+                    
+                case '.odu_i_fb_item':
+                    $(this).odu_i_f_checkFb(odu_i_submit_get_class,'#'+odu_i_submit_get_id);
+                    break;
+                    
+                case '.odu_i_sr_item':    
+                    $(this).odu_i_f_checkSr(odu_i_submit_get_class,'#'+odu_i_submit_get_id);
+                }
+            
+            
+            if(odu_i_total_items_All==odu_i_submit_get_item_number){
+                $(this).parent().append('<button class="odu_i_button_review odu_i_review">Review Activity</button>');
+                $('.odu_i_review').click(function(){
+                    $('.odu_i_review').hide();
+                    $('[id^="odu_i_item_"]').slideDown();
+                    $('.odu_i_retry').show();
+                    $('.odu_i_next').hide();
+                    $('.odu_i_button_area').fadeIn();
+                    $('.odu_i_print').show();
+                    
+                });
+                
+            }
+            else{
+                $(this).parent().append('<button class="odu_i_button_misc odu_i_next">Next</button>');
+                $('.odu_i_next').click(function(){//start of next button                    
+                    $('#'+odu_i_submit_get_id).next().fadeIn();
+                    $('#'+odu_i_submit_get_id).hide();           
+                });
+            }
+
+
+        }    
+
+    });
     
-    $('.odu_i_content_area').find('.odu_i_validate').remove();    
     
-    $(this).odu_i_count_items_validation();
-    
-    if (odu_i_validate>0){
-        alert('Some items or questions are unanswered.');
-        $(this).show();        
-    }
-    else{
-        $(this).hide();
-        $('.odu_i_print').fadeIn();
-        $('.odu_i_mc_item').odu_i_f_checkMcCb('.odu_i_mc_item','radio');
-        $('.odu_i_cb_item').odu_i_f_checkMcCb('.odu_i_cb_item','checkbox');
-        $('.odu_i_qna_item').odu_i_f_checkQna('.odu_i_qna_item');
-        $('.odu_i_fb_item').odu_i_f_checkFb('.odu_i_fb_item');
-        $('.odu_i_sr_item').odu_i_f_checkSr('.odu_i_sr_item');
-    }
-    odu_i_validate = 0;//reset the validation value;
 });
+
+
 
 $('.odu_i_retry').click(function(){//start over or try again
     location.reload();       
@@ -1116,36 +972,4 @@ $('.odu_i_print').on('click', function () {//print answers button
 });//end of document ready    
     
 
-
-</script><!--end of copy this-------------------------------------------------------->    
-
  
-    
-    
-      
- 
-    
-    </body>
-</html>
-    
-    
-    
-    
-    
-    
-    
-
-    
-   
-    
-
-    
-
-    
-    
-    
-    
-   
-    
-    
-

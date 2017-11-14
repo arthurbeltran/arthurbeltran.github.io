@@ -62,11 +62,7 @@
         <div class="odu_i_dr_drag_object_box">
         </div>
         
-    
-    
-    
-    
-    
+
     <div class="odu_i_dr_basket_area" data-column="2">
         <div class="odu_i_dr_basket_item">
             <div class="odu_i_dr_basket_text">
@@ -88,22 +84,13 @@
             <div class="odu_i_dr_a" >answer4</div>
             <div class="odu_i_dr_a" >answer5</div>
         </div>
-        
-        
-        
-        
     </div>
     
     <div class="odu_i_clear"></div>    
-        
-        
-    
-    
 
     <div class="odu_i_row odu_i_button_area" style="text-align:center">
         <button class="odu_i_button odu_i_submit">Check Answer(s)</button>
-        <button class="odu_i_button_misc odu_i_reorder">Drag Incorrect Item(s)</button>
-        <button class="odu_i_button_print odu_i_print">Print Activity</button>
+        <button class="odu_i_button_misc odu_i_reorder">Drag Incorrect Item(s)</button>        
         <button class="odu_i_button_retry odu_i_restart">Start Over</button>       
     </div>
 </div><!--end of drag and drop mode-->    
@@ -112,28 +99,14 @@
 <div class="odu_i_screen_r_mode odu_i_row"><!--screen reader mode-->
     <div class="odu_i_attention">You are in Screen Reader Mode.</div>
 
-
     
-    <div class="odu_i_dr_sr_item_area">
-             
-
-
-
-
-
-
-
-
-
-
+    <div class="odu_i_dr_sr_item_area">      
     </div>        
 
     
     
     <div class="odu_i_row odu_i_button_area" style="text-align:center">
-            <button class="odu_i_button odu_i_submit">Check Answer(s)</button>
-            <button class="odu_i_button_misc odu_i_reorder">Reorder Incorrect Item(s)</button>
-            <button class="odu_i_button_print odu_i_print">Print Activity</button>
+            <button class="odu_i_button odu_i_submit">Check Answer(s)</button>            
             <button class="odu_i_button_retry odu_i_restart">Start Over</button>       
     </div>    
     
@@ -150,8 +123,7 @@
 <!--end of interactive activity-->
     
    
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.print/1.5.1/jQuery.print.min.js" integrity="sha256-XN4xbOooWmIOZm8P4np4ggK3SICCxO8mFNPWN8bvbrM=" crossorigin="anonymous"></script>    
+    
     
 <script>
 //Complete table script ver 10252017    
@@ -193,18 +165,7 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
     $('.odu_i_switch_dr').hide();
     $('.odu_i_screen_r_mode').hide();
     
-    
-    
-    $('.odu_i_print').click(function(){//print the activity, temporary
-      
-        $('.odu_i_content_area').print({
-            addGlobalStyles : true,    
-            rejectWindow : true,    
-            iframe : true,
-            noPrintSelector: '.odu_i_button_area'        
-        });   
-
-    });
+        
     
     $('.odu_i_switch_sr').click(function(){//screen reader button
         $(this).hide();
@@ -631,7 +592,7 @@ $('.odu_i_restart').click(function(){
     location.reload();
 });
     
-   
+
    
    
     
