@@ -11,15 +11,8 @@ $('input').each(function(){
         $(this).keyup(function(){
             $(this).attr('value',$(this).val());
         });
-});    
-    
-    
-$('textinput').each(function(){
-        $(this).keyup(function(){
-            $(this).attr('value',$(this).val());
-        });
-});         
-    
+});        
+
     
 $('div[class$="_item"]').each(function(){//add id to each item
     odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
@@ -903,6 +896,12 @@ $.fn.odu_i_f_checkSr = function(itemType,itemId){
             $(this).hide();
             $(this).parent().find('.odu_i_next').detach();
             odu_i_validate = 0;
+            
+            $('textarea').each(function(){
+                $(this).attr('data-text',$(this).val());
+                $(this).html($(this).attr('data-text'));
+            });
+            
             
             switch(odu_i_submit_get_class){
                 case '.odu_i_mc_item':                   

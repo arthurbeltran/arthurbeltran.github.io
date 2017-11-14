@@ -21,12 +21,7 @@ $('input').each(function(){
         });
 });    
     
-    
-$('textinput').each(function(){
-        $(this).keyup(function(){
-            $(this).attr('value',$(this).val());
-        });
-});        
+         
     
 $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear form elements upon refresh   
     $(contentArea).find('input[type="radio"], input[type="checkbox"], input[type="text"], select, textarea').removeAttr('disabled');//enable form inputs
@@ -778,6 +773,13 @@ $('.odu_i_submit').click(function(){
     }
     else{
         $(this).hide();
+        
+        $('textarea').each(function(){
+                $(this).attr('data-text',$(this).val());
+                $(this).html($(this).attr('data-text'));
+        });
+        
+        
         $('.odu_i_print').fadeIn();
         $('.odu_i_mc_item').odu_i_f_checkMcCb('.odu_i_mc_item','radio');
         $('.odu_i_cb_item').odu_i_f_checkMcCb('.odu_i_cb_item','checkbox');
