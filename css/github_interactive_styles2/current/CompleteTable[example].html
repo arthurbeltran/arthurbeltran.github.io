@@ -33,46 +33,86 @@
 </div>
     
     
-<div class="odu_i_table_area" style="width:50%">
-<h4>Title of the Table</h4>
+<div class="odu_i_table_area" style="width:100%">
+<h4>Multiplication Table</h4>
 <table class="odu_i_table_wborder" >    
-    <thead>        
-        <th>Column Header</th>
-        <th>Column Header</th>
+    <thead>  
+        <th>Multiply by</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
     </thead>
     <tr>
+        <td>1</td>
         <td>
             <div class="odu_i_tbl_item">                         
             <input type="text">
-            <div class="odu_i_tbl_item_A">Answer1</div>    
+            <div class="odu_i_tbl_item_A">1</div>    
             </div>
         </td>
         <td>
             <div class="odu_i_tbl_item">                         
             <input type="text">
-            <div class="odu_i_tbl_item_A" data-condition="or">dog</div>
-            <div class="odu_i_tbl_item_A" data-condition="or">cat</div>
-            <div class="odu_i_tbl_item_A" data-condition="or">mouse</div>     
+            <div class="odu_i_tbl_item_A">2</div>
             </div>
         </td>
         
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">3</div>
+            </div>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">2</div>    
+            </div>
+        </td>
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">4</div>
+            </div>
+        </td>
         
-    </tr>
-    <tr>                
         <td>
             <div class="odu_i_tbl_item">                         
             <input type="text">
-            <div class="odu_i_tbl_item_A" data-condition="gte">3</div>    
+            <div class="odu_i_tbl_item_A">6</div>
+            </div>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">3</div>    
             </div>
         </td>
         <td>
             <div class="odu_i_tbl_item">                         
             <input type="text">
-            <div class="odu_i_tbl_item_A" data-condition="gtlt">4</div>
-            <div class="odu_i_tbl_item_A" data-condition="gtlt">6</div>        
+            <div class="odu_i_tbl_item_A">6</div>
+            </div>
+        </td>
+        
+        <td>
+            <div class="odu_i_tbl_item">                         
+            <input type="text">
+            <div class="odu_i_tbl_item_A">9</div>
             </div>
         </td>
     </tr>
+    
+    
+    
 </table>
 </div>    
  
@@ -198,6 +238,13 @@ odu_i_notification_validate = '<div class="odu_i_validate" style="text-align:cen
         $(this).attr('aria-label',odu_i_get_tbl_id+'_blank');//add label     
    }); 
 
+    $('input').each(function(){
+        $(this).keyup(function(){
+            $(this).attr('value',$(this).val());
+        });
+    });
+    
+    
     var odu_i_tbl_explanation=1;
     
    $('div[class$="_explanation"]').each(function(){//remove empty explanation divs
@@ -477,8 +524,9 @@ odu_i_notification_validate = '<div class="odu_i_validate" style="text-align:cen
    
     
 
-$('.odu_i_print').on('click', function () {//print answers button
-                $('.odu_i_button_area').remove();                
+$('.odu_i_print').on('click', function () {//print answers button    
+    
+                $('.odu_i_button_area').remove();                                
                 var divContents = $('.odu_i_content_area').html();//div which have to print
                 var printWindow = window.open('', '', 'height=700,width=900');
                 printWindow.document.write('<html><head><title></title>');

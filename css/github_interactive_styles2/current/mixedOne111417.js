@@ -6,8 +6,20 @@ odu_i_validate = 0;//validate initial value
 odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_circle">!</span> Please respond to this item or question before you can check your answer(s).</div>';//validate text    
     
 
-
-
+    
+$('input').each(function(){
+        $(this).keyup(function(){
+            $(this).attr('value',$(this).val());
+        });
+});    
+    
+    
+$('textinput').each(function(){
+        $(this).keyup(function(){
+            $(this).attr('value',$(this).val());
+        });
+});         
+    
     
 $('div[class$="_item"]').each(function(){//add id to each item
     odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;

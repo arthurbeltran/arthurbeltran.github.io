@@ -14,7 +14,19 @@ $('div[class$="_item"]').each(function(){//add id to each item
     $(this).attr('id','odu_i_item_'+odu_i_index_numbering);
 });    
     
-   
+
+$('input').each(function(){
+        $(this).keyup(function(){
+            $(this).attr('value',$(this).val());
+        });
+});    
+    
+    
+$('textinput').each(function(){
+        $(this).keyup(function(){
+            $(this).attr('value',$(this).val());
+        });
+});        
     
 $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear form elements upon refresh   
     $(contentArea).find('input[type="radio"], input[type="checkbox"], input[type="text"], select, textarea').removeAttr('disabled');//enable form inputs
