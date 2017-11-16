@@ -123,6 +123,14 @@ $color_interactive_dragBox_border:$liteGray;//add
 }
 
 
+
+@media print {
+    .odu_i_button_area{
+        display: none;
+    }
+}  
+
+
 /*instructions or directions box*/
 
 .odu_i_instructions{
@@ -335,6 +343,14 @@ $color_interactive_dragBox_border:$liteGray;//add
 .odu_i_display_score, .odu_i_start_over,{
     display:none;
 }
+
+
+.odu_i_title {
+	font-weight:bold;
+	text-align:center;
+	margin:10px;
+}
+
 
 
 /* _mc(multiple choice) and _cb (chekcbox, multiple-answers)*/
@@ -687,6 +703,13 @@ float:left;
 	padding: 5px;
 }
 
+
+.odu_i_order_item li h4{
+	font-weight:bold;
+}
+
+
+
 .odu_i_order_indicator_default{
 	background: $color_interactive_lightgray_background;
 }
@@ -811,6 +834,14 @@ float:left;
 	@extend .odu_i_item_background;
 	margin:10px;
 }
+
+
+
+.odu_i_dr_sr_item h4{
+	font-weight:bold;
+	
+}
+
 
 .odu_i_dr_sr_wrapper{
 float:left;

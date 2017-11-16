@@ -32,7 +32,7 @@ $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear f
     
     $(contentArea).find('textarea').val('');//remove user input text after refresh
     
-    $(contentArea).find('select').prop('selectIndex',0)//bring back selection to blank
+    $(contentArea).find('select').prop('selectIndex',0);//bring back selection to blank
     $(contentArea).find('select').attr('autocomplete', 'off');//remove previous selection upon refresh    
     
 }
@@ -114,8 +114,8 @@ function odu_i_formatArray(odu_i_arr){//array value formatting cb, fi and fb
 }//end of array value formatting cb and fi            
     
 function odu_i_compareArrays(odu_i_arr1, odu_i_arr2) {//compare simple arrays for cb, fi, fb, qna
-    return $(odu_i_arr1).not(odu_i_arr2).length == 0 && $(odu_i_arr2).not(odu_i_arr1).length == 0
-};//end of compare simple arrays for cb and fi     
+    return $(odu_i_arr1).not(odu_i_arr2).length === 0 && $(odu_i_arr2).not(odu_i_arr1).length === 0;
+}//end of compare simple arrays for cb and fi     
     
     
 function odu_i_formatArray2(odu_i_arr){//utility: array value formatting fi_or
@@ -280,7 +280,7 @@ $.fn.odu_i_count_items_validation = function(){// submit: count the items and an
                     }//if QnA or sr is blank
                     
                 });
-                
+            break;    
             
             case 'odu_i_fb_item':                
                 $(this).each(function(){
@@ -350,7 +350,8 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
             break;
             
         case '.odu_sr_item':
-            numStatement = '&nbsp;'; 
+            numStatement = '&nbsp;';
+            break;
             
         default:
             var odu_i_incorrect_statement = 'The answer'+odu_i_user_input_s+' '+odu_i_user_input_are+' incorrect.';
@@ -390,6 +391,9 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
 $.fn.odu_i_f_checkMcCb = function (itemType,inputType){//submit: check mc cb
     
     $(itemType).each(function(){
+        
+        $(this).find('input[type="'+inputType+'"]:checked').attr('checked','checked');
+        
         var odu_i_numStatement = '';
         var odu_i_count_item_answered = $(this).find('input[type="'+inputType+'"]:checked').length;//count the user input
         var odu_i_count_answer_key = $(this).find('input[data-value="correct"]').length; //count the number of answer key
@@ -760,6 +764,17 @@ $.fn.odu_i_f_checkSr = function(itemType){
 
 
 
+$('.odu_i_content_area').append(' <div class="odu_i_row odu_i_button_area" style="text-align:center">');
+$('.odu_i_button_area').append('<button class="odu_i_button odu_i_submit">Check Answer(s)');
+$('.odu_i_button_area').append('<button class="odu_i_button_print odu_i_print">Print Activity');
+$('.odu_i_button_area').append('<button class="odu_i_button_retry odu_i_retry">Start Over');    
+
+$('.odu_i_print').hide();
+
+
+
+
+
 
 $('.odu_i_submit').click(function(){
     
@@ -796,7 +811,8 @@ $('.odu_i_retry').click(function(){//start over or try again
     
     
 $('.odu_i_print').on('click', function () {//print answers button
-                $('.odu_i_button_area').remove();                
+    
+                $('.odu_i_button_area').hide();    
                 var divContents = $('.odu_i_content_area').html();//div which have to print
                 var printWindow = window.open('', '', 'height=700,width=900');
                 printWindow.document.write('<html><head><title></title>');
@@ -811,6 +827,8 @@ $('.odu_i_print').on('click', function () {//print answers button
                 printWindow.focus();                                         
                 printWindow.print();
                 printWindow.close();
+                $('.odu_i_button_area').show();    
+                
                 }
             });
 

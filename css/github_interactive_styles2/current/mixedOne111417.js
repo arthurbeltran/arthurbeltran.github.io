@@ -7,12 +7,15 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
     
 
     
-$('input').each(function(){
+$('input[type="text"]').each(function(){
         $(this).keyup(function(){
             $(this).attr('value',$(this).val());
         });
 });        
 
+
+
+    
     
 $('div[class$="_item"]').each(function(){//add id to each item
     odu_i_index_numbering=$(this).index('div[class$="_item"]')+1;
@@ -23,7 +26,7 @@ $('[id^="odu_i_item_"]').each(function(){//add the buttons
     $(this).append('<button class="odu_i_button odu_i_submit" style="margin-top:5px">Check Answer(s)</button>');
 });
     
-$('.odu_i_content_area').find('.odu_i_button_area').hide();    
+    
     
 $('[id^="odu_i_item_"]:first').show();//show only the first item    
     
@@ -39,7 +42,7 @@ $.fn.odu_i_f_FirefoxFormBug = function(contentArea){//firefox form bugs, clear f
     
     $(contentArea).find('textarea').val('');//remove user input text after refresh
     
-    $(contentArea).find('select').prop('selectIndex',0)//bring back selection to blank
+    $(contentArea).find('select').prop('selectIndex',0);//bring back selection to blank
     $(contentArea).find('select').attr('autocomplete', 'off');//remove previous selection upon refresh    
     
 }
@@ -191,7 +194,7 @@ $.fn.odu_i_f_mark = function(itemId,inputType,itemResponse,fbVal){//submit: addi
             
 //            $(itemId).find('input[type="text"]').css('width',$('.odu_i_fb_mark').width());
             
-            break;
+            
             
     }
 }
@@ -339,7 +342,7 @@ $.fn.odu_i_f_hideNotification = function (itemType){
         case '.odu_i_qna_item':
         case '.odu_i_sr_item':
             var itemSelector = 'textarea';
-            break
+            break;
             
             }
     
@@ -437,6 +440,10 @@ $.fn.odu_i_f_FeedbackPanel = function(response,itemId,itemType,userInput,answerK
 $.fn.odu_i_f_checkMcCb = function (itemType,inputType,itemId){//submit: check mc cb
     
     $(itemId).each(function(){
+        
+            
+        $(this).find('input[type="'+inputType+'"]:checked').attr('checked','checked');
+        
         var odu_i_numStatement = '';
         var odu_i_count_item_answered = $(this).find('input[type="'+inputType+'"]:checked').length;//count the user input
         var odu_i_count_answer_key = $(this).find('input[data-value="correct"]').length; //count the number of answer key
@@ -873,8 +880,11 @@ $.fn.odu_i_f_checkSr = function(itemType,itemId){
     
 }
 
-
-
+    $('.odu_i_content_area').append(' <div class="odu_i_row odu_i_button_area" style="text-align:center">');    
+    $('.odu_i_button_area').append('<button class="odu_i_button_print odu_i_print">Print Activity');
+    $('.odu_i_button_area').append('<button class="odu_i_button_retry odu_i_retry">Start Over'); 
+    
+    $('.odu_i_content_area').find('.odu_i_button_area').hide();
 
     $('.odu_i_submit').each(function(){
         var odu_i_submit_get_id = $(this).parent().attr('id');
@@ -962,7 +972,7 @@ $('.odu_i_retry').click(function(){//start over or try again
     
     
 $('.odu_i_print').on('click', function () {//print answers button
-                $('.odu_i_button_area').remove();                
+                $('.odu_i_button_area').hide();    
                 var divContents = $('.odu_i_content_area').html();//div which have to print
                 var printWindow = window.open('', '', 'height=700,width=900');
                 printWindow.document.write('<html><head><title></title>');
@@ -977,6 +987,7 @@ $('.odu_i_print').on('click', function () {//print answers button
                 printWindow.focus();                                         
                 printWindow.print();
                 printWindow.close();
+                $('.odu_i_button_area').show();
                 }
             });
 
