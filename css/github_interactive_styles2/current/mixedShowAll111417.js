@@ -812,9 +812,10 @@ $('.odu_i_retry').click(function(){//start over or try again
     
 $('.odu_i_print').on('click', function () {//print answers button
     
-                $('.odu_i_button_area').hide();    
+                
                 var divContents = $('.odu_i_content_area').html();//div which have to print
-                var printWindow = window.open('', '', 'height=700,width=900');
+//                var printWindow = window.open('', '', 'height=700,width=900');
+                var printWindow = window.print();
                 printWindow.document.write('<html><head><title></title>');
                 printWindow.document.write('<link rel="stylesheet" href="https://cdn.rawgit.com/arthurbeltran/arthurbeltran.github.io/f85bad88/css/github_interactive_styles2/current/odu_activities%5Bcurrent%5D.css" >');//external styles               
                 printWindow.document.write('</head><body>');
@@ -827,7 +828,7 @@ $('.odu_i_print').on('click', function () {//print answers button
                 printWindow.focus();                                         
                 printWindow.print();
                 printWindow.close();
-                $('.odu_i_button_area').show();    
+                    
                 
                 }
             });

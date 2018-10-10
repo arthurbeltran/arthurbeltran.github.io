@@ -545,7 +545,6 @@
   width: 80%; }
 
 .odu_i_dr_drag_object {
-  padding: 10px;
   background: white;
   border: 1px solid #c8c8c8;
   margin: 0px auto 5px auto;
@@ -557,10 +556,14 @@
 
 .odu_i_dr_drag_object .odu_i_mark_area {
   width: 20px;
+  margin: 10px 0px 0px 5px;
   display: none; }
 
 .odu_i_dr_text {
-  width: 90%; }
+  margin: 10px; }
+
+.odu_i_dr_item {
+  margin-bottom: 20px; }
 
 .odu_i_dr_a {
   display: none; }
@@ -571,12 +574,14 @@
   margin: 5px;
   text-align: center; }
 
+.odu_i_dr_column_title {
+  font-weight: bold; }
+
 .odu_i_dr_drag_object_box {
   padding: 10px;
   border: 1px solid #c8c8c8;
   background: #fafafa;
-  float: left;
-  max-width: 25%;
+  max-width: 30%;
   position: relative; }
 
 .odu_i_dr_basket_text {
@@ -599,6 +604,27 @@
 .odu_i_dr_set {
   background: #fffdd9;
   border: 1px solid #bdbba0; }
+
+.odu_i_dr_drop_box {
+  border: 2px dashed #c8c8c8;
+  padding: 10px;
+  margin: 5px 0px 0px 15px;
+  max-width: 90%; }
+
+.odu_i_dr_drop_box_text {
+  text-align: center; }
+
+.odu_i_dr_item_column {
+  float: left;
+  width: 60%;
+  border-right: 1px dotted #c8c8c8; }
+
+.odu_i_dr_distractor {
+  display: none; }
+
+.odu_i_match_area {
+  margin: 0 auto;
+  width: 80%; }
 
 /*dr_sr screen reader version of dragdrop */
 .odu_i_dr_sr_item {

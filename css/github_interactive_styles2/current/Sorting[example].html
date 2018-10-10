@@ -19,6 +19,7 @@
 <!--end of do not copy--------------------------------------------------------------------------------------------------------->
 
 <!--start of copy this----------------------------------------------------------------------------------------------------------->    
+<!--start of copy this----------------------------------------------------------------------------------------------------------->    
 
 
     
@@ -28,16 +29,19 @@
     <h4>Directions</h4>
     
     <div class="odu_i_instructions_generic"><!--generic-->    
-        <p><strong>Order/Rank</strong>. Drag the following concepts to the correct order.</p>
+        <p><strong>Sorting</strong>. Sort the following concepts by dragging them to the correct box.</p>
             <ul class="odu_i_directions">       
-            <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>    
+            <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>
+            <li>You can sort the incorrect answers by clicking <strong>Sort Incorrect Answers</strong></li>    
+                                                           
         </ul>
     </div>
 
     <div class="odu_i_instructions_screen_reader"><!--screen reader-->
-        <p><strong>Order/Rank</strong>. Order the following items by selecting the correct number.</p>
+        <p>Answer the following statements by selecting a choice from the drop-down menu.</p>
             <ul class="odu_i_directions">       
-            <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li>    
+            <li>Correct answers are marked with a check mark (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li> 
+            <li>If you got an incorrect answer, click the <strong>Try Again</strong> to change your answer.</li>    
         </ul>
     </div>
     
@@ -58,31 +62,30 @@
     
     
     
-        <h4 class="odu_i_dr_drag_object_box_title">Choices</h4>
-        <div class="odu_i_dr_drag_object_box">
+        <h4 class="odu_i_dr_drag_object_box_title">Online Learning</h4>
+        <div class="odu_i_dr_drag_object_box floatLeft">
         </div>
         
 
     <div class="odu_i_dr_basket_area" data-column="2">
         <div class="odu_i_dr_basket_item">
             <div class="odu_i_dr_basket_text">
-                <h4>Column 1</h4>
+                <h4>Truth</h4>
             </div>
             
-            <div class="odu_i_dr_a" >answer1</div>
-            <div class="odu_i_dr_a" >answer2</div>          
+            <div class="odu_i_dr_a" >Online courses already exist that meet state standards</div>
+            <div class="odu_i_dr_a" >Employers recognize my online degree</div>          
         </div>
         
         
         <div class="odu_i_dr_basket_item">
             <div class="odu_i_dr_basket_text">
-                <h4>Column 2</h4>
+                <h4>Myth</h4>
             </div>
                         
-            <div class="odu_i_dr_a" >answer3.5 is quite longer</div>
-            <div class="odu_i_dr_a" >answer3 secondword is very very long</div>
-            <div class="odu_i_dr_a" >answer4</div>
-            <div class="odu_i_dr_a" >answer5</div>
+            <div class="odu_i_dr_a" >Online courses are for gifted and talented students only</div>
+            <div class="odu_i_dr_a" >Online courses lack interaction</div>
+            <div class="odu_i_dr_a" >All online degree programs are the same</div>            
         </div>
     </div>
     
@@ -90,8 +93,9 @@
 
     <div class="odu_i_row odu_i_button_area" style="text-align:center">
         <button class="odu_i_button odu_i_submit">Check Answer(s)</button>
-        <button class="odu_i_button_misc odu_i_reorder">Drag Incorrect Item(s)</button>        
-        <button class="odu_i_button_retry odu_i_restart">Start Over</button>       
+        <button class="odu_i_button_misc odu_i_reorder">Sort Incorrect Item(s)</button>        
+        <button class="odu_i_button_retry odu_i_restart">Start Over</button> 
+        
     </div>
 </div><!--end of drag and drop mode-->    
     
@@ -108,6 +112,7 @@
     <div class="odu_i_row odu_i_button_area" style="text-align:center">
             <button class="odu_i_button odu_i_submit">Check Answer(s)</button>            
             <button class="odu_i_button_retry odu_i_restart">Start Over</button>       
+            
     </div>    
     
     
@@ -134,6 +139,15 @@ odu_i_check = '<div class="odu_i_c">&#x2714;';
 odu_i_x = '<div class="odu_i_x">&#x2718;';    
 odu_i_validate = 0;//validate initial value
 odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_circle">!</span> Please respond to this item or question before you can submit your answers.</div>';//validate text    
+    
+    
+    /*make drag objects touch enabled*/
+    
+    !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+    
+    
+    
+    
 
     $.fn.exists = function(){ return this.length > 0; }//utility: check if an element exists
     
@@ -185,8 +199,8 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
         $('.odu_i_dd_mode').fadeIn();
     });
     
-    $('.odu_i_dd_mode .odu_i_submit').hide();
-    $('.odu_i_print').hide();
+   
+
     $('.odu_i_reorder').hide(); 
     
       
@@ -196,7 +210,7 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
         odu_i_array_dr_width.push(odu_i_dr_width);
     });
     
-    odu_i_array_dr_highest = Math.max.apply(null, odu_i_array_dr_width);//get the longest drag object text
+    odu_i_array_dr_highest = (Math.max.apply(null, odu_i_array_dr_width)*10)+20;//get the longest drag object text
     
     
     
@@ -207,7 +221,7 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
         $(this).attr('data-key',odu_i_data_key);
         
         var odu_i_data_phrase = ($(this).attr('data-phrase')=='true')? 'text-align:left':'';
-        var odu_i_dr_drag_object_content = '<div class="odu_i_dr_drag_object" style="width:'+odu_i_array_dr_highest*10+'px;'+odu_i_data_phrase+'">\
+        var odu_i_dr_drag_object_content = '<div class="odu_i_dr_drag_object" style="width:'+odu_i_array_dr_highest+'px;'+odu_i_data_phrase+'">\
                                             <div class="odu_i_dr_text">'+$(this).text();                
         $('.odu_i_dr_drag_object_box').append(odu_i_dr_drag_object_content);        
     });
@@ -235,69 +249,78 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
             $(this).append('<div class="odu_i_drop_target">');
             
     });   
-
+    
+    $('.odu_i_dr_drag_object_box').css('width',odu_i_dr_basket_division+'%');
+    $('.odu_i_dr_drag_object_box').css('min-height',(odu_i_dr_basket_height-25)+'px');
+    
+    
     
    odu_i_array_draggable = [];//array for number of dr objects
    function odu_i_f_DragObject(selector){
         
         $(selector).draggable({
             cursor:'pointer',
-            snap: '.odu_i_dr_basket_item',
+//            snap: '.odu_i_dr_basket_item',
             start: function(){
                         $(this).find('.odu_i_mark_area').empty();
-                    },
+                        var odu_i_remove_item = $(this).text().trim();
+//                        odu_i_array_draggable.splice( $.inArray(odu_i_remove_item,odu_i_array_draggable),1);
+                    },            
             revert:'invalid',
-            enable: true,
-            refreshPositions: true
+            enable: true
         });   
    }     
       
     odu_i_f_DragObject('.odu_i_dr_drag_object');
     
     
-    $('.odu_i_dr_basket_item').droppable({
+    
+
+       $('.odu_i_dr_basket_item').droppable({
         accept: '.odu_i_dr_drag_object',
         drop: function(event, ui){            
                   var odu_i_get_key =[];
                   $(this).find('.odu_i_dr_a').each(function(){
                         odu_i_get_key.push($(this).text());                    
                   });
-                
-                 $(ui.draggable).addClass('odu_i_state_drop');
-                
+
                  var odu_i_get_text = $(ui.draggable).text().trim();
+
                  var arrayCheck = $.inArray(odu_i_get_text,odu_i_get_key);
                  var odu_i_check_drag_object = ($.inArray(odu_i_get_text,odu_i_get_key)!=-1)? odu_i_check:odu_i_x; 
-                 $(ui.draggable).find('.odu_i_mark_area').append(odu_i_check_drag_object);
-                 $(ui.draggable).draggable('disable');
-                 odu_i_array_draggable.push(odu_i_get_text);                
-                    if(odu_i_array_draggable.length==odu_i_array_dr_width.length){
-                            $('.odu_i_dd_mode').find('.odu_i_submit').fadeIn();
-                    }
-                    else{
-                        $('.odu_i_dd_mode').find('.odu_i_submit').fadeOut();
-                    }
-            },
-        tolerance: 'fit'
-        
-    });
-    
-     $('.odu_i_dd_mode').find('.odu_i_submit').click(function(){       
-        $(this).hide();
-        $(this).parent().find('.odu_i_print').fadeIn();       
-        $('.odu_i_mark_area').fadeIn();
-        $('.odu_i_dr_drag_object').each(function(){
-            var odu_i_count_x = $('.odu_i_x').length;
-            
-            if (odu_i_count_x>=1){
-                $('.odu_i_dd_mode').find('.odu_i_reorder').fadeIn();                
+                 $(ui.draggable).find('.odu_i_mark_area').append(odu_i_check_drag_object);                 
+                 odu_i_array_draggable.push(odu_i_get_text); 
+                $(ui.draggable).detach().css({top: 0,left: 0}).appendTo(this);
             }
-            $(this).addClass('odu_i_dr_set');
-            $(this).removeClass('odu_i_state_drop');
-           
-        
+
+
         });
+    
+    
+    
+    $('.odu_i_dd_mode').find('.odu_i_submit').click(function(){
         
+        var odu_i_count_array = [];
+         $.each(odu_i_array_draggable, function(i, el){
+                if($.inArray(el, odu_i_count_array) === -1) odu_i_count_array.push(el);
+            });
+            if (odu_i_count_array.length!=odu_i_array_dr_width.length){
+                alert('Some items are still not sorted.'+odu_i_count_array.length);
+            }
+            else{
+                $('.odu_i_dr_drag_object').addClass('odu_i_dr_set');
+                $('.odu_i_mark_area').fadeIn();
+                $('.odu_i_dr_drag_object').each(function(){
+                        $(this).draggable('disable');
+                });              
+                var odu_i_count_x = $('.odu_i_x').length;                
+                
+                if (odu_i_count_x>0){
+                    $('.odu_i_dd_mode').find('.odu_i_reorder').fadeIn();
+                    $(this).hide();
+                    
+                }
+            }
     });
     
     
@@ -305,23 +328,60 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
     
     $('.odu_i_dd_mode').find('.odu_i_reorder').click(function(){
         $(this).hide();
-        $('.odu_i_print').hide();        
+        $(this).after('<button class="odu_i_button odu_i_checkA">Check Answer(s)');
+        odu_i_array_draggable = [];
         
         $('.odu_i_dr_drag_object').each(function(){
             var odu_i_get_x = $(this).find('.odu_i_mark_area .odu_i_x').length;
             if (odu_i_get_x>=1){
                 $(this).removeClass('odu_i_dr_set');
                 $(this).find('.odu_i_mark_area').empty();
-                $(this).find('.odu_i_mark_area').hide();                
-                $(this).css('left',$(this).attr('data-left'));
-                $(this).css('top',$(this).attr('data-top'));                
+                $(this).find('.odu_i_mark_area').hide();                                           
                 var odu_i_get_selector = '.'+$(this).attr('class');
                 $(this).draggable('enable');
                 odu_i_f_DragObject(odu_i_get_selector);            
                 odu_i_array_draggable.splice(0,1);
             }
         });
-    });
+        
+        
+        $('.odu_i_dd_mode').find('.odu_i_checkA').click(function(){
+                
+            var odu_i_check_if_moved;
+            
+            $('.odu_i_dr_drag_object').each(function(){
+                odu_i_check_if_moved = ($(this).find('.odu_i_mark_area').is(':empty'))? 1:0;                
+            });
+            
+            if (odu_i_check_if_moved>=1){
+                alert('Some items still need to be moved or dragged.');
+            }
+            else{
+                
+                $('.odu_i_dr_drag_object').addClass('odu_i_dr_set');
+                $('.odu_i_mark_area').fadeIn();
+                $('.odu_i_dr_drag_object').each(function(){
+                        $(this).draggable('disable');
+                });              
+                var odu_i_count_x = $('.odu_i_x').length;                
+                
+                if (odu_i_count_x>0){
+                    $('.odu_i_dd_mode').find('.odu_i_reorder').fadeIn();
+                    $(this).remove();
+                    
+                }
+                
+                
+            }
+        });
+        
+        
+        
+    });//end of reorder
+    
+        
+    
+    
         
     $('.odu_i_dr_drag_object').data('left', $('.odu_i_dr_drag_object').position().left).data('top', $('.odu_i_dr_drag_object').position().top);
     
@@ -582,6 +642,52 @@ odu_i_notification_validate = '<div class="odu_i_validate"><span class="odu_i_ci
     });
 
  
+
+    
+var eventFired = 0;
+
+if ($(window).width() < 480) {
+    $('.odu_i_instructions_generic').hide();
+    $('.odu_i_switch_buttons_area').hide();
+    $('.odu_i_dd_mode').hide();            
+    $('.odu_i_screen_r_mode .odu_i_attention:first').hide();
+    $('.odu_i_screen_r_mode').show();
+    $('.odu_i_instructions_screen_reader').show();
+
+}
+else {
+     $('.odu_i_instructions_generic').show();
+    $('.odu_i_switch_buttons_area').show();
+    $('.odu_i_dd_mode').show();            
+    $('.odu_i_screen_r_mode .odu_i_attention:first').hide();
+    $('.odu_i_screen_r_mode').hide();
+    $('.odu_i_instructions_screen_reader').hide();
+}    
+
+$(window).on('resize', function() {
+    if (!eventFired) {
+        if ($(window).width() < 480) {
+            $('.odu_i_instructions_generic').hide();
+            $('.odu_i_switch_buttons_area').hide();
+            $('.odu_i_dd_mode').hide();            
+            $('.odu_i_screen_r_mode .odu_i_attention:first').hide();
+            $('.odu_i_screen_r_mode').show();
+            $('.odu_i_instructions_screen_reader').show();
+        } 
+        else{
+            
+             $('.odu_i_instructions_generic').show();
+            $('.odu_i_switch_buttons_area').show();
+            $('.odu_i_dd_mode').show();            
+            $('.odu_i_screen_r_mode .odu_i_attention:first').hide();
+            $('.odu_i_screen_r_mode').hide();
+            $('.odu_i_instructions_screen_reader').hide();
+            
+        }
+    }
+});    
+    
+    
     
 
 
@@ -594,7 +700,7 @@ $('.odu_i_restart').click(function(){
     
 
    
-   
+
     
 
 });//end of document ready
