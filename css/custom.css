@@ -1,0 +1,35 @@
+@charset "utf-8";
+.container {
+}
+.headerArea  {
+    border-bottom: thin 1px lightgray;
+
+}
+.tab-content-area {
+    margin: 25px;
+}
+.nav-brand-area {
+    margin-left: 15px;
+}
+.card-hover {
+	cursor: pointer;
+}
+
+.card-hover:hover{
+    background: #007bff;
+    color: white;
+}.card-image-area {
+    margin-top: 10px;
+
+}
+.tabs-content-modal-area {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+
+body, html{
+background-image: url("../bg.png");	
+}
+
+

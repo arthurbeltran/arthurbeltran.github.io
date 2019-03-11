@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Course Number</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" async  src="mathjax.js"></script>   
+</head>
+<body style="font-family: Open Sans">
+  
+    
+    
+<style>    
+/*add custom styles here*/
+.odu_i_dr_item{margin:10px}    
+.odu_i_dr_drop{width: 100px; height: 40px; padding:0px; float:left; background:#ffffff; }
+.odu_i_dr_drop div{margin:-2px auto 5px auto;}    
+.odu_i_dr_drag {width:100px; height:40px; text-align: center;}/*common properties of drag and drop*/
+.odu_i_dr_drag, .odu_i_dr_dropped  {background: aliceblue; border: 1px solid gainsboro}/*object to be dragged*/
+.odu_i_dr_drop{border:1px dashed;}/*drop area*/    
+.odu_i_dr_drop_A{display:none;}/*a*/
+.odu_i_dr_drag_area{margin-top:10px; padding:10px; border:1px solid gainsboro; position:relative; background: snow; }/*area of the drag*/
+.odu_i_dr_drag_area p{text-align: center;}
+.odu_i_dr_drag_area div{margin:5px;}    
+.odu_i_dr_mark_area{margin:2px; display:none;}    
+.odu_i_dr_mark_area, .odu_i_dr_drop{float:left;}
+.odu_i_dr_incorrect, .odu_i_dr_correct  {display: none;}    
+.odu_i_dr_incorrect{color: red}
+.odu_i_dr_correct{color: green}    
+.odu_i_column {float: left; margin: 0px 5px;position:relative}
+.odu_i_content_area caption {display:none}
+.odu_i_table_bordered {margin: 0px auto; border-collapse: collapse; border:1px solid gainsboro; background:white;}    
+.odu_i_table_bordered td, .odu_i_table_bordered th   {border-bottom:1px solid gainsboro; }
+.odu_i_table_bordered td{padding: 10px; margin: 0px auto;}
+.odu_i_dr_arrow{font-size:25px; margin-top:10px; font-weight:bold; text-align: center; float:left}
+.odu_i_dr_darrow{font-size:25px; font-weight:bold; text-align: center}
+.odu_i_dr_larrow{font-size:25px; margin-top:15px; font-weight:bold; text-align: center; float:right}    
+.odu_i_dr_diagram {margin:0px auto; text-align: center}    
+.odu_i_dr_diagram img {width:400px; height:695px;}
+.odu_i_dr_special_caption_A {text-align:center; color:steelblue; font-weight:bold; display:none; position: relative; bottom:38px; width:100px; background-color:azure; border:1px solid steelblue; font-size: 13px;}     
+    
+    
+    
+    
+    
+</style>
+
+<div class="odu_i_content_area"><!--start of interactive activity-->
+
+    
+<div class="odu_i_instructions">
+<p><strong>Directions:</strong> Complete the diagram below by matching the diagnostic test with the correlated part of the Nephron. Drag an answer from the <strong>Answers Box</strong> and drop them in the correct box.</p>
+<ul class="odu_i_directions">        
+    <li>Correct answers are marked with a check (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li> 
+    <li>If you made a mistake, drag again your answer to a new box.</li>
+</ul>  
+
+</div>        
+
+<div class="odu_i_dr_area" style="width:730px; margin:0px auto">
+
+<div class="odu_i_column" style="width:78%; border:1px solid gainsboro;">
+<p style="text-align:center"><strong>Renal Diagnostic Tests</strong></p>
+<br><br>    
+<div class="odu_i_dr_diagram">    
+<img src="img/nephron_blank2.jpg">
+</div>    
+    
+<div class="odu_i_dr_item" id="odu_i_item_1" style="position:absolute; bottom:655px; left:190px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">PAH</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+<div class="odu_i_dr_item" id="odu_i_item_2" style="position:absolute; bottom:529px; left:-5px;">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">GFR Test</div>
+<div class="odu_i_clear"></div>    
+</div>    
+
+    
+<div class="odu_i_dr_item" id="odu_i_item_3" style="position:absolute; bottom:432px;">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">&nbsp;Tritable Acidity</div>
+<div class="odu_i_clear"></div>    
+</div>     
+
+    
+<div class="odu_i_dr_item" id="odu_i_item_4" style="position:absolute; bottom:202px; left:58px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Osmolarity</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+<div class="odu_i_dr_item" id="odu_i_item_5" style="position:absolute; bottom:607px; left:442px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Osmolarity</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+<div class="odu_i_dr_item" id="odu_i_item_6" style="position:absolute; bottom:504px; left:450px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Ammonia</div>
+<div class="odu_i_clear"></div>    
+</div>     
+    
+
+<div class="odu_i_dr_item" id="odu_i_item_7" style="position:absolute; bottom:233px; left:450px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Free Water Clearance</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+    
+    
+    
+</div>
+<div class="odu_i_column">
+<div class="odu_i_dr_drag_area"><!--box for drag objects-->    
+</div>   
+</div>        
+</div><!--end of odu_i_dr_area-->
+  
+    
+<div class="odu_i_clear"></div>        
+ <div class="odu_i_row" style="text-align:center">
+     <br>
+    <button class="odu_i_button_retry odu_i_dr_retry">Start Over</button>
+     <button class="odu_i_button odu_i_dr_show">Show Answer Key</button> 
+</div>    
+</div><!--end of interactive activity-->
+    
+<script>
+    var _0xd71c=["\x3C\x70\x20\x73\x74\x79\x6C\x65\x3D\x22\x63\x6F\x6C\x6F\x72\x3A\x20\x6C\x69\x67\x68\x74\x67\x72\x61\x79\x3B\x20\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65\x3A\x31\x30\x70\x78\x22\x3E\x43\x6F\x70\x79\x72\x69\x67\x68\x74\x3A\x20\x41\x72\x74\x68\x75\x72\x20\x42\x65\x6C\x74\x72\x61\x6E\x2C\x20\x4F\x6C\x64\x20\x44\x6F\x6D\x69\x6E\x69\x6F\x6E\x20\x55\x6E\x69\x76\x65\x72\x73\x69\x74\x79\x20\x43\x65\x6E\x74\x65\x72\x20\x66\x6F\x72\x20\x4C\x65\x61\x72\x6E\x69\x6E\x67\x20\x61\x6E\x64\x20\x54\x65\x61\x63\x68\x69\x6E\x67\x3C\x2F\x70\x3E","\x61\x70\x70\x65\x6E\x64","\x6C\x61\x73\x74","\x64\x69\x76","\x6C\x65\x6E\x67\x74\x68","\x74\x65\x78\x74","\x69\x64","\x61\x74\x74\x72","\x70\x61\x72\x65\x6E\x74","\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x73\x70\x65\x63\x69\x61\x6C\x5F\x63\x61\x70\x74\x69\x6F\x6E\x5F\x41\x22\x3E","\x3C\x2F\x70\x3E","\x23","\x20\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x6F\x70","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x61\x67\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x6C\x69\x6E\x65\x2D\x68\x65\x69\x67\x68\x74\x3A\x33\x22\x3E\x3C\x73\x70\x61\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x63\x6F\x72\x72\x65\x63\x74\x22\x3E\x26\x23\x78\x32\x37\x31\x34\x3B\x3C\x2F\x73\x70\x61\x6E\x3E\x3C\x73\x70\x61\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x22\x3E\x26\x23\x78\x32\x37\x31\x38\x3B\x3C\x2F\x73\x70\x61\x6E\x3E","\x3C\x2F\x64\x69\x76\x3E","\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x61\x67\x5F\x61\x72\x65\x61","\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x73\x70\x65\x63\x69\x61\x6C\x5F\x63\x61\x70\x74\x69\x6F\x6E\x5F\x41\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65\x3A\x31\x34\x70\x78\x3B\x20\x77\x69\x64\x74\x68\x3A\x31\x30\x30\x70\x78\x3B\x20\x62\x6F\x74\x74\x6F\x6D\x3A\x36\x30\x70\x78\x22\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x61\x67\x22\x3E\x3C\x73\x70\x61\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x63\x6F\x72\x72\x65\x63\x74\x22\x3E\x26\x23\x78\x32\x37\x31\x34\x3B\x3C\x2F\x73\x70\x61\x6E\x3E\x3C\x73\x70\x61\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x22\x3E\x26\x23\x78\x32\x37\x31\x38\x3B\x3C\x2F\x73\x70\x61\x6E\x3E","\x65\x61\x63\x68","\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x6F\x70\x5F\x41","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72\x41\x6C\x6C","\x69\x74\x65\x6D","\x63\x68\x69\x6C\x64\x72\x65\x6E","\x72\x61\x6E\x64\x6F\x6D","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x64\x75\x5F\x69\x5F\x63\x6C\x65\x61\x72\x22\x3E","\x3C\x70\x20\x73\x74\x79\x6C\x65\x3D\x22\x74\x65\x78\x74\x2D\x61\x6C\x69\x67\x6E\x3A\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x73\x74\x72\x6F\x6E\x67\x3E\x41\x6E\x73\x77\x65\x72\x73\x20\x42\x6F\x78\x3C\x2F\x73\x74\x72\x6F\x6E\x67\x3E\x3C\x2F\x70\x3E","\x70\x72\x65\x70\x65\x6E\x64","\x72\x65\x6C\x6F\x61\x64","\x63\x6C\x69\x63\x6B","\x2E\x6F\x64\x75\x5F\x69\x5F\x62\x75\x74\x74\x6F\x6E\x5F\x72\x65\x74\x72\x79","","\x72\x65\x70\x6C\x61\x63\x65","\x68\x74\x6D\x6C","\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x6F\x70","\x73\x6C\x6F\x77","\x74\x6F\x67\x67\x6C\x65","\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x73\x70\x65\x63\x69\x61\x6C\x5F\x63\x61\x70\x74\x69\x6F\x6E\x5F\x41","\x2E\x6F\x64\x75\x5F\x69\x5F\x73\x70\x65\x63\x69\x61\x6C\x5F\x63\x61\x70\x74\x69\x6F\x6E\x31","\x53\x68\x6F\x77\x20\x41\x6E\x73\x77\x65\x72\x20\x4B\x65\x79","\x48\x69\x64\x65\x20\x41\x6E\x73\x77\x65\x72\x20\x4B\x65\x79","\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x73\x68\x6F\x77","\x70\x6F\x69\x6E\x74\x65\x72","\x64\x72\x61\x67\x67\x61\x62\x6C\x65","\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x61\x67","\x68\x69\x64\x65","\x2E\x75\x69\x2D\x64\x72\x61\x67\x67\x61\x62\x6C\x65\x2D\x64\x72\x61\x67\x67\x69\x6E\x67\x20\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x2C\x20\x2E\x75\x69\x2D\x64\x72\x61\x67\x67\x61\x62\x6C\x65\x2D\x64\x72\x61\x67\x67\x69\x6E\x67\x20\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x63\x6F\x72\x72\x65\x63\x74","\x63\x6C\x61\x73\x73","\x70\x75\x73\x68","\x20\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x64\x72\x6F\x70\x5F\x41","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x69\x6E\x41\x72\x72\x61\x79","\x73\x68\x6F\x77","\x2E\x75\x69\x2D\x64\x72\x61\x67\x67\x61\x62\x6C\x65\x2D\x64\x72\x61\x67\x67\x69\x6E\x67\x20\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x63\x6F\x72\x72\x65\x63\x74","\x2E\x75\x69\x2D\x64\x72\x61\x67\x67\x61\x62\x6C\x65\x2D\x64\x72\x61\x67\x67\x69\x6E\x67\x20\x2E\x6F\x64\x75\x5F\x69\x5F\x64\x72\x5F\x69\x6E\x63\x6F\x72\x72\x65\x63\x74","\x64\x72\x6F\x70\x70\x61\x62\x6C\x65","\x72\x65\x61\x64\x79"];$(document)[_0xd71c[56]](function(){$(_0xd71c[3])[_0xd71c[2]]()[_0xd71c[1]](_0xd71c[0]);$(_0xd71c[19])[_0xd71c[18]](function(){var _0x49c6x1=$(this)[_0xd71c[5]]()[_0xd71c[4]];var _0x49c6x2=$(this)[_0xd71c[8]]()[_0xd71c[7]](_0xd71c[6]);if(_0x49c6x1<= 15){$(_0xd71c[11]+ _0x49c6x2+ _0xd71c[12])[_0xd71c[1]](_0xd71c[9]+ $(this)[_0xd71c[5]]()+ _0xd71c[10]);$(_0xd71c[15])[_0xd71c[1]](_0xd71c[13]+ $(this)[_0xd71c[5]]()+ _0xd71c[14])}else {$(_0xd71c[11]+ _0x49c6x2+ _0xd71c[12])[_0xd71c[1]](_0xd71c[16]+ $(this)[_0xd71c[5]]()+ _0xd71c[10]);$(_0xd71c[15])[_0xd71c[1]](_0xd71c[17]+ $(this)[_0xd71c[5]]()+ _0xd71c[14])}});var _0x49c6x3=document[_0xd71c[20]](_0xd71c[15]);for(var _0x49c6x4=0;_0x49c6x4< _0x49c6x3[_0xd71c[4]];_0x49c6x4++){var _0x49c6x5=_0x49c6x3[_0xd71c[21]](_0x49c6x4);for(var _0x49c6x6=_0x49c6x5[_0xd71c[22]][_0xd71c[4]];_0x49c6x6>= 0;_0x49c6x6--){_0x49c6x5[_0xd71c[24]](_0x49c6x5[_0xd71c[22]][Math[_0xd71c[23]]()* _0x49c6x6| 0])}};$(_0xd71c[15])[_0xd71c[1]](_0xd71c[25]);$(_0xd71c[15])[_0xd71c[27]](_0xd71c[26]);$(_0xd71c[30])[_0xd71c[29]](function(){location[_0xd71c[28]]()});$(_0xd71c[41])[_0xd71c[29]](function(){$(_0xd71c[34])[_0xd71c[18]](function(){var _0x49c6x7=$(this);_0x49c6x7[_0xd71c[33]](_0x49c6x7[_0xd71c[33]]()[_0xd71c[32]](/&nbsp;/g,_0xd71c[31]))});$(_0xd71c[37])[_0xd71c[36]](_0xd71c[35]);$(_0xd71c[38])[_0xd71c[36]](_0xd71c[35]);$(this)[_0xd71c[5]](function(_0x49c6x6,_0x49c6x8){return _0x49c6x8=== _0xd71c[39]?_0xd71c[40]:_0xd71c[39]})});$(_0xd71c[44])[_0xd71c[43]]({cursor:_0xd71c[42],snap:_0xd71c[34]});$(_0xd71c[34])[_0xd71c[55]]({accept:_0xd71c[44],out:function(_0x49c6x9,_0x49c6xa){$(_0xd71c[46])[_0xd71c[45]]()},drop:function(_0x49c6x9,_0x49c6xa){odu_i_get_dr_id_for_array= $(this)[_0xd71c[8]]()[_0xd71c[7]](_0xd71c[6]);odu_get_dr_drop_answer_array= [];$(_0xd71c[11]+ odu_i_get_dr_id_for_array+ _0xd71c[49])[_0xd71c[18]](function(){odu_get_dr_drop_answer_array[_0xd71c[31]+ $(this)[_0xd71c[7]](_0xd71c[47])+ _0xd71c[31]]= $(this)[_0xd71c[5]]();odu_get_dr_drop_answer_array[_0xd71c[48]]($(this)[_0xd71c[5]]())});var _0x49c6xb=$(_0x49c6xa[_0xd71c[43]])[_0xd71c[5]]()[_0xd71c[50]](2);var _0x49c6xc=$[_0xd71c[51]](_0x49c6xb,odu_get_dr_drop_answer_array);if(_0x49c6xc!=  -1){$(_0xd71c[53])[_0xd71c[52]]()}else {$(_0xd71c[54])[_0xd71c[52]]()}}})})
+    </script>
+    
+    
+    
+   
+    
+    
+</body>
+</html>

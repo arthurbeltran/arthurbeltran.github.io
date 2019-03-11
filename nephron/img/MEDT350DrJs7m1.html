@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styles</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" async  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+    
+    
+    
+</head>
+<body style="font-family: Open Sans">
+<style>
+    
+.odu_i_content_area {
+  margin: 0px auto 0px auto;
+  font-size: 14px; }
+  .odu_i_content_area h4 {
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 100; }
+
+.odu_i_row {
+  margin: 0px auto 0px auto;
+  clear: both; }
+
+.odu_i_attention {
+  padding: 10px;
+  background: #ffefd5; }
+
+.odu_i_clear {
+  clear: both; }
+
+.odu_i_hidden {
+  display: none; }
+
+.odu_i_screen_reader_label {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+.odu_i_button, .odu_i_button_small, .odu_i_button_error, .odu_i_button_retry {
+  font-size: 14px;
+  background: #337ab7;
+  border: 0px;
+  padding: 8px 18px;
+  margin: 0px 3px 0px 3px;
+  text-align: center;
+  display: inline-block;
+  opacity: 1.90;
+  color: white;
+  filter: alpha(opacity=80);
+  border-radius: 4px; }
+
+.odu_i_button_small {
+  padding: 6px 12px;
+  margin: 0px 2px;
+  font-size: 12px; }
+
+.odu_i_button_error {
+  background: #dc143c; }
+
+.odu_i_button_retry {
+  background: #228b22; }
+
+.odu_i_button:hover, .odu_i_button_small:hover, .odu_i_button_error:hover, .odu_i_button_retry:hover {
+  background: #337ab7;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  cursor: pointer; }
+
+.odu_i_button_retry:hover {
+  background: #228b22; }
+
+.odu_i_button_error:hover {
+  background: #dc143c; }
+
+.odu_i_panel, .odu_i_panel_success, .odu_i_panel_error, .odu_i_panel_retry {
+  margin: 10px auto; }
+
+.odu_i_panel_header, .odu_i_panel_content {
+  background: #337ab7;
+  padding: 10px;
+  color: white;
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid #337ab7; }
+
+.odu_i_panel_content {
+  background: #ffffff;
+  color: #000000;
+  border-top: 0px;
+  border-radius: 0px 0px 4px 4px; }
+
+.odu_i_panel_success .odu_i_panel_header, .odu_i_panel_success .odu_i_panel_content {
+  background: #D9EDF7;
+  border: 1px solid #D9EDF7;
+  color: #0a68db; }
+.odu_i_panel_success .odu_i_panel_content {
+  border: 1px solid #D9EDF7;
+  background: #ffffff;
+  color: #000000; }
+
+.odu_i_panel_error .odu_i_panel_header, .odu_i_panel_error .odu_i_panel_content {
+  background: #F2DEDE;
+  border: 1px solid #F2DEDE;
+  color: #7c0101; }
+.odu_i_panel_error .odu_i_panel_content {
+  border: 1px solid #F2DEDE;
+  background: #ffffff;
+  color: #000000; }
+
+.odu_i_panel_retry .odu_i_panel_header, .odu_i_panel_retry .odu_i_panel_content {
+  background: #DFF0D8;
+  border: 1px solid #DFF0D8;
+  color: #247702; }
+.odu_i_panel_retry .odu_i_panel_content {
+  border: 1px solid #DFF0D8;
+  background: #ffffff;
+  color: #000000; }    
+    
+    
+    
+/*add custom styles here*/
+.odu_i_dr_item{margin:10px}    
+.odu_i_dr_drop{width: 100px; height: 40px; padding:0px; float:left; background:#ffffff; }
+.odu_i_dr_drop div{margin:-2px auto 5px auto;}    
+.odu_i_dr_drag {width:100px; height:40px; text-align: center;}/*common properties of drag and drop*/
+.odu_i_dr_drag, .odu_i_dr_dropped  {background: aliceblue; border: 1px solid gainsboro}/*object to be dragged*/
+.odu_i_dr_drop{border:1px dashed;}/*drop area*/    
+.odu_i_dr_drop_A{display:none;}/*a*/
+.odu_i_dr_drag_area{margin-top:10px; padding:10px; border:1px solid gainsboro; position:relative; background: snow; }/*area of the drag*/
+.odu_i_dr_drag_area p{text-align: center;}
+.odu_i_dr_drag_area div{margin:5px;}    
+.odu_i_dr_mark_area{margin:2px; display:none;}    
+.odu_i_dr_mark_area, .odu_i_dr_drop{float:left;}
+.odu_i_dr_incorrect, .odu_i_dr_correct  {display: none;}    
+.odu_i_dr_incorrect{color: red}
+.odu_i_dr_correct{color: green}    
+.odu_i_column {float: left; margin: 0px 5px;position:relative}
+.odu_i_content_area caption {display:none}
+.odu_i_table_bordered {margin: 0px auto; border-collapse: collapse; border:1px solid gainsboro; background:white;}    
+.odu_i_table_bordered td, .odu_i_table_bordered th   {border-bottom:1px solid gainsboro; }
+.odu_i_table_bordered td{padding: 10px; margin: 0px auto;}
+.odu_i_dr_arrow{font-size:25px; margin-top:10px; font-weight:bold; text-align: center; float:left}
+.odu_i_dr_darrow{font-size:25px; font-weight:bold; text-align: center}
+.odu_i_dr_larrow{font-size:25px; margin-top:15px; font-weight:bold; text-align: center; float:right}    
+.odu_i_dr_diagram {margin:0px auto; text-align: center}    
+.odu_i_dr_diagram img {width:400px; height:695px;}
+.odu_i_dr_special_caption_A {text-align:center; color:steelblue; font-weight:bold; display:none; position: relative; bottom:38px; width:100px; background-color:azure; border:1px solid steelblue; font-size: 13px;}     
+    
+    
+    
+    
+    
+</style>
+
+<div class="odu_i_content_area"><!--start of interactive activity-->
+    
+<p><strong>Directions:</strong> Complete the diagram below by matching the diagnostic test with the correlated part of the Nephron. Drag an answer from the <strong>Answers Box</strong> and drop them in the correct box.</p>
+<ul class="odu_i_directions">        
+    <li>Correct answers are marked with a check (<span style="color:green">✔</span>), while incorrect answers are with an X (<span style="color:red">✘</span>).</li> 
+    <li>If you made a mistake, drag again your answer to a new box.</li>
+</ul>  
+
+
+<div class="odu_i_dr_area" style="width:730px; margin:0px auto">
+
+<div class="odu_i_column" style="width:78%; border:1px solid gainsboro;">
+<p style="text-align:center"><strong>Renal Diagnostic Tests</strong></p>
+<br><br>    
+<div class="odu_i_dr_diagram">    
+<img src="nephron_blank2.jpg">
+</div>    
+    
+<div class="odu_i_dr_item" id="odu_i_item_1" style="position:absolute; bottom:655px; left:190px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">PAH</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+<div class="odu_i_dr_item" id="odu_i_item_2" style="position:absolute; bottom:529px; left:-5px;">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">GFR Test</div>
+<div class="odu_i_clear"></div>    
+</div>    
+
+    
+<div class="odu_i_dr_item" id="odu_i_item_3" style="position:absolute; bottom:432px;">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">&nbsp;Tritable Acidity</div>
+<div class="odu_i_clear"></div>    
+</div>     
+
+    
+<div class="odu_i_dr_item" id="odu_i_item_4" style="position:absolute; bottom:202px; left:58px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Osmolarity</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+<div class="odu_i_dr_item" id="odu_i_item_5" style="position:absolute; bottom:607px; left:442px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Osmolarity</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+<div class="odu_i_dr_item" id="odu_i_item_6" style="position:absolute; bottom:504px; left:450px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Ammonia</div>
+<div class="odu_i_clear"></div>    
+</div>     
+    
+
+<div class="odu_i_dr_item" id="odu_i_item_7" style="position:absolute; bottom:233px; left:450px">    
+<div class="odu_i_dr_drop">&nbsp;</div>
+<div class="odu_i_dr_drop_A">Free Water Clearance</div>
+<div class="odu_i_clear"></div>    
+</div>
+    
+    
+    
+    
+    
+</div>
+<div class="odu_i_column">
+<div class="odu_i_dr_drag_area"><!--box for drag objects-->    
+</div>   
+</div>        
+</div><!--end of odu_i_dr_area-->
+  
+    
+<div class="odu_i_clear"></div>        
+ <div class="odu_i_row" style="text-align:center">
+     <br>
+    <button class="odu_i_button_retry odu_i_dr_retry">Start Over</button>
+     <button class="odu_i_button odu_i_dr_show">Show Answer Key</button> 
+</div>    
+</div><!--end of interactive activity-->
+    
+<script>
+//add custom scripts here
+    
+$(document).ready(function(){    
+  
+    
+
+$('.odu_i_dr_drop_A').each(function(){//add the check and x mark
+var odu_i_dr_drag_length = $(this).text().length;
+var odu_i_get_parent_id_for_key = $(this).parent().attr('id');  
+
+if (odu_i_dr_drag_length<=15){
+$('#'+odu_i_get_parent_id_for_key+' .odu_i_dr_drop').append('<p class="odu_i_dr_special_caption_A">'+$(this).text()+'</p>');        
+$('.odu_i_dr_drag_area').append('<div class="odu_i_dr_drag" style="line-height:3"><span class="odu_i_dr_correct">&#x2714;</span><span class="odu_i_dr_incorrect">&#x2718;</span>'+$(this).text()+'</div>');         
+}    
+else{
+    $('#'+odu_i_get_parent_id_for_key+' .odu_i_dr_drop').append('<p class="odu_i_dr_special_caption_A" style="font-size:14px; width:100px; bottom:60px">'+$(this).text()+'</p>');   
+    $('.odu_i_dr_drag_area').append('<div class="odu_i_dr_drag"><span class="odu_i_dr_correct">&#x2714;</span><span class="odu_i_dr_incorrect">&#x2718;</span>'+$(this).text()+'</div>');         
+}    
+
+}); 
+
+var uls = document.querySelectorAll('.odu_i_dr_drag_area');//randomize list
+for (var j = 0; j < uls.length; j++) {
+  var ul = uls.item(j);
+  for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+  }
+}//end of randomize list
+    
+$('.odu_i_dr_drag_area').append('<p class="odu_i_clear">');//add a clear:both at the end of the list    
+$('.odu_i_dr_drag_area').prepend('<p style="text-align:center"><strong>Answers Box</strong></p>');//add the header for the answers box     
+$('.odu_i_button_retry').click(function(){//add a retry or start over button
+location.reload();
+});
+
+    
+$('.odu_i_dr_show').click(function(){
+    
+    $('.odu_i_dr_drop').each(function() {
+    var $this = $(this);
+    $this.html($this.html().replace(/&nbsp;/g, ''));
+    });
+    
+    
+    
+    
+    $('.odu_i_dr_special_caption_A').toggle('slow');
+    $('.odu_i_special_caption1').toggle('slow');
+    $(this).text(function(i, text){
+          return text === "Show Answer Key" ? "Hide Answer Key" : "Show Answer Key";
+    });
+});        
+    
+    
+    
+
+$('.odu_i_dr_drag').draggable({//activate the drag object
+    cursor:'pointer',
+    snap:'.odu_i_dr_drop'
+});
+    
+$('.odu_i_dr_drop').droppable({//activate the drop area
+    
+    accept: '.odu_i_dr_drag',//define the drag object
+    
+    
+    out: function(event, ui){//hide check or x mark when drag outside the drop area
+        $('.ui-draggable-dragging .odu_i_dr_incorrect, .ui-draggable-dragging .odu_i_dr_correct').hide();
+    },
+    
+    drop: function (event, ui){//define what happens after dropping the drag object
+    odu_i_get_dr_id_for_array = $(this).parent().attr('id');//get the id of the drop area          
+    odu_get_dr_drop_answer_array = [];//var for the answers in array form
+    $('#'+odu_i_get_dr_id_for_array+' .odu_i_dr_drop_A').each(function(){//get the answers in array form
+    odu_get_dr_drop_answer_array[''+$(this).attr('class')+''] = $(this).text();   
+    odu_get_dr_drop_answer_array.push($(this).text());
+    });   
+        
+       
+    var odu_i_get_drag_value = $(ui.draggable).text().substring(2);//get the text of drag object
+    var odu_i_check_drag_array= $.inArray(odu_i_get_drag_value, odu_get_dr_drop_answer_array);//check if the drag object is included from the array, if not -1 would be the value        
+                        
+           if (odu_i_check_drag_array!=-1){//if the drag object is on the list of correct answers
+
+               $('.ui-draggable-dragging .odu_i_dr_correct').show();
+           }
+           else {//if not
+
+               $('.ui-draggable-dragging .odu_i_dr_incorrect').show();
+           }
+
+               
+        }//end of drop                       
+    
+    
+});    
+    
+    
+}); //end of document ready   
+</script>    
+    
+    
+    
+    
+   
+    
+    
+</body>
+</html>
