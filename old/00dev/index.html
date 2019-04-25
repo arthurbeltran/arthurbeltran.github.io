@@ -444,8 +444,18 @@
 </style> 
 
 <style>
-    .odu_i_likert tr fieldset{
+    .odu_i_likert fieldset{
 	       border: none;
+    }
+    .odu_i_likert fieldset legend{
+        padding: 0px;
+        margin: 0px;
+        float: left;
+        width: 200px;
+    }
+    
+    .odu_i_likert label {
+        margin: 20px;        
     }
 </style>
 
@@ -474,19 +484,37 @@ Please rate yourself on the items listed below. The following items are rated on
 </div>
     
    
-  
+<div class="odu_i_likert">
     <fieldset>
-    <legend>Question</legend>    
+    <legend>The quick brown fox, jumps over the lazy dog.</legend>    
     <label class="radio-inline">
-      <input type="radio" name="optradio" checked>Option 1
+      <input type="radio" name="optradio" id="odu_i_smc_item_1_choice_1">1
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio">Option 2
+      <input type="radio" name="optradio" id="odu_i_smc_item_1_choice_2">2
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio">Option 3
+      <input type="radio" name="optradio" id="odu_i_smc_item_1_choice_3">3
     </label>
     </fieldset>    
+</div>
+    
+    
+<div class="odu_i_likert">
+    <fieldset>
+    <legend>The quick brown fox, jumps over the lazy dog.</legend>    
+    <label class="radio-inline">
+      <input type="radio" name="optradio2"  id="odu_i_smc_item_2_choice_1">Option 1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio2" id="odu_i_smc_item_2_choice_2">Option 2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio2" id="odu_i_smc_item_2_choice_3">Option 3
+    </label>
+    </fieldset>    
+</div>          
+    
     
 
     
